@@ -25,6 +25,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors() {
+
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -40,28 +41,32 @@ class SessionForm extends React.Component {
 
         return (
             <div>
-                <h2>
-                    {this.props.formType}
-                </h2>
+                {this.props.formType !== 'signup' ? <Link to={"/signup"}>Sign Up</Link> : <Link to={"/signup"}>Login</Link>}
                 <form className="Session-Form" onSubmit={this.handleSubmit}>
-                    Welcome to Jiator!
+                    {this.props.formType === 'signup' ? 'Sign Up:' : 'Login:'}
                     <br/>
                     {this.renderErrors()}
                     <label>Username:
                         <input type="text" value={this.state.username} onChange={this.handleInput("username")} />
                     </label>
+                    <br/>
                     <label>Password:
                         <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
                     </label>
-                    <label>First Name:
+                    <br />
+                    {this.props.formType === 'signup' ? <label>Email:
+                        <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
+                    </label> : null}
+                    <br />
+                    {this.props.formType === 'signup' ? <label>First Name:
                         <input type="text" value={this.state.first_name} onChange={this.handleInput("first_name")} />
-                    </label>
-                    <label>Last Name:
+                    </label> : null }
+                    <br />
+                    {this.props.formType === 'signup' ? <label>Last Name:
                         <input type="text" value={this.state.last_name} onChange={this.handleInput("last_name")} />
-                    </label>
+                    </label> : null}
                     <input type="submit" value={this.props.formType === "login" ? "Login" : "Sign Up"} />
                 </form>
-                {this.props.formType === 'signup' ? <Link to={"/signup"}>Sign Up</Link> : <Link to={"/signup"}>Login</Link> }
             </div>
         )
     }
