@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
 
     handleDemo(e) {
         e.preventDefault()
-        this.props.processForm(this.demoUser)
+        this.props.processDemo(this.demoUser)
         this.props.closeModal()
     }
 
