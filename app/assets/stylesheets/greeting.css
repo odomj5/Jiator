@@ -1,5 +1,6 @@
 
 .greeting-nav {
+    width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,4 +17,24 @@
 .nav-button {
     border: none;
     font-family: Arial, sans-serif;
+}
+
+.login-signup button i {
+    float: left;
+    font-size: 24px;
+    left: 18px;
+}
+
+.login-signup button {
+    font-size: 20px;
+}
+
+.greeting-div {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: lightgrey;
 }
