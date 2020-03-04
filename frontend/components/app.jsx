@@ -11,17 +11,14 @@ import {
 } from 'react-router-dom'
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import Modal from './modal/modal'
-
+import SplashContainer from './splash/splash_container'
 
 const App = () => (
     <div>
         <Modal/>
-        <header>
-            <Link to={'/'} className='header-link'>
-            <h1>Jiator</h1>
-            </Link>
-            <GreetingContainer />
-        </header>
+        <Route to="/" component={GreetingContainer} />
+        <Route to="/" component={SplashContainer} />
+
         {/* Using modal for login and signup  */}
         {/* <Switch>
             <AuthRoute exact path={"/login"} component={LoginFormContainer}/>

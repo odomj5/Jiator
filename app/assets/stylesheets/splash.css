@@ -1,0 +1,12 @@
+.splash-div img {
+    width: 100%;
+}
+
+.logo-link {
+    font-family: Arial, sans-serif;
+    color: #186d61;
+    font-size: 30px;
+    font-weight: 650;
+    margin: 20px 25px;
+    letter-spacing: -0.5px;
+}

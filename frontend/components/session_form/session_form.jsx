@@ -11,8 +11,15 @@ class SessionForm extends React.Component {
             last_name: '' 
 
         };
+
+        this.demoUser = {
+            username: 'neo2020',
+            password: 'hunter12'
+        }
+
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+        this.handleDemo = this.handleDemo.bind(this);
+    } 
 
     handleSubmit(e) {
         e.preventDefault();
@@ -22,6 +29,12 @@ class SessionForm extends React.Component {
 
     handleInput(inputType) {
         return e => this.setState({ [inputType]: e.target.value })
+    }
+
+    handleDemo(e) {
+        e.preventDefault()
+        this.props.processForm(this.demoUser)
+        this.props.closeModal()
     }
 
     renderErrors() {
@@ -41,13 +54,16 @@ class SessionForm extends React.Component {
 
         return (
             <div>
-                {this.props.formType !== 'signup' ? <Link to={"/signup"}>Sign Up</Link> : <Link to={"/signup"}>Login</Link>}
                 <form className="Session-Form" onSubmit={this.handleSubmit}>
-                    {this.props.formType === 'signup' ? 'Sign Up:' : 'Login:'}
+                    Welcome to Jiator!
                     <br/>
+                    Please {this.props.formType} or {this.props.otherForm}
+                    <div onClick={this.props.closeModal} className='close-x'>×</div>
+                    <div className='session-errors'>
                     {this.renderErrors()}
+                    </div>
                     <label>Username:
-                        <input type="text" value={this.state.username} onChange={this.handleInput("username")} />
+                        <input type="text" autoFocus='autoFocus'value={this.state.username} onChange={this.handleInput("username")} />
                     </label>
                     <br/>
                     <label>Password:
@@ -65,6 +81,7 @@ class SessionForm extends React.Component {
                     {this.props.formType === 'signup' ? <label>Last Name:
                         <input type="text" value={this.state.last_name} onChange={this.handleInput("last_name")} />
                     </label> : null}
+                    <button className="demo-button" onClick={this.handleDemo}>Demo User</button>
                     <input type="submit" value={this.props.formType === "login" ? "Login" : "Sign Up"} />
                 </form>
             </div>

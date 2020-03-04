@@ -1,0 +1,18 @@
+
+.greeting-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    border: none;
+}
