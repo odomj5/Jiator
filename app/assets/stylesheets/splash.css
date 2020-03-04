@@ -10,3 +10,19 @@
     margin: 20px 25px;
     letter-spacing: -0.5px;
 }
+
+.icon-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    /* background-color: lightgrey; */
+
+}
+
+.icon-bar div i {
+    text-align: center;
+    /* border: 3px solid */
+    margin: auto;
+    width: 100%;
+}
