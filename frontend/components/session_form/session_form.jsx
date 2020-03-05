@@ -56,10 +56,10 @@ class SessionForm extends React.Component {
             <div>
                 <form className="Session-Form" onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} className='close-x'>×</div>
-                    <div className='form-welc'>{this.props.formType === 'signup' ? 'Welcome to Jiator!' : 'Welcome Back to Jiator!' }</div>
+                    <div className='form-welc'>{this.props.formType === 'signup' ? 'Welcome to Jiator!' : 'Welcome Back!' }</div>
             
                     <br/>
-                    Please {this.props.formType} or {this.props.otherForm}
+                    {/* Please {this.props.formType} or {this.props.otherForm} */}
                     
                     <div className='session-errors'>
                     {this.renderErrors()}
@@ -87,6 +87,12 @@ class SessionForm extends React.Component {
                     <button>{this.props.formType === "login" ? "Login" : "Sign Up"}</button>
                     <button className="demo-button" onClick={this.handleDemo}>Demo User</button>
                 </form>
+                <br/>
+                <div className='switch-form'>
+                    {this.props.formType === 'signup' ? 'Already have an account?' : 'Need to create an account?'}
+                    {this.props.otherForm}
+                </div>
+                
             </div>
         )
     }

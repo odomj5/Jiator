@@ -37,6 +37,7 @@ input[type=text], input[type=email], input[type=password] {
     font-size: 16px;
     height: 30px;
     display: block;
+    margin: 5px; 
 }
 
 input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
@@ -53,12 +54,14 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
 .form-welc {
   font-weight: bold;
   text-align: center;
+  font-size: 24px;
 }
 
 .Session-Form > label {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  
 }
 
 .Session-Form {
@@ -68,12 +71,31 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
   box-sizing: border-box;
   /* width: 480px; */
   padding: 40px;
+  color: black;
 }
 
 .Session-Form button {
   box-sizing: border-box;
   color: white;
-  background-color: #186d61;
+  background-color:#186b6d;
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+  margin-top: 10px;
 
 }
+
+.switch-form {
+  text-align: center;
+  font-size: 14px;
+}
+
+.switch-form a {
+  color: blue;
+  font-size: 12px;
+  margin: 5px;
+
+}
+
+
