@@ -28,10 +28,18 @@
     font-size: 20px;
 }
 
+.login-signup button:hover {
+    cursor: pointer;
+}
+
 .header-button i {
     font-size: 24px;
     margin: 10px;
     background-color: white;
+}
+
+.header-group button:hover {
+    cursor: pointer;
 }
 
 .header-button {
