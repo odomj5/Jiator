@@ -1,7 +1,7 @@
 import React from 'react'
 import { openModal, closeModal } from '../../actions/modal_actions'
 import { connect } from "react-redux";
-import { signup, login } from "../../actions/session_actions";
+import { signup, login, clearErrors, CLEAR_ERRORS } from "../../actions/session_actions";
 import SessionForm from "./session_form";
 
 const mapStateToProps = state => {
@@ -20,7 +20,8 @@ const mapDispatchToProps = dispatch => {
                 Login
             </a>
         ),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        clearErrors: () => dispatch(clearErrors())
     })
 }
 

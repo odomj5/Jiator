@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const Greeting = ({ currentUser, logout, openModal }) => {
-
     const display = currentUser ? (<hgroup className="header-group">
         <h2 className="header-name">{currentUser.firstName} are you ready to explore SF?</h2>
         <button className="header-button" onClick={logout} ><i class="fas fa-sign-out-alt"></i>Log Out</button>

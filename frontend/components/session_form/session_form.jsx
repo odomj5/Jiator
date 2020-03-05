@@ -50,6 +50,10 @@ class SessionForm extends React.Component {
         );
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors()
+    }
+
     render() {
 
         return (
@@ -57,11 +61,8 @@ class SessionForm extends React.Component {
                 <form className="Session-Form" onSubmit={this.handleSubmit}>
                     <div onClick={this.props.closeModal} className='close-x'>×</div>
                     <div className='form-welc'>{this.props.formType === 'signup' ? 'Welcome to Jiator!' : 'Welcome Back!' }</div>
-            
-                    <br/>
-                    {/* Please {this.props.formType} or {this.props.otherForm} */}
-                    
                     <div className='session-errors'>
+
                     {this.renderErrors()}
                     </div>
                     <label >Username:
