@@ -1,7 +1,6 @@
 import React from "react"
 import GreetingContainer from "./greeting/greeting_container"
-import LoginFormContainer from "./session_form/login_form_container"
-import SignupFormContainer from "./session_form/signup_form_container" 
+import TourIndexContainer from "./tours/tour_index_container"
 import {
     Route,
     Redirect,
@@ -16,14 +15,17 @@ import SplashContainer from './splash/splash_container'
 const App = () => (
     <div>
         <Modal/>
-        <Route to="/" component={GreetingContainer} />
-        <Route to="/" component={SplashContainer} />
+        {/* <Route to="/" component={GreetingContainer} />
+        <Route to="/" component={SplashContainer} /> */}
+        <Route path="/" component={GreetingContainer} />
+        <Route exact path="/" component={SplashContainer} />
 
-        {/* Using modal for login and signup  */}
-        {/* <Switch>
-            <AuthRoute exact path={"/login"} component={LoginFormContainer}/>
-            <AuthRoute exact path={"/signup"} component={SignupFormContainer}/>
-        </Switch> */}
+        {/* Using modal for login and signup   */}
+         <Switch>    
+            <Route exact path="/api/tours" component={TourIndexContainer} />
+            {/* <Route exact path="/tours/:tourId" component={TourShowContainer} /> */}
+
+        </Switch>
 
     </div>
 )

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom"
 import configureStore from "./store/store" 
 import Root from "./components/root"
 import { login, signup } from "./actions/session_actions"
+import {requestTour, requestTours} from "./actions/tour_actions"
+import {fetchTour, fetchTours} from "./util/tour_api_util"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch;
     window.login = login;
     window.signup = signup;
+    window.requestTour = requestTour;
+    window.requestTours = requestTours;
+    window.fetchTour = fetchTour;
+    window.fetchTours = fetchTours;
+
     //Testing
 
     const root = document.getElementById("root")
