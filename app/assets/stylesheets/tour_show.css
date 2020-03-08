@@ -1,0 +1,166 @@
+/* .default-img {
+    position: relative;
+    height: 500px;
+    width: 700px;
+}
+
+
+
+.booking-div {
+    position: absolute;
+    right: 5px;
+    top: 5%;
+    background-color: lightgray;
+    height: 480px;
+    width: 470px;
+} */
+
+.show-div {
+    position: relative;
+    margin-left: 275.5px;
+    /* margin-right: 275.5px; */
+    margin-right: 430.5px;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif; 
+}
+
+.tour-name {
+    position: relative;
+    font-size: 28px;
+    font-family: Raleway, Helvetica, Arial;
+    color: #2a2d32;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.booking-outer-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    
+    
+}
+
+.default-img {
+    min-height: 400px;
+}
+
+.booking-div-cont {
+    margin-left: 20px;
+    background-color: lightgray;
+}
+
+.booking-div {
+    min-height: 500px;
+    min-width: 400px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+
+}
+
+.booked-div {
+    color: red;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid grey;
+    padding: 10%;
+    width: 80%;
+    /* margin-left: 5%; */
+
+}
+
+.booked-avail-div {
+    font-family: "Work Sans", Helvetica, Arial, sans-serif; 
+    font-size: 20px;
+    border-bottom: 1px solid grey;
+    padding: 10%;
+    width: 80%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* icon for booking */
+.booking-div i {
+    margin-right: 5px;
+    color: red;
+}
+
+.booking-calendar {
+    padding: 10%;
+}
+
+.reservation-dets {
+    padding: 10%;
+}
+
+.details-div {
+  /* margin-right: 100px; */
+
+}
+
+.ttl-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* margin-left: 275.5px;
+    margin-right: 275.5px; */
+    border-top: 1px, solid black;
+    border-bottom: 1px, solid black;
+    color: #55575b;
+
+}
+
+.ttl-bar i {
+    color: #186b6d;
+}
+
+.overview-title {
+    font-size: 24px; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+
+}
+
+.overview-par {
+    font-size: 16px; 
+
+}
+
+.included-title {
+    font-size: 24px; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.included-yes {
+    font-size: 16px; 
+}
+
+.included-no {
+    font-size: 16px; 
+}
+
+.additional-title {
+    font-size: 24px; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.additional-info {
+    font-size: 16px; 
+}
+
