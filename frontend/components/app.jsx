@@ -1,6 +1,7 @@
 import React from "react"
 import GreetingContainer from "./greeting/greeting_container"
 import TourIndexContainer from "./tours/tour_index_container"
+import TourShowContainer from "./tours/tour_show_container"
 import {
     Route,
     Redirect,
@@ -22,8 +23,9 @@ const App = () => (
 
         {/* Using modal for login and signup   */}
          <Switch>    
+            <Route exact path="/api/tours/:tourId" component={TourShowContainer} />
             <Route exact path="/api/tours" component={TourIndexContainer} />
-            {/* <Route exact path="/tours/:tourId" component={TourShowContainer} /> */}
+
 
         </Switch>
 

@@ -3,6 +3,7 @@ import {
     RECEIVE_TOUR
 } from '../actions/tour_actions'
 
+
 const ToursReducer = (state = {}, action) => {
     Object.freeze(state)
     let newState = Object.assign({}, state)
@@ -10,7 +11,7 @@ const ToursReducer = (state = {}, action) => {
         case RECEIVE_TOURS:
             return action.tours 
         case RECEIVE_TOUR:
-            return action.tour.id = action.tour 
+            return action.tour 
     
         default:
     }       return state 

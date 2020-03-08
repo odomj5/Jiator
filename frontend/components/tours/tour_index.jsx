@@ -8,7 +8,7 @@ class TourIndex extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className="index-div">
                 <img src={window.SFindexURL} className="t-index-img"/>
                 <ul>
                     {this.props.tours.map(tour => 

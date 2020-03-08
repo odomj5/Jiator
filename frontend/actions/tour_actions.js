@@ -20,7 +20,9 @@ const receiveTour = tour => {
 
 export const requestTours = () => dispatch => {
     return TourAPIUtil.fetchTours()
-        .then((tours) => dispatch(receiveTours(tours)))
+        .then((tours) =>{ 
+            return dispatch(receiveTours(tours))
+        })
 }
 
 export const requestTour = tourId => dispatch => {
