@@ -3,8 +3,9 @@ import { requestTour } from '../../actions/tour_actions'
 import TourShow from './tour_show'
 
 const mSTP = (state, ownProps) => {
+    // debugger 
     return({
-        tour: state.entities.tours
+        tour: state.entities.tours[ownProps.match.params.tourId]
     })
 }
 

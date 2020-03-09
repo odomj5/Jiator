@@ -1,25 +1,12 @@
-/* .default-img {
-    position: relative;
-    height: 500px;
-    width: 700px;
-}
-
-
-
-.booking-div {
-    position: absolute;
-    right: 5px;
-    top: 5%;
-    background-color: lightgray;
-    height: 480px;
-    width: 470px;
-} */
-
 .show-div {
     position: relative;
-    margin-left: 275.5px;
-    /* margin-right: 275.5px; */
-    margin-right: 430.5px;
+    width: 1375px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* margin-left: 275.5px;
+    margin-right: 275.5px; */
+    /* margin-right: 430.5px; */
     font-family: "Work Sans", Helvetica, Arial, sans-serif; 
 }
 
@@ -30,12 +17,13 @@
     color: #2a2d32;
     text-align: left;
     font-weight: bold;
+    margin-bottom: 5px;
 
 }
 
 .booking-outer-div {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     
     
@@ -43,6 +31,7 @@
 
 .default-img {
     min-height: 400px;
+    max-width: 60%;
 }
 
 .booking-div-cont {
@@ -143,6 +132,17 @@
     margin-top: 1%;
     margin-bottom: 1%;
     font-weight: bold;
+
+}
+
+.included-container {
+    
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    /* min-height: 100px; */
 }
 
 .included-yes {
@@ -164,3 +164,28 @@
     font-size: 16px; 
 }
 
+.included-container > div{
+    font-weight: normal;
+    margin: 2%;
+}
+
+.included-yes >  div >  i {
+    color: #186b6d;
+
+}
+
+.included-no >  div >  i {
+    color: rgb(235, 22, 22);
+
+}
+
+.additional-info {
+    margin: 2%;
+}
+
+.additional-info  i {
+    color: #186b6d;
+    font-size: 10px;
+    margin-bottom: 1%;
+
+}

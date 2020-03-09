@@ -11,10 +11,10 @@ const receiveTours = tours => {
     })
 }
 
-const receiveTour = tour => {
+const receiveTour = payload => {
     return ({
         type: RECEIVE_TOUR,
-        tour: tour
+        payload
     })
 }
 
