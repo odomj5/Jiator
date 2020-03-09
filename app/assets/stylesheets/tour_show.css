@@ -29,9 +29,15 @@
     
 }
 
+/* original image style
 .default-img {
     min-height: 400px;
     max-width: 60%;
+} */
+
+.photo-main-div img {
+    max-width: 400px;
+    max-height: 400px;
 }
 
 .booking-div-cont {
@@ -124,6 +130,7 @@
 
 .overview-par {
     font-size: 16px; 
+    margin: 2%;
 
 }
 
@@ -185,7 +192,8 @@
 
 .additional-info  i {
     color: #186b6d;
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 1%;
+   
 
 }

@@ -12,7 +12,7 @@ const ToursReducer = (state = {}, action) => {
         case RECEIVE_TOURS:
             return action.tours 
         case RECEIVE_TOUR:
-            debugger
+            // debugger
             // return action.tour.id = action.tour 
             return Object.assign(newState, action.payload.tours) 
     
