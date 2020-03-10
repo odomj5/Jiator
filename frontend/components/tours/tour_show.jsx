@@ -7,11 +7,9 @@ class TourShow extends React.Component {
     // constructor(props){
     //     super(props)
     //     this.state = this.props.tour
-    //     debugger
 // }
     
     componentDidMount() {
-        // debugger
         this.props.requestTour(this.props.match.params.tourId)
     }
 
@@ -25,7 +23,6 @@ class TourShow extends React.Component {
 
         if (this.props.tour === undefined) return null
      
-        // debugger
         return(
             <div className="show-div">
                 <h1 className="tour-name">

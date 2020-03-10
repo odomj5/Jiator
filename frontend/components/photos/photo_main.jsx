@@ -16,7 +16,6 @@ class PhotoMain extends React.Component {
 
 
     render () {
-        // debugger
         return(
         <div className="photo-main-div">
             <PhotoThumbnail 

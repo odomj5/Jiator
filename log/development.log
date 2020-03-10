@@ -25165,3 +25165,95 @@ Processing by Api::ToursController#show as JSON
 Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for ::1 at 2020-03-09 18:15:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 58ms (Views: 54.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/tours/9" for ::1 at 2020-03-09 18:15:10 -0700
+Processing by Api::ToursController#show as JSON
+  Parameters: {"id"=>"9"}
+  [1m[36mTour Load (1.0ms)[0m  [1m[34mSELECT  "tours".* FROM "tours" WHERE "tours"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/api/tours_controller.rb:8
+  Rendering api/tours/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 9], ["record_type", "Tour"], ["name", "photos"]]
+  ↳ app/views/api/tours/show.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/tours/show.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/tours/show.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/tours/show.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/tours/show.json.jbuilder:4
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/tours/show.json.jbuilder:4
+  Rendered api/tours/show.json.jbuilder (25.4ms)
+Completed 200 OK in 33ms (Views: 23.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--84b5e9445cf678b885640956bd3ddb826aa2a7b0/alcatraz.jpg" for ::1 at 2020-03-09 18:15:10 -0700
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7bb20544d205a9dfe3620facbcd0049c9da52581/alcatraz2.jpg" for ::1 at 2020-03-09 18:15:10 -0700
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--84b5e9445cf678b885640956bd3ddb826aa2a7b0", "filename"=>"alcatraz"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /home/jon/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (5.1ms) [0m[34mGenerated URL for file at key: GEcUbQajn6hbXe9r2H3aJusf (https://jiator-dev.s3.us-west-1.amazonaws.com/GEcUbQajn6hbXe9r2H3aJusf?response-content-disposition=inline%3B%20filename%3D%22alcatraz.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4b0d11f6e02e5655464b375533afef9f778b9f0f068fd317f12aaa9cb06d4b8b)[0m
+Redirected to https://jiator-dev.s3.us-west-1.amazonaws.com/GEcUbQajn6hbXe9r2H3aJusf?response-content-disposition=inline%3B%20filename%3D%22alcatraz.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=4b0d11f6e02e5655464b375533afef9f778b9f0f068fd317f12aaa9cb06d4b8b
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--41669a9683e4ec7ac1fe9671bbcbaa36ae16e11c/alcatraz3.jpg" for ::1 at 2020-03-09 18:15:10 -0700
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--41669a9683e4ec7ac1fe9671bbcbaa36ae16e11c", "filename"=>"alcatraz3"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (3.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /home/jon/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b406834411e41c1272cac650099586705584e55e/alcatraz4.jpg" for ::1 at 2020-03-09 18:15:10 -0700
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--16fefb20748b663d38846e93095aa7d4ce374653/alcatraz5.jpg" for ::1 at 2020-03-09 18:15:10 -0700
+[36m  S3 Storage (1.8ms) [0m[34mGenerated URL for file at key: juqQRKKy3qjsBZYf8HSciHtV (https://jiator-dev.s3.us-west-1.amazonaws.com/juqQRKKy3qjsBZYf8HSciHtV?response-content-disposition=inline%3B%20filename%3D%22alcatraz3.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz3.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3c7e09617b63b4bb4bc9679cc66f515df23abc612deb105fdaee3b49660ffa8e)[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7bb20544d205a9dfe3620facbcd0049c9da52581", "filename"=>"alcatraz2"}
+Redirected to https://jiator-dev.s3.us-west-1.amazonaws.com/juqQRKKy3qjsBZYf8HSciHtV?response-content-disposition=inline%3B%20filename%3D%22alcatraz3.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz3.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3c7e09617b63b4bb4bc9679cc66f515df23abc612deb105fdaee3b49660ffa8e
+Completed 302 Found in 13ms (ActiveRecord: 3.8ms)
+
+
+  [1m[36mActiveStorage::Blob Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /home/jon/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (15.0ms) [0m[34mGenerated URL for file at key: zVCHBAdBgAH1gRVdeVoXGp3A (https://jiator-dev.s3.us-west-1.amazonaws.com/zVCHBAdBgAH1gRVdeVoXGp3A?response-content-disposition=inline%3B%20filename%3D%22alcatraz2.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz2.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b851746557134ac077c4290cce78b224e28a02dbd7d8fb558f585ef21d43a3a2)[0m
+Redirected to https://jiator-dev.s3.us-west-1.amazonaws.com/zVCHBAdBgAH1gRVdeVoXGp3A?response-content-disposition=inline%3B%20filename%3D%22alcatraz2.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz2.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b851746557134ac077c4290cce78b224e28a02dbd7d8fb558f585ef21d43a3a2
+Completed 302 Found in 25ms (ActiveRecord: 3.2ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--16fefb20748b663d38846e93095aa7d4ce374653", "filename"=>"alcatraz5"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b406834411e41c1272cac650099586705584e55e", "filename"=>"alcatraz4"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /home/jon/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[36m  S3 Storage (2.7ms) [0m[34mGenerated URL for file at key: Yu6295vqbwi5Gki3q1dQqz4c (https://jiator-dev.s3.us-west-1.amazonaws.com/Yu6295vqbwi5Gki3q1dQqz4c?response-content-disposition=inline%3B%20filename%3D%22alcatraz5.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz5.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3aed14ffcea9b92ff4313e5aa00794c72fa21b1fc392b6ca658d6a1eb93dd079)[0m
+  ↳ /home/jon/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.9ms) [0m[34mGenerated URL for file at key: sgKnRrLSd8F434GWKQXFpkeZ (https://jiator-dev.s3.us-west-1.amazonaws.com/sgKnRrLSd8F434GWKQXFpkeZ?response-content-disposition=inline%3B%20filename%3D%22alcatraz4.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz4.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5dca43bd2881e49fd11693181e14e7698d7287bae23f62c558ae69c51ed312c5)[0m
+Redirected to https://jiator-dev.s3.us-west-1.amazonaws.com/Yu6295vqbwi5Gki3q1dQqz4c?response-content-disposition=inline%3B%20filename%3D%22alcatraz5.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz5.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3aed14ffcea9b92ff4313e5aa00794c72fa21b1fc392b6ca658d6a1eb93dd079
+Redirected to https://jiator-dev.s3.us-west-1.amazonaws.com/sgKnRrLSd8F434GWKQXFpkeZ?response-content-disposition=inline%3B%20filename%3D%22alcatraz4.jpg%22%3B%20filename%2A%3DUTF-8%27%27alcatraz4.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA6O3WOV737F3V7WU3%2F20200310%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20200310T011510Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5dca43bd2881e49fd11693181e14e7698d7287bae23f62c558ae69c51ed312c5
+Completed 302 Found in 16ms (ActiveRecord: 1.5ms)
+
+
+Completed 302 Found in 15ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-10 08:49:48 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jon/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 1200ms (Views: 1194.6ms | ActiveRecord: 4.6ms)
+
+
