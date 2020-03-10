@@ -34,7 +34,7 @@ t2 = Tour.create!(name: "Muir Woods and Sausalito Half Day Tour",
     location_id: 1, 
     time_estimate: '4 hours (Approx.)', 
     language: 'English',
-    price: 29)
+    price: 73)
 
     # file = open(url)
 
@@ -51,5 +51,22 @@ t2 = Tour.create!(name: "Muir Woods and Sausalito Half Day Tour",
     t2.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/muir/muirwoods2.jpg"), filename: "muirwoods2.jpg")
     t2.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/muir/treerings2.jpg"), filename: "treerings2.jpg")
 
+t3 = Tour.create!(name: "San Francisco is undoubtedly a hilly place, and this challenging 5-mile walking tour doesn’t shy away from the steepness. Instead, it takes you off the beaten path and onto some of the city’s stairways for an incredible exploration of several neighborhoods and downtown attractions. While meandering through SF’s Russian Hill, Telegraph Hill and North Beach neighborhoods, you’ll come upon some hidden gems, jaw-dropping views, and world-famous sites. Climb to Coit Tower via the Filbert Street Steps; ascend Lombard Street, often referred to as the crookedest street in the world; and discover a tiny park overlooking St Peter and Paul Church, where Marilyn Monroe and Joe DiMaggio took their wedding pics after tying the knot at San Francisco City Hall.",
+    included: ["Professional guide", "Narrated city hiking tou"], 
+    not_included: ["Gratuities", "Food and drinks", "Coit Tower elevator"],
+    additional_info: ["Confirmation will be received at time of booking",  "Not wheelchair accessible", "Due to the distance and intensity of the hike, this tour is not recommended for children 12 years and younger", "Tour runs rain or shine. If it is raining and you would prefer not to attend, you may reschedule or request a refund", "Comfortable shoes or hiking boots and dressing in layers is recommended", "Bringing water is recommended", "Minimum numbers apply. There is a possibility of cancellation after confirmation if there are not enough participants to meet requirements. In the event of this occurring, you will be offered an alternative or full refund","Minimum numbers apply. There is a possibility of cancellation after confirmation if there are not enough participants to meet requirements. In the event of this occurring, you will be offered an alternative or full refund", "This tour/activity will have a maximum of 20 travelers"], 
+    spaces_available: 20, 
+    location_id: 1, 
+    time_estimate: '3 hours (Approx.)', 
+    language: 'English',
+    price: 58)
 
-
+t4 = Tour.create!(name: "San Francisco is undoubtedly a hilly place, and this challenging 5-mile walking tour doesn’t shy away from the steepness. Instead, it takes you off the beaten path and onto some of the city’s stairways for an incredible exploration of several neighborhoods and downtown attractions. While meandering through SF’s Russian Hill, Telegraph Hill and North Beach neighborhoods, you’ll come upon some hidden gems, jaw-dropping views, and world-famous sites. Climb to Coit Tower via the Filbert Street Steps; ascend Lombard Street, often referred to as the crookedest street in the world; and discover a tiny park overlooking St Peter and Paul Church, where Marilyn Monroe and Joe DiMaggio took their wedding pics after tying the knot at San Francisco City Hall.",
+    included: ["Professional guide", "Narrated city hiking tou"], 
+    not_included: ["Gratuities", "Food and drinks", "Coit Tower elevator"],
+    additional_info: ["Confirmation will be received at time of booking",  "Not wheelchair accessible", "Due to the distance and intensity of the hike, this tour is not recommended for children 12 years and younger", "Tour runs rain or shine. If it is raining and you would prefer not to attend, you may reschedule or request a refund", "Comfortable shoes or hiking boots and dressing in layers is recommended", "Bringing water is recommended", "Minimum numbers apply. There is a possibility of cancellation after confirmation if there are not enough participants to meet requirements. In the event of this occurring, you will be offered an alternative or full refund","Minimum numbers apply. There is a possibility of cancellation after confirmation if there are not enough participants to meet requirements. In the event of this occurring, you will be offered an alternative or full refund", "This tour/activity will have a maximum of 20 travelers"], 
+    spaces_available: 20, 
+    location_id: 1, 
+    time_estimate: '3 hours (Approx.)', 
+    language: 'English',
+    price: 58)
