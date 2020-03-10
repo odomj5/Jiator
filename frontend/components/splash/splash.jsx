@@ -2,7 +2,7 @@ import React from 'react';
 
 const Splash = () => (
 <div className="splash-div">
-    <img src={window.GGbridgeURL} />
+        <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/splash/GGbridge.jpg"/>
     <div className="icon-bar">
         <div className='icon-1'>
             <i className="fas fa-ticket-alt"></i>

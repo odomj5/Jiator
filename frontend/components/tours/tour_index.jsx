@@ -9,7 +9,8 @@ class TourIndex extends React.Component {
     render() {
         return(
             <div className="index-div">
-                <img src={window.SFindexURL} className="t-index-img"/>
+                <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/index/SFindex.jpeg"
+                className="t-index-img"/>
                 <ul>
                     {this.props.tours.map(tour => 
                     <TourIndexItem tour={tour} key={tour.id} /> )}
