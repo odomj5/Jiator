@@ -33,7 +33,7 @@ class TourShow extends React.Component {
                 </h1>
                 <div className='booking-outer-div'>
                     {/* <img className="default-img" src={this.props.tour.photoUrls[0]}/> */}
-                    <PhotoMain photos={this.props.tour.photoUrls}/>
+                    <PhotoMain photos={this.props.tour.photoUrls} className="photo-main"/>
                     <div className="booking-div-cont">
 
                         <div className="booking-div">
