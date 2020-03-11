@@ -12,16 +12,17 @@ class TourIndexItem extends React.Component {
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
-                    <div className='idx-tour-l'>{this.props.tour.language}</div>
+                    <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>
                     
                 </div>
                 <div className='index-item-booking'>
                     <div className='idx-tour-p'>from <span className="price-span">${this.props.tour.price}</span> </div>
-                    <div>{this.props.tour.spacesAvailable}</div>
+                    <div className="learn-more-div">Learn More</div>
+                    <div className="idx-tour-spaces">{this.props.tour.spacesAvailable} spaces available!</div>
                     <div className='idx-tour-t'>{this.props.tour.timeEstimate}</div>
-                    <div className='idx-tour-c'>Free Cancellation</div>
+                    <div className='idx-tour-c'><i className="fas fa-check"></i> Free Cancellation</div>
                 </div>
-                <span></span>
+                
             </div>
         )
     }

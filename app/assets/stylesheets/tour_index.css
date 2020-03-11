@@ -61,13 +61,24 @@
 .idx-more {
    color: blue;
    font-size: 12px;
+   margin-bottom: 25px;
    
+}
+
+.idx-tour-l {
+   font-size: 15px;
+   /* font-weight: bold; */
+}
+
+.lan-span {
+   /* font-size: 13px; */
+   font-weight: lighter;
 }
 
 .index-item-booking {
    display: flex;
    flex-direction: column;
-   justify-content: space-around;
+   justify-content: flex-start;
    margin-left: 1%;
    margin-right: 1%;
    min-width: 200px;
@@ -75,7 +86,47 @@
 
 }
 
-.price-span {
-   font-weight: bold;
-   /* color: red; */
+.idx-tour-p {
+   text-align: center;
+   margin-bottom: 15px;
 }
+
+.price-span {
+   font-weight: bolder;
+   font-size: 20px;
+}
+
+.learn-more-div {
+   background-color: rgb(163, 6, 6);
+   color: white;
+   font-weight: bolder;
+   border-radius: 1px;
+   text-align: center;
+   margin-left: 10px;
+   margin-right: 10px;
+   padding: 2px;
+   margin-bottom: 10px;
+
+}
+
+.idx-tour-spaces {
+   font-style: italic;
+   font-weight: lighter;
+   font-size: 14px;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.idx-tour-t {
+   font-size: 10px;
+   margin-top: 12px;
+   text-align: center;
+}
+
+.idx-tour-c {
+   font-size: 10px;
+   text-align: center;
+   margin-top: 5px;
+
+}
+
