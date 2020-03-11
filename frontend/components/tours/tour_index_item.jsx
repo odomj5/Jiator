@@ -1,12 +1,24 @@
 import React from 'react'
 
 class TourIndexItem extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.selectTour = this.selectTour.bind(this)
+    }
+
+    selectTour(id) {
+        this.props.history.push(`/api/tours/${id}`)
+    }
+
     render() {
         // debugger
         let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
 
+        // debugger
+
         return(
-            <div className="index-item-div">
+            <div className="index-item-div" onClick={() => this.selectTour(this.props.tour.id)}>
                 <img src={this.props.tour.photoUrls[0]} />
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>

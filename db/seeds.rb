@@ -94,7 +94,7 @@ t5 = Tour.create!(name: "Golden Gate Park Segway Tour",
     location_id: 1, 
     time_estimate: '2.5 hours (Approx.)', 
     language: 'English',
-    price: 60)
+    price: 80)
 
     t5.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/ggp/gg1.jpg"), filename: "gg1.jpg")
     t5.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/ggp/gg2.jpg"), filename: "gg2.jpg")
