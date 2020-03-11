@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const Greeting = ({ currentUser, logout, openModal }) => {
     const display = currentUser ? (<hgroup className="header-group">
         <h2 className="header-name">{currentUser.firstName} are you ready to explore SF?</h2>
-        <button className="header-button" onClick={logout} ><i class="fas fa-sign-out-alt"></i>Log Out</button>
+        <button className="header-button" onClick={logout} ><i className="fas fa-sign-out-alt"></i>Log Out</button>
     </hgroup>) : (
             <nav className="login-signup">
                 <button onClick={() => openModal('login')} className="nav-button"><i className="far fa-user-circle"></i>Login</button>

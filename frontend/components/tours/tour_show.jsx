@@ -3,11 +3,6 @@ import PhotoMain from "../photos/photo_main"
 
 
 class TourShow extends React.Component {
-
-    // constructor(props){
-    //     super(props)
-    //     this.state = this.props.tour
-// }
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
@@ -29,7 +24,6 @@ class TourShow extends React.Component {
                     {this.props.tour.name}
                 </h1>
                 <div className='booking-outer-div'>
-                    {/* <img className="default-img" src={this.props.tour.photoUrls[0]}/> */}
                     <PhotoMain photos={this.props.tour.photoUrls} className="photo-main"/>
                     <div className="booking-div-cont">
 

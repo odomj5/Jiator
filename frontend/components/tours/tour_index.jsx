@@ -11,10 +11,10 @@ class TourIndex extends React.Component {
             <div className="index-div">
                 <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/index/SFindex.jpeg"
                 className="t-index-img"/>
-                <ul>
+                <div className="tour-index-item-container">
                     {this.props.tours.map(tour => 
                     <TourIndexItem tour={tour} key={tour.id} /> )}
-                </ul>
+                </div>
             </div>
         )
     }
