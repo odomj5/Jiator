@@ -12,14 +12,15 @@ class TourIndexItem extends React.Component {
     }
 
     render() {
-        // debugger
-        let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
 
-        // debugger
+        let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
 
         return(
             <div className="index-item-div" onClick={() => this.selectTour(this.props.tour.id)}>
-                <img src={this.props.tour.photoUrls[0]} />
+                <div className="image-cont">
+                    <img src={this.props.tour.photoUrls[0]} 
+                    className="idx-tour-img"/>
+                </div>
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
                     <div className='idx-tour-o'>{ovrSnip}</div>
