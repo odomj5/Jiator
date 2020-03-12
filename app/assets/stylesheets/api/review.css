@@ -3,6 +3,10 @@
     font-weight: bold;
 }
 
+.review-index-div {
+    margin-left: 1%;
+}
+
 .star-title-cont {
     font-size: 12px;
     display: flex;
@@ -13,7 +17,7 @@
 
 .star-icon-div {
     color: #186b6d;
-    margin-left: 2px;
+    /* margin-left: 2px; */
     margin-right: 5px;
     margin-bottom: .5%;
 }

@@ -14,6 +14,14 @@ Tour.destroy_all
 u1 = User.create({:first_name=>"Keanu", :last_name=>"Reeves", :username=>"neo2020", 
     :email=>"theone@thefuture.machines", :password=>"hunter12"})
 
+u2 = User.create!(first_name: "Ryan", last_name: "Leung", username: "sheep", email: "email1@sfaa.com", password:"hunter12" )
+
+u3 = User.create!(first_name: "Oliver", last_name: "Yoon", username: "fiidoD1", email: "registeredemail2@sfaa.com", password:"hunter12" )
+
+u4 = User.create!(first_name: "Victoria", last_name: "Campbell", username: "4yokes", email: "daemail3@sfaa.com", password:"hunter12" )
+
+u5 = User.create!(first_name: "Ryan", last_name: "Mappa", username: "ArmShow01", email: "beastmode@sfaa.com", password:"hunter12" )
+
 
 t1 = Tour.create!(name: "Alcatraz and One Day Bike Rental", 
     overview: "Get two classic San Francisco experiences—a bike ride starting at Fisherman’s Wharf and a visit to the notorious prison island of Alcatraz—in one combined tour package. Take a scenic ferry ride to Alcatraz Island, where you can explore at your own pace on a self-guided audio tour. Use the flexible 1-day bike rental on the day of your choosing and enjoy a safe ride with a helmet included.",
@@ -109,3 +117,148 @@ r1 = Review.create!(title: "First Review!!!",
     rating: 5,
     user_id: u1.id,
     tour_id: t1.id)
+
+r2 = Review.create!(title: "Great, easy experience", 
+    body: "Such a beautiful day to head to Alcatraz. It was an easy process all around. Easy boarding, everything was on time and the experience was wonderful. It’s a move at your own pace tour and we loved that.",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t1.id)
+
+r3 = Review.create!(title: "Alcatraz visit", 
+    body: "I would recommend this visit. Was very compelling. The audio tour was great. Wear comfortable shoes. A lot of walking but worth it.",
+    rating: 5,
+    user_id: u3.id,
+    tour_id: t1.id)
+
+r4 = Review.create!(title: "The BEST", 
+    body: "Not only the Viator employee on the phone but the direct employee, Jason, of the tour service were so accommodating and amazing. They made a last minute booking phone call a reality and it was SOOO worth it. Alcatraz is a must see. So much history and the audio tour is very cool. We used the bike rental to ride to and then over the Golden Gate Bridge, another must see and what a fun way to do it. Thanks Victor and Jason from Alcatraz tours. Top notch folks. This is a very affordable tour as well. $98 for both and took essentially 6 hours so not bad for a full day of entertainment!",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t1.id)
+
+r5 = Review.create!(title: "Brilliant", 
+    body: "Excellent way to see some amazing views of the city with the bike ride and a great way to get on to Alcatraz if all the tickets are sold out for when you’re visiting. Would definitely recommend.",
+    rating: 5,
+    user_id: u5.id,
+    tour_id: t1.id)
+
+r6 = Review.create!(title: "Don’t Miss Experience", 
+    body: "Highly recommend this tour - our guide was funny and super informative. Loved her storytelling ability to engage us while on the bus. Muir Woods, and the road to, was beautiful-and while I would have loved to explore longer, it was the right amount of time for this tour.",
+    rating: 5,
+    user_id: u5.id,
+    tour_id: t2.id)
+
+r7 = Review.create!(title: "Thouroughly Enjoyed",
+    body: "Muir woods was an excellent trip. Absolutely gorgeous and peaceful to walk amongst these massive and spectacular creations of nature. I wish we had more time to sit and enjoy their beauty. The bus ride and our tour guide (Tiana) were excellent very informative and comical. She made us laugh but yet also provided great information and history about what we were seeing while driving through the city. We took the later tour which worked for us this trip but I would take the earlier tour if you want to spend more time in Sausalito and then catch the 2:55 (weekend schedule) Ferry back to San Francisco as it makes two stops before landing by pier 39. Kind of giving you a mini bay cruise.",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t2.id)
+
+r8 = Review.create!(title: "Beautiful Redwoods",
+    body: "Tour guide Josh was great very informative beautiful ride along the way worth seeing only wish other people respected the time of others had to wait 25 minutes on the bus when we left because 1 person did not get back on time cut our 2nd stop of the trip short. still worth it.",
+    rating: 5,
+    user_id: u3.id,
+    tour_id: t2.id)
+
+r9 = Review.create!(title: "Perfect half day trip",
+    body: "Great experience with a great guide. Mr. Chablis was a safe driver, funny and informative. Just the right amount of time at Muir Woods and Sausalito, I highly recommend this tour.",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t2.id)
+
+r10 = Review.create!(title: "Lovely day out",
+    body: "Our driver was Dalilo. He was excellent - very informative. He made a quick photo stop at the Golden Gate Bridge which was appreciated. We drove on to Muir Woods and it was great to park right at the Visitor Centre where the walks begin. We had a full hour and a half to wander amongst the magnificent redwoods. He then took us on to Sausalito where I left to have fish and chips, check out the town and then catch the ferry back to Fisherman’s Wharf.",
+    rating: 5,
+    user_id: u1.id,
+    tour_id: t2.id)
+
+r11 = Review.create!(title: "Greer was outstanding! The tour was...",
+    body: "Greer was outstanding! The tour was very informative and brought us to several outstanding scenic view points. The walk is definitely strenuous as stated in the write-up. Many hills and flights of stairs, but definitely worth the effort! Greer adjusted the pace to the group's comfort level.",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t3.id)
+
+r12 = Review.create!(title: "Really enjoyed seeing and hearing about...",
+    body: "Really enjoyed seeing and hearing about hidden treasures of the city on this tour. The guide Greer was well informed, knowledgable, passionate and helpful I wouldn't consider myself to be fit, I found some of the steep hills difficult but I enjoyed the tour all the same; no pain, no gain.",
+    rating: 5,
+    user_id: u5.id,
+    tour_id: t3.id)
+
+r13 = Review.create!(title: "This tour was fantastic! We visited...",
+    body: "This tour was fantastic! We visited some popular city attractions e.g., Coit Tower and Lombard Street, but many other lesser known neighborhood pocket parks with outstanding views of the city and bay. With all the hills in the city, it's much more than a walking tour -- certainly an exhilarating urban hike! Our guide -- Greer -- was personable and knowledgeable. We highly recommend this hike!",
+    rating: 5,
+    user_id: u3.id,
+    tour_id: t3.id)
+
+r14 = Review.create!(title: "What a wonderful way to see San...",
+    body: "What a wonderful way to see San Francisco, it's a strenuous walk but Alex made sure there were plenty of breaks to take photos and catch our breath. The size of the group made it easy to accommodate everyone's tastes and interests. I would certainly do more walks around the city.",
+    rating: 5,
+    user_id: u1.id,
+    tour_id: t3.id)
+
+r15 = Review.create!(title: "I recently moved to San Francisco and...",
+    body: "I recently moved to San Francisco and signed up for an Urban Hike to become better acquainted with my new hometown! On this hilly walk, I explored some of the city’s famous spots (like Coit Tower and Lombard Street), as well discover hidden gems (such as Jack Early Park and Macondrary Lane). Our tour guide, Alex, was really friendly and shared some engaging stories about the locations we visited. The hike isn’t too strenuous, you’ll definitely get a good calf workout. I’d suggest wearing comfortable walking shoes and bringing a bottle of water. Whether you’re a local or here on vacation, I highly recommend this tour!",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t3.id)
+
+r16 = Review.create!(title: "Awesome experience",
+    body: "We had the best time with this cruise. The crew is super friendly and fun. They made sure we had a great experience, especially Ceasar. To top it off we got to see sunset and moon rise, double treat. It was gorgeous!!",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t4.id)
+
+r17 = Review.create!(title: "Boston crew",
+    body: "Loved everything about this tour!! Operators were great.! Appetizers, drink variety fantastic! Views were amazing , perfect night for a sunset cruise!!Other guests were nice and fun .",
+    rating: 5,
+    user_id: u5.id,
+    tour_id: t4.id)
+
+r18 = Review.create!(title: "Enjoyable experience!",
+    body: "It was great. Perfect way to spend my first evening EVER in San Francisco! The guides were amazing and I’d definitely go again in my next visit.",
+    rating: 5,
+    user_id: u1.id,
+    tour_id: t4.id)
+
+r19 = Review.create!(title: "Beautiful sunset!!!",
+    body: "It was so beautiful!!! My favorite activity in San Francisco! Definitely would recommend!! Wonderful friendly people",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t4.id)
+
+r20 = Review.create!(title: "Sailing into the sunset",
+    body: "Relaxed friendly crew; Plenty of space; generous snacks & drinks and warm jackets in the stunning San Francisco Bay. Not to be missed",
+    rating: 5,
+    user_id: u3.id,
+    tour_id: t4.id)
+
+r21 = Review.create!(title: "Segway tour of San Francisco",
+    body: "Oh my gosh what a great tour. Good equipment and a fantastic tour layout. We took two tours. Brandon and Jeff are the best and most knowledgeable in the areas history.",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t5.id)
+
+r22 = Review.create!(title: "First time on a segway",
+    body: "A brilliant experience that I would highly recommend. Kelly our instructor took us through all the safety training with great care to ensure that everyone was completely at ease on the Segway. We then went on the tour riding on all surfaces finishing off with some off road trail routes. Well done Kelly - great job from start to finish 😀",
+    rating: 5,
+    user_id: u3.id,
+    tour_id: t5.id)
+
+r23 = Review.create!(title: "Fun and informative!",
+    body: "All 9 of us had a great time segwaying thru the park! Learned a lot about the history, plants and animals. SunDog was a great tour guide!",
+    rating: 5,
+    user_id: u1.id,
+    tour_id: t5.id)
+
+r24 = Review.create!(title: "A fantastic time!!",
+    body: "We had a great time riding on the segways, seeing a ton of it, and learning about the park from our awesome guide Kelly!!",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t5.id)
+
+r25 = Review.create!(title: "Awesome tour!",
+    body: "My family loved this Segway tour! Juannas was our tour guide and was extremely knowledgeable and made the tour super fun!",
+    rating: 5,
+    user_id: u5.id,
+    tour_id: t5.id)
+
