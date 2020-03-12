@@ -5,6 +5,8 @@ import Root from "./components/root"
 import { login, signup } from "./actions/session_actions"
 import {requestTour, requestTours} from "./actions/tour_actions"
 import {fetchTour, fetchTours} from "./util/tour_api_util"
+import {fetchReviews, fetchReview} from "./util/review_api_util"
+import {requestReview, requestReviews} from "./actions/review_actions"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,6 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.requestTours = requestTours;
     window.fetchTour = fetchTour;
     window.fetchTours = fetchTours;
+    window.fetchReviews = fetchReviews;
+    window.fetchReview = fetchReview
+    window.requestReview = requestReview
+    window.requestReviews = requestReviews
 
     //Testing
 

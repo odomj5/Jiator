@@ -35,4 +35,6 @@ class User < ApplicationRecord
         self.session_token ||= SecureRandom.base64
     end
 
+    has_many :reviews
+
 end

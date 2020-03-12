@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+Review.destroy_all
 User.destroy_all
 Tour.destroy_all
 
@@ -87,7 +88,7 @@ t4 = Tour.create!(name: "San Francisco Bay Sunset Catamaran Cruise",
 
 t5 = Tour.create!(name: "Golden Gate Park Segway Tour",
     overview: "Explore San Francisco’s beautiful Golden Gate Park on this 2.5-hour Segway tour. Led by a local guide, you’ll pass top attractions like the Japanese Tea Gardens, the de Young Museum and the California Academy of Sciences. All equipment is included, as well as a safety training. Cover even more ground on a Segway as you soak up Golden Gate Park's rich history and hidden gems from your guide.",
-    included: ["2.5-hour Segway training and tour", "2.5-hour Segway training and tour"], 
+    included: ["2.5-hour Segway training and tour", "Helmet and safety vest - Jackets and gloves available for foggy days"], 
     not_included: ["Gratuities", "Food and drinks"],
     additional_info: ["Confirmation will be received at time of booking, unless booked within 2 days of travel. In this case confirmation will be received within 48 hours, subject to availability",  "SEGWAY RIDER REQUIREMENTS:", "All guests must be age 12 or older.", "All guests must weigh between 100-250 lbs or 45-113 kilos.", "Riders under 18 must be accompanied by a parent or guardian on the tour.", "No pregnant guests are allowed due to safety reasons.", "This activity is not recommended for some guests that are: ages 70 years and older, have had recent surgeries or have motor skill/control issues.", "Each customer must sign a Liability Waiver.", "Helmets and safety vests are provided and are required.", "All participants must be able to easily and quickly step on and off the Segway without assistance", "All participants must be able to easily and quickly step on and off the Segway without assistance", "Not wheelchair accessible", "Near public transportation", "Most travelers can participate", "This tour/activity will have a maximum of 8 travelers"], 
     spaces_available: 8, 
@@ -103,3 +104,8 @@ t5 = Tour.create!(name: "Golden Gate Park Segway Tour",
     t5.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/ggp/gg5.jpg"), filename: "gg5.jpg")
 
 
+r1 = Review.create!(title: "First Review!!!", 
+    body: "The tour lived up to the hype.",
+    rating: 5,
+    user_id: u1.id,
+    tour_id: t1.id)
