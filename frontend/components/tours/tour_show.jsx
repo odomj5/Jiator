@@ -1,11 +1,13 @@
 import React from 'react'
 import PhotoMain from "../photos/photo_main"
+import Review from "../reviews/review"
 
 
 class TourShow extends React.Component {
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
+        // this.props.requestReviews(this.props.match.params.tourId)
     }
 
     componentDidUpdate(prevProps) {
@@ -84,6 +86,12 @@ class TourShow extends React.Component {
                             <li key={idx}><i className="fas fa-circle"></i> {info}</li>))}</ul>
                     </div>
                 </div>
+                <Review 
+                    reviews={this.props.reviews}
+                    tour={this.props.tour}
+                    requestReviews={this.props.requestReviews}
+
+                />  
             </div>
         )
         

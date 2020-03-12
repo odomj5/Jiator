@@ -1,0 +1,30 @@
+.review-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.star-title-cont {
+    font-size: 12px;
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: .5%;
+
+}
+
+.star-icon-div {
+    color: #186b6d;
+    margin-left: 2px;
+    margin-right: 5px;
+    margin-bottom: .5%;
+}
+
+.username-date-cont {
+    font-size: 10px;
+    display: flex;
+}
+
+.body-cont {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: .5%;
+}
