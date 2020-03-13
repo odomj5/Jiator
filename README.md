@@ -3,6 +3,8 @@ App Academy - Full Stack Project
 
 [View the live site ](https://jiator.herokuapp.com/#/)
 
+![](app/assets/images/homepage.png/homepage)
+
 
 Jiator, inspired by [Viator](https://www.viator.com/), is the world leader in offering amazing tours, activities, and travel experiences around the world
 
