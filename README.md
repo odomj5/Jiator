@@ -1,4 +1,5 @@
-#Jiator - App Academy Full Stack Project
+# Jiator 
+App Academy - Full Stack Project 
 
 [View the live site ](https://jiator.herokuapp.com/#/)
 
