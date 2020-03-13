@@ -12,7 +12,7 @@ import {
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import Modal from './modal/modal'
 import SplashContainer from './splash/splash_container'
-
+import Footer from "./footer/footer"
 const App = () => (
     <div>
         <Modal/>
@@ -20,7 +20,7 @@ const App = () => (
         <Route to="/" component={SplashContainer} /> */}
         <Route path="/" component={GreetingContainer} />
         <Route exact path="/" component={SplashContainer} />
-
+        
         {/* Using modal for login and signup   */}
          <Switch>    
             <Route exact path="/api/tours/:tourId" component={TourShowContainer} />
@@ -28,7 +28,7 @@ const App = () => (
 
 
         </Switch>
-
+        <Route path="/" component={Footer} />
     </div>
 )
 

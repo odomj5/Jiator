@@ -29,7 +29,7 @@ class ReviewIndex extends React.Component {
                 </div> 
                 <div className="username-date-cont">
                 <div>{year} {months[month]} {day}</div>
-                <div>{this.props.review.user}</div>
+                <div className="review-user">{this.props.review.user}</div>
                 </div>
                 <div className="body-cont">
                     <div className>{this.props.review.body}</div>
