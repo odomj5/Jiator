@@ -1,6 +1,6 @@
-import {connect} from 'react-redux'
-import {requestTours} from '../../actions/tour_actions'
-import TourIndex from './tour_index'
+import {connect} from 'react-redux';
+import {requestTours} from '../../actions/tour_actions';
+import TourIndex from './tour_index';
 
 const mSTP = state => {
     return({
