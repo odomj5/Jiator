@@ -1,4 +1,5 @@
 import React from 'react';
+import SplashIndexContainer from "./splash_index_container"
 
 const Splash = () => (
 <div className="splash-div">
@@ -25,6 +26,7 @@ const Splash = () => (
             <div className='icon-5-text'>A Jonadvisor Company</div>
         </div>
     </div>
+    <SplashIndexContainer />
 </div>
 )
 
