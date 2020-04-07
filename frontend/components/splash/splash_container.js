@@ -6,7 +6,6 @@ const mDTP = dispatch => ({
 })
 
 const mSTP = (state, ownProps) => {
-    debugger
     return({
         history: ownProps.history,
         location: ownProps.location,
