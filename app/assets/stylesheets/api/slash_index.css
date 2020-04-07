@@ -1,4 +1,26 @@
+.splash-idx-div > h2 {
+    font-size: 40px;
+    color: #022c4b;
+    text-align: center;
+    background-color: #ebf3f5;
+    padding: 20px;
+}
+
+
+.splash-idx-cont {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.splash-idx-item-cont {
+    max-width: 300px;
+    height: 375px;
+}
+
 .splash-idx-item-cont > img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 100%;
+    max-height: 175px;
 }
