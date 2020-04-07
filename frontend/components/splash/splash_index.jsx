@@ -6,17 +6,19 @@ class SplashIndex extends React.Component {
         this.props.requestTours();
     }
 
+    tourIndex() {
+        this.props.history.push('/api/tours')
+    }
+
 
     render() {
         return(
             <div className="splash-idx-div">
-                <h2>Explore San Francisco</h2>
+                <h2 onClick={() => this.tourIndex()}>Explore San Francisco</h2>
                 <div className="splash-idx-cont">
                     {this.props.tours.map(tour =>
                         <SplashIndexItem tour={tour} key={tour.id}
-                            history={this.props.history}
-                            location={this.props.location}
-                            match={this.props.match}
+                            
 
 
                         />)}

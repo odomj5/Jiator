@@ -26,7 +26,8 @@ const Splash = () => (
             <div className='icon-5-text'>A Jonadvisor Company</div>
         </div>
     </div>
-    <SplashIndexContainer />
+    <SplashIndexContainer 
+    />
 </div>
 )
 
