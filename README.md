@@ -32,6 +32,8 @@ Jiator, inspired by [Viator](https://www.viator.com/), is the world leader in of
 ## User Authentication
 Users can create an account and log in. User authentication for this web application was made using the BCrypt gem and SecureRandom module.
 
+![modal](app/assets/images/signupmodal.png)
+
 ## Tours 
 Tours are listed for booking. Tour listings include: price, overview, included features, additional info, spaces available, length of time, and languages available in.
 

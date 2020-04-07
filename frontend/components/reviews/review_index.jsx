@@ -13,7 +13,6 @@ class ReviewIndex extends React.Component {
             'October', 'November', 'December'
         ]
 
-        // debugger
         return(
             <div className="review-index-div">
                <div className="star-title-cont">

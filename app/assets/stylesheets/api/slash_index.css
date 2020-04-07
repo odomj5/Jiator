@@ -1,0 +1,64 @@
+.splash-idx-div > h2 {
+    font-size: 40px;
+    color: #022c4b;
+    text-align: center;
+    background-color: #ebf3f5;
+    padding: 20px;
+}
+
+
+.splash-idx-cont {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.splash-idx-item-cont {
+    position: relative;
+    max-width: 350px;
+    height: 350px;
+    border: 1px solid #babebe;
+    margin-bottom: 10px;
+}
+
+.splash-idx-item-cont > img {
+    max-width: 100%;
+    max-height: 275px;
+    min-height: 60%;
+}
+
+.splash-idx-item-cont > h5 {
+    margin: 5px;
+    font-size: 12px;
+    color: #2a2d32;
+}
+
+.splash-idx-item-cont > h2 {
+    font-size: 16px;
+    margin: 15px 5px 10px 5px;
+    font-family: Raleway, Helvetica, Arial;
+}
+
+.splash-idx-item-cont > h3 {
+    font-size: 14px;
+    position: absolute;
+    margin-left: 5px;
+    bottom: 8%;
+}
+
+.splash-idx-item-cont > h4 {
+   margin: 15px 5px 0px 5px;
+   font-size: 12px;  
+   color: #2a2d32;
+   position: absolute;
+   bottom: 2px;
+}
+
+.splash-idx-item-cont > h4 > span {
+    font-size: 16px;
+    font-weight: bold;
+}

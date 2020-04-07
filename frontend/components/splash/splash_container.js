@@ -5,8 +5,12 @@ const mDTP = dispatch => ({
 
 })
 
-const mSTP = state => ({
-
-})
+const mSTP = (state, ownProps) => {
+    return({
+        history: ownProps.history,
+        location: ownProps.location,
+        mathch: ownProps.mathch
+    })
+}
 
 export default connect(mSTP, mDTP)(Splash)
