@@ -18,6 +18,7 @@
 }
 
 .splash-idx-item-cont {
+    position: relative;
     max-width: 350px;
     height: 350px;
     border: 1px solid #babebe;
@@ -31,21 +32,30 @@
 }
 
 .splash-idx-item-cont > h5 {
-    margin: 2px;
+    margin: 5px;
     font-size: 12px;
     color: #2a2d32;
 }
 
 .splash-idx-item-cont > h2 {
     font-size: 16px;
-    margin: 2px;
+    margin: 15px 5px 10px 5px;
     font-family: Raleway, Helvetica, Arial;
 }
 
+.splash-idx-item-cont > h3 {
+    font-size: 14px;
+    position: absolute;
+    margin-left: 5px;
+    bottom: 8%;
+}
+
 .splash-idx-item-cont > h4 {
-   margin: 2px;
+   margin: 15px 5px 0px 5px;
    font-size: 12px;  
    color: #2a2d32;
+   position: absolute;
+   bottom: 2px;
 }
 
 .splash-idx-item-cont > h4 > span {
