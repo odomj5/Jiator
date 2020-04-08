@@ -2,9 +2,17 @@ import React from 'react'
 
 class SplashIndexItem extends React.Component {
 
+
+    selectTour(id) {
+        // debugger 
+        this.props.history.push(`/api/tours/${id}`)
+    }
+
     render () {
         return(
-            <div className="splash-idx-item-cont">
+            <div className="splash-idx-item-cont"
+                onClick={() => this.selectTour(this.props.tour.id)}
+            >
                 <img src={this.props.tour.photoUrls[1]}/>
                 <h5> <i className="fas fa-globe"></i> San Francisco, United States</h5>
                 <h2>{this.props.tour.name}</h2>

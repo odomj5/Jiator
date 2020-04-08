@@ -18,9 +18,9 @@ class SplashIndex extends React.Component {
                 <div className="splash-idx-cont">
                     {this.props.tours.map(tour =>
                         <SplashIndexItem tour={tour} key={tour.id}
-                            
-
-
+                            history={this.props.history}
+                            location={this.props.location}
+                            match={this.props.match}  
                         />)}
                 </div>
             </div>
