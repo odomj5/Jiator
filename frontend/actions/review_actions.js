@@ -45,19 +45,19 @@ export const requestReview = reviewId => dispatch => {
         (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const createReview = (tourId, review) => {
+export const createReview = (tourId, review) => dispatch => {
     return APIUtil.createReview(tourId, review)
     .then((review) => dispatch(receiveReview(review)),
         (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const updateReview = review => {
+export const updateReview = review => dispatch => {
     return APIUtil.updateReview(review)
     .then(review => dispatch(receiveReview(review)),
         (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const deleteReview = reviewId => {
+export const deleteReview = reviewId => dispatch => {
     return APIUtil.deleteReview(reviewId)
         .then( () => dispatch(removeReview(reviewId)),
             (errors) => dispatch(receiveErrors(errors.responseJSON)))

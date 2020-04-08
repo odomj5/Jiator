@@ -15,6 +15,7 @@ class Review extends React.Component {
         return(
             <div className="review-div">
                 <div className="review-header">Reviews
+                <button>Leave A Review</button>
 
                 {this.props.reviews.map(review => 
                 <ReviewIndex 
