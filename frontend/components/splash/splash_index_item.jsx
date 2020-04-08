@@ -4,7 +4,6 @@ class SplashIndexItem extends React.Component {
 
 
     selectTour(id) {
-        // debugger 
         this.props.history.push(`/api/tours/${id}`)
     }
 
