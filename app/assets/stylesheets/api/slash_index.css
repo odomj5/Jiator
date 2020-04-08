@@ -22,19 +22,34 @@
     max-width: 350px;
     height: 350px;
     border: 1px solid #babebe;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    /* overflow: hidden; */
 }
 
-.splash-idx-item-cont > img {
+.img-cont {
+    overflow: hidden;
+}
+
+.splash-idx-item-cont > .img-cont > img {
     max-width: 100%;
     max-height: 275px;
     min-height: 60%;
+}
+
+.splash-idx-item-cont > .img-cont > img:hover {
+   position: relative;
+   cursor: pointer;
+   transform: scale(1.2);
+   -webkit-transform: scale(1.2);
+   -moz-transform: scale(1.2);
+   z-index: 0;
 }
 
 .splash-idx-item-cont > h5 {
     margin: 5px;
     font-size: 12px;
     color: #2a2d32;
+    overflow: hidden;
 }
 
 .splash-idx-item-cont > h2 {

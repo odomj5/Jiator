@@ -12,8 +12,10 @@ class SplashIndexItem extends React.Component {
         return(
             <div className="splash-idx-item-cont"
                 onClick={() => this.selectTour(this.props.tour.id)}
-            >
-                <img src={this.props.tour.photoUrls[1]}/>
+                >
+                <div className="img-cont">
+                    <img src={this.props.tour.photoUrls[1]}/>
+                </div>
                 <h5> <i className="fas fa-globe"></i> San Francisco, United States</h5>
                 <h2>{this.props.tour.name}</h2>
                 <h3>Review</h3>
