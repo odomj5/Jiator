@@ -4,11 +4,10 @@ import { requestTour } from "../../actions/tour_actions";
 import ReviewFrom from "./review_form";
 import {closeModal} from "../../actions/modal_actions";
 
-const mSTP = (state, ownProps) => {
+const mSTP = (state) => {
+    // debugger
     return ({
-       userId: state.session.id, 
-       tourId: ownProps.match.params.tourId, 
-       tour: state.entities.tours[ownProps.match.params.tourId]
+       userId: state.session.id
 
     })
 }

@@ -6,6 +6,7 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/review_form_container';
 
 function Modal({ modal, closeModal, clearErrors }) {
+
     if (!modal) {
         return null;
     }
@@ -19,9 +20,11 @@ function Modal({ modal, closeModal, clearErrors }) {
             break;
         case "review":
             component = <ReviewFormContainer />;
+            break;
         default:
             return null;
     }
+
     return (
         <div className="modal-background" onClick={closeModal} onChange={clearErrors}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
