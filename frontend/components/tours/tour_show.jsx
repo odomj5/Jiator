@@ -90,6 +90,7 @@ class TourShow extends React.Component {
                     reviews={this.props.reviews}
                     tour={this.props.tour}
                     requestReviews={this.props.requestReviews}
+                    openModal={this.props.openModal}
 
                 />  
             </div>

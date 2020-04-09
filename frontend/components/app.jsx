@@ -13,11 +13,10 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util'
 import Modal from './modal/modal'
 import SplashContainer from './splash/splash_container'
 import Footer from "./footer/footer"
+
 const App = () => (
     <div>
         <Modal/>
-        {/* <Route to="/" component={GreetingContainer} />
-        <Route to="/" component={SplashContainer} /> */}
         <Route path="/" component={GreetingContainer} />
         <Route exact path="/" component={SplashContainer} />
         
