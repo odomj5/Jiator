@@ -16,6 +16,8 @@ class ReviewForm extends React.Component {
         e.preventDefault();
         let review = Object.assign({}, this.state)
         review.rating = parseInt(this.state.rating)
+        debugger
+        review.tourId = this.props.tourId 
         this.props.createReview(this.props.tourId, review)
     }
 

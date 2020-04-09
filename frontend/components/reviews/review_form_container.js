@@ -3,9 +3,10 @@ import { createReview, updateReview } from "../../actions/review_actions";
 import { requestTour } from "../../actions/tour_actions";
 import ReviewFrom from "./review_form";
 import {closeModal} from "../../actions/modal_actions";
+import { withRouter } from 'react-router-dom';
+
 
 const mSTP = (state) => {
-    // debugger
     return ({
        userId: state.session.id,
        errors: state.errors.reviewErrors
@@ -22,4 +23,4 @@ const mDTP = dispatch => {
     })
 }
 
-export default connect(mSTP, mDTP)(ReviewFrom)
+export default connect(mSTP, mDTP)(withRouter(ReviewFrom))
