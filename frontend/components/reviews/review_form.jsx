@@ -23,10 +23,25 @@ class ReviewForm extends React.Component {
         return e => this.setState({[inputType]: e.target.value})
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+
     render() {
         return(
             <div className="review-form">
                 <form onSubmit={this.handleSubmit}>
+                    <div className="review-errors">
+                        {this.renderErrors()}
+                    </div>
                     <label>Title:
                         <input 
                             type="text"

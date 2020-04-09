@@ -7,7 +7,8 @@ import {closeModal} from "../../actions/modal_actions";
 const mSTP = (state) => {
     // debugger
     return ({
-       userId: state.session.id
+       userId: state.session.id,
+       errors: state.errors.reviewErrors
 
     })
 }
