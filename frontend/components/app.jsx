@@ -17,8 +17,8 @@ import reviewModal from "./modal/reviewModal"
 
 const App = () => (
     <div>
-        <Modal/>
-        {/* <Route path="/" component={Modal}/> */}
+        {/* <Modal/> */}
+        <Route path='/api/tours/:tourId' component={Modal}/>
         <Route path="/" component={GreetingContainer} />
         <Route exact path="/" component={SplashContainer} />
         

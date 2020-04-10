@@ -6,7 +6,6 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/review_form_container';
 import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
-import ReviewModal from "../modal/reviewModal"
 
 
 function Modal({ modal, closeModal, clearErrors }) {
@@ -22,9 +21,9 @@ function Modal({ modal, closeModal, clearErrors }) {
         case 'signup':
             component = <SignupFormContainer />;
             break;
-        // case "review":
-        //     component = <ReviewModal />;
-        //     break;
+        case "review":
+            component = <ReviewFormContainer />;
+            break;
         default:
             return null;
     }

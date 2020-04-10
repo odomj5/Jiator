@@ -1,10 +1,12 @@
 import React from "react"
 import ReviewIndex from "./review_index"
+import ReviewForm from "./review_form"
 
 class Review extends React.Component {
 
 
     componentDidMount() {
+        debugger
         this.props.requestReviews(this.props.tour.id)
     }
 
@@ -23,7 +25,6 @@ class Review extends React.Component {
                     review={review}
                     // user={review.user}
                 />)}
-
                 </div>
 
                
