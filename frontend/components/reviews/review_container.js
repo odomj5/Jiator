@@ -16,4 +16,4 @@ const mDTP = dispatch => {
 }
 
 
-export default connect(mDTP)(Review)
+export default connect(null, mDTP)(Review)

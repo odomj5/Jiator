@@ -10,7 +10,7 @@ class Review extends React.Component {
 
     render() {
         if (this.props.reviews === undefined) return null 
-        debugger
+        // debugger
         return(
             <div className="review-div">
                 <div className="review-header">Reviews
