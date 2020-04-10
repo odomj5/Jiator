@@ -7,7 +7,7 @@ class ReviewForm extends React.Component {
         this.state = {
             title: "", 
             body: "",
-            rating: ""
+            rating: 5
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,8 +17,7 @@ class ReviewForm extends React.Component {
         e.preventDefault();
         let review = Object.assign({}, this.state)
         review.rating = parseInt(this.state.rating)
-        debugger
-        review.tourId = this.props.tourId 
+        review.tour_id = this.props.tourId 
         this.props.createReview(this.props.tourId, review)
     }
 

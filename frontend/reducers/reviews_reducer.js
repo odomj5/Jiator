@@ -1,6 +1,7 @@
 import {RECEIVE_REVIEW, RECEIVE_REVIEWS, REMOVE_REVIEW} from "../actions/review_actions"
 
 const ReviewsReducer = (state = {}, action) => {
+    // debugger
     Object.freeze(state)
     let newState = Object.assign({}, state)
     switch (action.type) {

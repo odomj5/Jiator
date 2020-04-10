@@ -23,7 +23,6 @@ class Review extends React.Component {
                     review={review}
                     // user={review.user}
                 />)}
-                {/* {this.props} */}
                 </div>
 
                

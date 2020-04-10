@@ -46,8 +46,9 @@ export const requestReview = reviewId => dispatch => {
 }
 
 export const createReview = (tourId, review) => dispatch => {
+    debugger
     return APIUtil.createReview(tourId, review)
-    .then((review) => dispatch(receiveReview(review)),
+    .then((reviews) => dispatch(receiveReviews(reviews)),
         (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 

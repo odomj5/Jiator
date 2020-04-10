@@ -2,6 +2,7 @@ class Api::ReviewsController < ApplicationController
     
     # nested under tours 
     def index 
+        debugger
         @reviews = Review.where(tour_id: params[:tour_id])
     end
 
@@ -12,12 +13,12 @@ class Api::ReviewsController < ApplicationController
 
     #nested under tours 
     def create 
-        @review = Review.new(review_params)
+        # debugger
+        @review = Review.create(review_params)
         @review.user_id = current_user.id
-        @review.tour_id = params[:tour_id]
-
+        # @review.tour_id = params[:tour_id]
         if @review.save 
-            render show
+            render index
         else
             render json: @review.errors.full_messages, status: 422
         end
