@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/review_form_container';
-import { Route } from 'react-router-dom'
-import { withRouter } from 'react-router-dom';
 
 
 function Modal({ modal, tourId, closeModal, clearErrors }) {
@@ -22,9 +20,7 @@ function Modal({ modal, tourId, closeModal, clearErrors }) {
             component = <SignupFormContainer />;
             break;
         case "review":
-            component = <ReviewFormContainer 
-            tourId={tourId}
-            />;
+            component = <ReviewFormContainer />;
             break;
         default:
             return null;
@@ -40,10 +36,8 @@ function Modal({ modal, tourId, closeModal, clearErrors }) {
 }
 
 const mapStateToProps = (state) => {
-    // debugger
     return {
         modal: state.ui.modal,
-        tourId: Object.keys(state.entities.tours)[0]
     };
 };
 

@@ -6,8 +6,7 @@ import {closeModal} from "../../actions/modal_actions";
 import { withRouter } from 'react-router-dom';
 
 
-const mSTP = (state, ownProps) => {
-    debugger
+const mSTP = (state) => {
     return ({
        userId: state.session.id,
        errors: state.errors.reviewErrors,
