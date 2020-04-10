@@ -10,7 +10,8 @@ const mSTP = (state, ownProps) => {
     debugger
     return ({
        userId: state.session.id,
-       errors: state.errors.reviewErrors
+       errors: state.errors.reviewErrors,
+       tourId: Object.keys(state.entities.tours)[0]
 
     })
 }

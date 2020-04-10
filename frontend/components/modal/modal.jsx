@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
 
 
-function Modal({ modal, closeModal, clearErrors }) {
+function Modal({ modal, tourId, closeModal, clearErrors }) {
 
     if (!modal) {
         return null;
@@ -22,7 +22,9 @@ function Modal({ modal, closeModal, clearErrors }) {
             component = <SignupFormContainer />;
             break;
         case "review":
-            component = <ReviewFormContainer />;
+            component = <ReviewFormContainer 
+            tourId={tourId}
+            />;
             break;
         default:
             return null;
@@ -37,10 +39,11 @@ function Modal({ modal, closeModal, clearErrors }) {
     );
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     // debugger
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal,
+        tourId: Object.keys(state.entities.tours)[0]
     };
 };
 

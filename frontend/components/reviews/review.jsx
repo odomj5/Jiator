@@ -6,12 +6,10 @@ class Review extends React.Component {
 
 
     componentDidMount() {
-        debugger
         this.props.requestReviews(this.props.tour.id)
     }
 
     render() {
-
         if (this.props.reviews === undefined) return null 
  
         return(
@@ -25,6 +23,7 @@ class Review extends React.Component {
                     review={review}
                     // user={review.user}
                 />)}
+                {/* {this.props} */}
                 </div>
 
                
