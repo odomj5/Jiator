@@ -12,7 +12,7 @@ class ReviewIndex extends React.Component {
             'June', 'July', 'August', 'September',
             'October', 'November', 'December'
         ]
-
+        // debugger
         return(
             <div className="review-index-div">
                <div className="star-title-cont">
@@ -33,6 +33,8 @@ class ReviewIndex extends React.Component {
                 <div className="body-cont">
                     <div>{this.props.review.body}</div>
                 </div>
+                {this.props.currentUserId === this.props.review.userId ? <button>Delete</button> : null }
+
             </div>
         )
     }   

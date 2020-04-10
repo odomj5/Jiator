@@ -2,7 +2,6 @@ class Api::ReviewsController < ApplicationController
     
     # nested under tours 
     def index 
-        debugger
         @reviews = Review.where(tour_id: params[:tour_id])
     end
 

@@ -11,7 +11,6 @@ class Review extends React.Component {
 
     render() {
         if (this.props.reviews === undefined) return null 
- 
         return(
             <div className="review-div">
                 <div className="review-header">Reviews
@@ -21,7 +20,7 @@ class Review extends React.Component {
                 <ReviewIndex 
                     key={review.id}
                     review={review}
-                    // user={review.user}
+                    currentUserId={this.props.userId}
                 />)}
                 </div>
 

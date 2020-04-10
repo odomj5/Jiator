@@ -6,7 +6,8 @@ import {openModal} from "../../actions/modal_actions";
 const mSTP = (state, ownProps) => {
     return({
         tour: state.entities.tours[ownProps.match.params.tourId],
-        reviews: Object.values(state.entities.reviews)
+        reviews: Object.values(state.entities.reviews),
+        userId: state.session.id
     })
 }
 
