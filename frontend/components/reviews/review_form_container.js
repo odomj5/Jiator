@@ -3,7 +3,6 @@ import { createReview, updateReview } from "../../actions/review_actions";
 import { requestTour } from "../../actions/tour_actions";
 import ReviewFrom from "./review_form";
 import {closeModal} from "../../actions/modal_actions";
-import { withRouter } from 'react-router-dom';
 
 
 const mSTP = (state) => {
