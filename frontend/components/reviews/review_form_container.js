@@ -6,7 +6,8 @@ import {closeModal} from "../../actions/modal_actions";
 import { withRouter } from 'react-router-dom';
 
 
-const mSTP = (state) => {
+const mSTP = (state, ownProps) => {
+    debugger
     return ({
        userId: state.session.id,
        errors: state.errors.reviewErrors
@@ -23,4 +24,4 @@ const mDTP = dispatch => {
     })
 }
 
-export default connect(mSTP, mDTP)(withRouter(ReviewFrom))
+export default connect(mSTP, mDTP)(ReviewFrom)

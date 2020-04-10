@@ -1,30 +1,21 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import LoginFormContainer from '../session_form/login_form_container';
-import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/review_form_container';
 import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router-dom';
-import ReviewModal from "../modal/reviewModal"
 
 
-function Modal({ modal, closeModal, clearErrors }) {
+function reviewModal({ modal, closeModal, clearErrors }) {
 
     if (!modal) {
         return null;
     }
     let component;
     switch (modal) {
-        case 'login':
-            component = <LoginFormContainer />;
+        case "review":
+            component = <ReviewFormContainer />;
             break;
-        case 'signup':
-            component = <SignupFormContainer />;
-            break;
-        // case "review":
-        //     component = <ReviewModal />;
-        //     break;
         default:
             return null;
     }
@@ -39,7 +30,7 @@ function Modal({ modal, closeModal, clearErrors }) {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    // debugger
+    debugger
     return {
         modal: state.ui.modal
     };
@@ -51,4 +42,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(reviewModal);
