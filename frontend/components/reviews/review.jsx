@@ -1,6 +1,5 @@
 import React from "react"
 import ReviewIndex from "./review_index"
-import ReviewForm from "./review_form"
 
 class Review extends React.Component {
 
@@ -11,6 +10,7 @@ class Review extends React.Component {
 
     render() {
         if (this.props.reviews === undefined) return null 
+        debugger
         return(
             <div className="review-div">
                 <div className="review-header">Reviews
@@ -21,6 +21,7 @@ class Review extends React.Component {
                     key={review.id}
                     review={review}
                     currentUserId={this.props.userId}
+                    deleteReview={this.props.deleteReview}
                 />)}
                 </div>
 

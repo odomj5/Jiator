@@ -2,6 +2,11 @@ import React from "react"
 
 class ReviewIndex extends React.Component {
 
+
+    deleteReview(reviewId) {
+        
+    }
+
     render() {
         let upDate = new Date(this.props.review.updatedAt)
         let year = upDate.getFullYear()

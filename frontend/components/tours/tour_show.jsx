@@ -1,6 +1,6 @@
 import React from 'react'
 import PhotoMain from "../photos/photo_main"
-import Review from "../reviews/review"
+import ReviewContainer from "../reviews/review_container"
 
 
 class TourShow extends React.Component {
@@ -86,7 +86,7 @@ class TourShow extends React.Component {
                             <li key={idx}><i className="fas fa-circle"></i> {info}</li>))}</ul>
                     </div>
                 </div>
-                <Review 
+                <ReviewContainer 
                     reviews={this.props.reviews}
                     tour={this.props.tour}
                     tourId={this.props.tour.id}
