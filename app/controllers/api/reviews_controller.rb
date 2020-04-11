@@ -35,9 +35,13 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy 
+        # debugger
         @review = Review.find(params[:id])
+        # debugger
         if @review.destroy
-            render partial: 'api/reviews/review', object: @review
+            # render partial: 'api/reviews/review', object: @review
+            # debugger
+            render index
         else
             render json: @review.errors.full_messages, status: 422
         end

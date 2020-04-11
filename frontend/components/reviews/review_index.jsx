@@ -10,7 +10,7 @@ class ReviewIndex extends React.Component {
 
     deleteReview(e) {
         e.preventDefault();
-        debugger
+        // debugger
         this.props.deleteReview(this.props.review.id)
     }
 
