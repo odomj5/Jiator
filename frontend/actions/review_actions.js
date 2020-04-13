@@ -27,6 +27,7 @@ const receiveErrors = errors => {
 }
 
 const removeReview = reviewId => {
+    debugger
     return({
         type: REMOVE_REVIEW,
         reviewId: reviewId
@@ -46,7 +47,6 @@ export const requestReview = reviewId => dispatch => {
 }
 
 export const createReview = (tourId, review) => dispatch => {
-    debugger
     return APIUtil.createReview(tourId, review)
     .then((reviews) => dispatch(receiveReview(reviews)),
         (errors) => dispatch(receiveErrors(errors.responseJSON)))
@@ -61,7 +61,7 @@ export const updateReview = review => dispatch => {
 export const deleteReview = reviewId => dispatch => {
     debugger
     return APIUtil.deleteReview(reviewId)
-    .then( (review) => dispatch(removeReview(review.id)))
-            // (errors) => dispatch(receiveErrors(errors.responseJSON)))
+    .then( () => dispatch(removeReview(reviewId)),
+        (errors) => dispatch(receiveErrors(errors.responseJSON)))
 }
 

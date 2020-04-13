@@ -6,7 +6,6 @@ class Api::ReviewsController < ApplicationController
     end
 
     def show
-        debugger
         @review = Review.find(params[:id])
  
     end
@@ -18,11 +17,9 @@ class Api::ReviewsController < ApplicationController
         @review.user_id = current_user.id
         # @review.tour_id = params[:tour_id]
         if @review.save 
-            debugger
             redirect_to api_review_url(@review.id) 
         else
             render json: @review.errors.full_messages, status: 422
-            debugger
         end
     end
 
@@ -38,13 +35,9 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy 
-        # debugger
         @review = Review.find(params[:id])
-        # debugger
         if @review.destroy
-            # render partial: 'api/reviews/review', object: @review
-            # debugger
-            render index
+            render :destroy
         else
             render json: @review.errors.full_messages, status: 422
         end

@@ -4,11 +4,11 @@ class ReviewIndex extends React.Component {
     constructor(props) {
         super(props);
 
-        this.deleteReview = this.deleteReview.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
 
-    deleteReview(e) {
+    handleDelete(e) {
         e.preventDefault();
         // debugger
         this.props.deleteReview(this.props.review.id)
@@ -45,7 +45,7 @@ class ReviewIndex extends React.Component {
                 <div className="body-cont">
                     <div>{this.props.review.body}</div>
                 </div>
-                {this.props.currentUserId === this.props.review.userId ? <button onClick={this.deleteReview}>Delete</button> : null }
+                {this.props.currentUserId === this.props.review.userId ? <button onClick={this.handleDelete}>Delete</button> : null }
 
             </div>
         )
