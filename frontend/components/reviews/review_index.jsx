@@ -10,7 +10,6 @@ class ReviewIndex extends React.Component {
 
     handleDelete(e) {
         e.preventDefault();
-        // debugger
         this.props.deleteReview(this.props.review.id)
     }
 
@@ -18,13 +17,13 @@ class ReviewIndex extends React.Component {
         let upDate = new Date(this.props.review.updatedAt)
         let year = upDate.getFullYear()
         let month = upDate.getMonth()
-        let day = upDate.getDay()
+        let day = upDate.getDate()
         const months = [
             'January', 'February', 'March', 'April', 'May',
             'June', 'July', 'August', 'September',
             'October', 'November', 'December'
         ]
-        // debugger
+        debugger
         return(
             <div className="review-index-div">
                <div className="star-title-cont">

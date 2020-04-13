@@ -27,7 +27,6 @@ const receiveErrors = errors => {
 }
 
 const removeReview = reviewId => {
-    debugger
     return({
         type: REMOVE_REVIEW,
         reviewId: reviewId
@@ -59,7 +58,6 @@ export const updateReview = review => dispatch => {
 }
 
 export const deleteReview = reviewId => dispatch => {
-    debugger
     return APIUtil.deleteReview(reviewId)
     .then( () => dispatch(removeReview(reviewId)),
         (errors) => dispatch(receiveErrors(errors.responseJSON)))
