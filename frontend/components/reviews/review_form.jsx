@@ -19,6 +19,8 @@ class ReviewForm extends React.Component {
         review.rating = parseInt(this.state.rating)
         review.tour_id = this.props.tourId 
         this.props.createReview(this.props.tourId, review)
+        this.props.closeModal()
+        
     }
 
     handleInput(inputType) {

@@ -17,9 +17,11 @@ class Api::ReviewsController < ApplicationController
         @review.user_id = current_user.id
         # @review.tour_id = params[:tour_id]
         if @review.save 
-            render index
+            debugger
+            render show
         else
             render json: @review.errors.full_messages, status: 422
+            debugger
         end
     end
 
