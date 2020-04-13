@@ -1,6 +1,18 @@
 import React from "react"
 
 class ReviewIndex extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleDelete = this.handleDelete.bind(this);
+    }
+
+
+    handleDelete(e) {
+        e.preventDefault();
+        // debugger
+        this.props.deleteReview(this.props.review.id)
+    }
 
     render() {
         let upDate = new Date(this.props.review.updatedAt)
@@ -12,7 +24,7 @@ class ReviewIndex extends React.Component {
             'June', 'July', 'August', 'September',
             'October', 'November', 'December'
         ]
-
+        // debugger
         return(
             <div className="review-index-div">
                <div className="star-title-cont">
@@ -33,6 +45,8 @@ class ReviewIndex extends React.Component {
                 <div className="body-cont">
                     <div>{this.props.review.body}</div>
                 </div>
+                {this.props.currentUserId === this.props.review.userId ? <button onClick={this.handleDelete}>Delete</button> : null }
+
             </div>
         )
     }   

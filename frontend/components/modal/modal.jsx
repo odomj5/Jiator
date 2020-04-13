@@ -1,10 +1,13 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import LoginFormContainer from '../session_form/login_form_container'
+import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import ReviewFormContainer from '../reviews/review_form_container';
 
-function Modal({ modal, closeModal, clearErrors }) {
+
+function Modal({ modal, tourId, closeModal, clearErrors }) {
+
     if (!modal) {
         return null;
     }
@@ -16,9 +19,13 @@ function Modal({ modal, closeModal, clearErrors }) {
         case 'signup':
             component = <SignupFormContainer />;
             break;
+        case "review":
+            component = <ReviewFormContainer />;
+            break;
         default:
             return null;
     }
+
     return (
         <div className="modal-background" onClick={closeModal} onChange={clearErrors}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -28,9 +35,9 @@ function Modal({ modal, closeModal, clearErrors }) {
     );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal,
     };
 };
 

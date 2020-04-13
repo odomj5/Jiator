@@ -5,19 +5,19 @@ class Api::ReviewsController < ApplicationController
         @reviews = Review.where(tour_id: params[:tour_id])
     end
 
-    def show 
+    def show
         @review = Review.find(params[:id])
  
     end
 
     #nested under tours 
     def create 
-        @review = Review.new(review_params)
+        # debugger
+        @review = Review.create(review_params)
         @review.user_id = current_user.id
-        @review.tour_id = params[:tour_id]
-
+        # @review.tour_id = params[:tour_id]
         if @review.save 
-            render show
+            redirect_to api_review_url(@review.id) 
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -37,7 +37,7 @@ class Api::ReviewsController < ApplicationController
     def destroy 
         @review = Review.find(params[:id])
         if @review.destroy
-            render partial: 'api/reviews/review', object: @review
+            render :destroy
         else
             render json: @review.errors.full_messages, status: 422
         end
