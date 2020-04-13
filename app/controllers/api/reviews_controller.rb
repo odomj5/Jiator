@@ -5,7 +5,8 @@ class Api::ReviewsController < ApplicationController
         @reviews = Review.where(tour_id: params[:tour_id])
     end
 
-    def show 
+    def show
+        debugger
         @review = Review.find(params[:id])
  
     end
@@ -18,7 +19,7 @@ class Api::ReviewsController < ApplicationController
         # @review.tour_id = params[:tour_id]
         if @review.save 
             debugger
-            render show
+            redirect_to api_review_url(@review.id) 
         else
             render json: @review.errors.full_messages, status: 422
             debugger
