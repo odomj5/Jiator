@@ -42,6 +42,10 @@
     margin-top: .5%;
 }
 
+.star-rating-div > label > input[type=radio] {
+    display: none;
+}
+
 .star-rating-div #checked {
     color: #186b6d;
 }
