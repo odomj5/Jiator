@@ -7,6 +7,20 @@
     font-weight: bold;
 }
 
+.review-header > button {
+  background-color: white;
+  font-size: 14px;
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  padding: 10px;
+  border-radius: 12px;
+  border-color: #186b6d;
+  margin: 0px 0px 0px 10px
+}
+
+.review-header > button:hover {
+    cursor: pointer;
+}
+
 .review-index-div {
     margin-left: 1%;
 }

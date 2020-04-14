@@ -18,15 +18,15 @@ class Review extends React.Component {
         return(
             <div className="review-div">
                 <div className="review-header">Reviews
-                <button onClick={() => this.props.openModal("review")}>Leave A Review</button>
-                
-                {reviewsRev.map(review => 
-                <ReviewIndex 
-                    key={review.id}
-                    review={review}
-                    currentUserId={this.props.userId}
-                    deleteReview={this.props.deleteReview}
-                />)}
+                    <button onClick={() => this.props.openModal("review")}>Leave A Review</button>
+                    
+                    {reviewsRev.map(review => 
+                    <ReviewIndex 
+                        key={review.id}
+                        review={review}
+                        currentUserId={this.props.userId}
+                        deleteReview={this.props.deleteReview}
+                    />)}
                 </div>
 
                
