@@ -80,7 +80,9 @@ class ReviewForm extends React.Component {
                     <div className="review-errors">
                         {this.renderErrors()}
                     </div>
+                    <label>Rating:
                     {this.StarRating()}
+                    </label>
                     <label>Title:
                         <input 
                             type="text"
@@ -95,18 +97,7 @@ class ReviewForm extends React.Component {
                             onChange={this.handleInput("body")}
                         />
                     </label>
-                    <label>Rating:
-                        <select 
-                            value={this.state.rating}
-                            onChange={this.handleInput("rating")}
-                            >
-                            <option value="5">5</option>
-                            <option value="4">4</option>
-                            <option value="3">3</option>
-                            <option value="2">2</option>
-                            <option value="1">1</option>
-                        </select>
-                    </label>
+                    
                     <button >Submit Review</button>
                 </form>
             </div>
