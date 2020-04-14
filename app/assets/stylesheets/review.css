@@ -20,10 +20,15 @@
 }
 
 .star-icon-div {
-    color: #186b6d;
+    /* color: #186b6d; */
     /* margin-left: 2px; */
     margin-right: 5px;
     margin-bottom: .5%;
+}
+
+.curr-star-rating > #checked {
+    color: #186b6d;
+
 }
 
 .username-date-cont {
