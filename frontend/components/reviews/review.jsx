@@ -14,11 +14,12 @@ class Review extends React.Component {
         if (this.props.reviews === undefined) return null 
 
         const reviewsRev = this.props.reviews.reverse() 
-
+        // debugger
         return(
             <div className="review-div">
                 <div className="review-header">Reviews
-                    <button onClick={() => this.props.openModal("review")}>Leave A Review</button>
+                    {this.props.userId === null ? null : <button onClick={() => this.props.openModal("review")}>Leave A Review</button>}
+                   
                     
                     {reviewsRev.map(review => 
                     <ReviewIndex 
