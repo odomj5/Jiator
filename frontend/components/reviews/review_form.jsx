@@ -61,7 +61,10 @@ class ReviewForm extends React.Component {
                                 value={ratingVal}
                                 onClick={() => updateRating(ratingVal)} />
                             <i className="fas fa-star"
-                                id={ratingVal <= this.state.rating ? "checked" : "notChecked"}></i>
+                                id={ratingVal <= (this.state.rating) ? "checked" : "notChecked"}
+                                onMouseEnter={() => updateRating(ratingVal)}
+                                
+                                />
                         </label>
                     )
                 })}
