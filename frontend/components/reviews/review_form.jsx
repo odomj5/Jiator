@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from 'react-router-dom';
+import StarRating from "./starRating";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -46,6 +47,7 @@ class ReviewForm extends React.Component {
                     <div className="review-errors">
                         {this.renderErrors()}
                     </div>
+                    <StarRating />
                     <label>Title:
                         <input 
                             type="text"
