@@ -4,7 +4,7 @@ const StarRating = () => {
     const [rating, setRating] = useState(null);
 
     return (
-        <div>
+        <div className="star-rating-div">
             {[...Array(5)].map((star, i) => {
                 const ratingVal = i + 1;
 
@@ -16,7 +16,7 @@ const StarRating = () => {
                         value={ratingVal} 
                         onClick={() => setRating(ratingVal)}/>
                         <i className="fas fa-star" 
-                         color={ratingVal <= rating ? "#ffc107" : "#e4e5e9"}></i>
+                         id={ratingVal <= rating ? "checked" : "notChecked"}></i>
                    </label> 
                 )
 

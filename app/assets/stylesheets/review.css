@@ -41,3 +41,7 @@
     font-weight: normal;
     margin-top: .5%;
 }
+
+.star-rating-div #checked {
+    color: #186b6d;
+}
