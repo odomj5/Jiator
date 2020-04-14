@@ -1,6 +1,4 @@
-import React from "react";
-import { withRouter } from 'react-router-dom';
-import StarRating from "./starRating";
+import React, { useState } from "react";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -8,13 +6,14 @@ class ReviewForm extends React.Component {
         this.state = {
             title: "", 
             body: "",
-            rating: 5
+            rating: 0
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         let review = Object.assign({}, this.state)
         review.rating = parseInt(this.state.rating)
@@ -40,6 +39,34 @@ class ReviewForm extends React.Component {
         )
     }
 
+    StarRating() {
+
+        const updateRating = (ratingVal) => {
+            this.setState({rating: ratingVal})
+
+        }
+
+        return (
+            <div className="star-rating-div">
+                {[...Array(5)].map((star, i) => {
+                    const ratingVal = i + 1;
+
+                    return (
+                        <label key={i}>
+                            <input
+                                type="radio"
+                                name="rating"
+                                value={ratingVal}
+                                onClick={() => updateRating(ratingVal)} />
+                            <i className="fas fa-star"
+                                id={ratingVal <= this.state.rating ? "checked" : "notChecked"}></i>
+                        </label>
+                    )
+                })}
+            </div>
+        )
+    }
+     
     render() {
         return(
             <div className="review-form">
@@ -47,7 +74,7 @@ class ReviewForm extends React.Component {
                     <div className="review-errors">
                         {this.renderErrors()}
                     </div>
-                    <StarRating />
+                    {this.StarRating()}
                     <label>Title:
                         <input 
                             type="text"
@@ -82,4 +109,4 @@ class ReviewForm extends React.Component {
 }
 
 
-export default withRouter(ReviewForm); 
+export default ReviewForm; 

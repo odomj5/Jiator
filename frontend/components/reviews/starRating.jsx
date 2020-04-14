@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 
 const StarRating = () => {
     const [rating, setRating] = useState(null);
-
+    
     return (
         <div className="star-rating-div">
             {[...Array(5)].map((star, i) => {
                 const ratingVal = i + 1;
 
                 return (
-                   <label>
+                   <label key={i}>
                        <input 
                         type="radio" 
                         name="rating" 
