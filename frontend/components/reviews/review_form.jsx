@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -16,11 +16,13 @@ class ReviewForm extends React.Component {
         debugger
         e.preventDefault();
         let review = Object.assign({}, this.state)
-        review.rating = parseInt(this.state.rating)
         review.tour_id = this.props.tourId 
         this.props.createReview(this.props.tourId, review)
-        this.props.closeModal()
-        
+
+        if (this.props.errors.length) {
+            debugger
+            this.props.closeModal() 
+        }
     }
 
     handleInput(inputType) {
@@ -65,6 +67,10 @@ class ReviewForm extends React.Component {
                 })}
             </div>
         )
+    }
+
+    componentWillUnmount() {
+        this.props.clearReviewErrors();
     }
      
     render() {

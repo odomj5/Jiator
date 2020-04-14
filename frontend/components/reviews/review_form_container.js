@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { createReview, updateReview } from "../../actions/review_actions";
+import { createReview, updateReview, clearReviewErrors } from "../../actions/review_actions";
 import { requestTour } from "../../actions/tour_actions";
 import ReviewFrom from "./review_form";
 import {closeModal} from "../../actions/modal_actions";
@@ -19,7 +19,8 @@ const mDTP = dispatch => {
         createReview: (tourId, formReview) => dispatch(createReview(tourId, formReview)),
         updateReview: formReview => dispatch(updateReview(formReview)),
         requestTour: tourId => dispatch(requestTour(tourId)),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        clearReviewErrors: () => dispatch(clearReviewErrors()) 
     })
 }
 
