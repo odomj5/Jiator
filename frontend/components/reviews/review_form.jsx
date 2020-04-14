@@ -13,7 +13,6 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         let review = Object.assign({}, this.state)
         review.tour_id = this.props.tourId 
@@ -78,28 +77,34 @@ class ReviewForm extends React.Component {
      
     render() {
         return(
-            <div className="review-form">
-                <form onSubmit={this.handleSubmit}>
+            <div className="review-form-cont">
                     <div className="review-errors">
                         {this.renderErrors()}
                     </div>
-                    <label>Rating:
-                    {this.StarRating()}
-                    </label>
-                    <label>Title:
+                <form 
+                  className="review-form"
+                  onSubmit={this.handleSubmit}>
+                    <div className="rating-div">
+                        <label>Rating:
+                        </label>
+                        {this.StarRating()}
+                    </div> 
+                    <div>
+                        <label>Title:</label>
                         <input 
                             type="text"
                             value={this.state.title}
                             onChange={this.handleInput("title")}
-                        />
-                    </label>
-                    <label>Body:
-                        <input
+                        />    
+                    </div> 
+                    <div>
+                    <label>Body:</label>
+                        <textarea
                             type="text"
                             value={this.state.body}
                             onChange={this.handleInput("body")}
                         />
-                    </label>
+                    </div>
                     
                     <button >Submit Review</button>
                 </form>

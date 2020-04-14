@@ -1,0 +1,50 @@
+
+.review-errors {
+   color: red; 
+   margin-bottom: 10px;
+}
+.review-form > div {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.star-rating-div {
+    margin-left: 5px;
+}
+
+
+.star-rating-div > label > input[type=radio] {
+    display: none;
+}
+
+.star-rating-div #checked {
+    color: #186b6d;
+}
+
+.review-form input[type=text] {
+    margin: 0px 0px 0px 15px;
+    width: 100%;
+}
+
+.review-form textarea {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 60px;
+    width: 100%;
+    display: block;
+    margin: 0px 0px 0px 15px 
+}
+
+.review-form > button {
+  box-sizing: border-box;
+  color: white;
+  background-color:#186b6d;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+  margin-top: 10px;
+
+}
