@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/review_form_container';
+import UpdateReviewFormContainer from "../reviews/update_review_container";
 
 
-function Modal({ modal, tourId, closeModal, clearErrors }) {
+function Modal({ modal, closeModal, clearErrors }) {
 
     if (!modal) {
         return null;
@@ -21,6 +22,9 @@ function Modal({ modal, tourId, closeModal, clearErrors }) {
             break;
         case "review":
             component = <ReviewFormContainer />;
+            break;
+        case "update-review":
+            component = <UpdateReviewFormContainer />;
             break;
         default:
             return null;

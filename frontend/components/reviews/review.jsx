@@ -27,6 +27,9 @@ class Review extends React.Component {
                         review={review}
                         currentUserId={this.props.userId}
                         deleteReview={this.props.deleteReview}
+                        returnSingleReview={this.props.returnSingleReview
+                        }
+                        openModal={this.props.openModal}
                     />)}
                 </div>
 

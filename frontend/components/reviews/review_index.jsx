@@ -5,6 +5,7 @@ class ReviewIndex extends React.Component {
         super(props);
 
         this.handleDelete = this.handleDelete.bind(this);
+        // this.handleUpdate = this.handleUpdate.bind(this);
     }
 
 
@@ -12,6 +13,7 @@ class ReviewIndex extends React.Component {
         e.preventDefault();
         this.props.deleteReview(this.props.review.id)
     }
+
 
     currentStars() {
         

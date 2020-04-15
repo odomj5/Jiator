@@ -1,4 +1,4 @@
-import {RECEIVE_REVIEW, RECEIVE_REVIEWS, REMOVE_REVIEW} from "../actions/review_actions"
+import {RECEIVE_REVIEW, RECEIVE_REVIEWS, REMOVE_REVIEW, RETURN_SINGLE_REVIEW} from "../actions/review_actions"
 
 const ReviewsReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -11,6 +11,8 @@ const ReviewsReducer = (state = {}, action) => {
         case REMOVE_REVIEW:
             delete newState[action.reviewId]
             return newState
+        case RETURN_SINGLE_REVIEW:
+            return action.review
         default:
             return state 
     }
