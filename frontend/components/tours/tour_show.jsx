@@ -19,6 +19,17 @@ class TourShow extends React.Component {
         return e => this.setState({ [inputType]: e.target.value })
     }
 
+    includedToggle() {
+        const incYes = document.getElementById("yes-included").className
+        const newYes = incYes === "included-yes" ? "included-yes-show" : "included-yes"
+        document.getElementById("yes-included").className = newYes
+        const incNo = document.getElementById("no-included").className
+        const newNo = incNo === "included-no" ? "included-no-show" : "included-no"
+        document.getElementById("no-included").className = newNo
+
+
+    }
+
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
@@ -99,15 +110,18 @@ class TourShow extends React.Component {
                             <p className="overview-par">{this.props.tour.overview}</p>
                         </div>
                     </div>
-                    <div className="included-div">
+                    <div className="included-div"
+                        onClick={this.includedToggle}>
                         <div className="included-title">What's Included  
                             <div className='included-container'>
 
-                                <div className="included-yes">
+                                <div className="included-yes"
+                                    id="yes-included">
                                     {this.props.tour.included.map((feature, idx) => (
                                         <div key={idx}><i className="fas fa-check"></i> {feature}</div>))}
                                 </div>
-                                <div className='included-no'>
+                                <div className='included-no'
+                                    id="no-included">
                                     {this.props.tour.notIncluded.map((feature, idx) => (
                                         <div key={idx}><i className="fas fa-times"></i> {feature}</div>))}
                                     </div>
