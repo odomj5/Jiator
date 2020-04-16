@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
         e.preventDefault()
         this.props.processDemo(this.demoUser)
         this.props.closeModal()
-        window.location.href = "/#/api/tours"
+        // window.location.href = "/#/api/tours"
     }
 
     renderErrors() {
@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
     }
 
     componentWillUnmount(){
-        this.props.clearErrors()
+        this.props.clearErrors();
     }
 
     render() {

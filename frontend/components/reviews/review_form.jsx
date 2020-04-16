@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from 'react-router-dom';
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -7,7 +6,7 @@ class ReviewForm extends React.Component {
         this.state = {
             title: "", 
             body: "",
-            rating: 5
+            rating: 0
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,11 +15,13 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let review = Object.assign({}, this.state)
-        review.rating = parseInt(this.state.rating)
         review.tour_id = this.props.tourId 
         this.props.createReview(this.props.tourId, review)
-        this.props.closeModal()
-        
+
+        if (this.props.errors.length) {
+            debugger
+            this.props.closeModal() 
+        }
     }
 
     handleInput(inputType) {
@@ -39,39 +40,72 @@ class ReviewForm extends React.Component {
         )
     }
 
+    StarRating() {
+
+        const updateRating = (ratingVal) => {
+            this.setState({rating: ratingVal})
+
+        }
+
+        return (
+            <div className="star-rating-div">
+                {[...Array(5)].map((star, i) => {
+                    const ratingVal = i + 1;
+
+                    return (
+                        <label key={i}>
+                            <input
+                                type="radio"
+                                name="rating"
+                                value={ratingVal}
+                                onClick={() => updateRating(ratingVal)} />
+                            <i className="fas fa-star"
+                                id={ratingVal <= (this.state.rating) ? "checked" : "notChecked"}
+                                onMouseEnter={() => updateRating(ratingVal)}
+                                
+                                />
+                        </label>
+                    )
+                })}
+            </div>
+        )
+    }
+
+    componentWillUnmount() {
+        this.props.clearReviewErrors();
+    }
+     
     render() {
         return(
-            <div className="review-form">
-                <form onSubmit={this.handleSubmit}>
+            <div className="review-form-cont">
                     <div className="review-errors">
                         {this.renderErrors()}
                     </div>
-                    <label>Title:
+                <form 
+                  className="review-form"
+                  onSubmit={this.handleSubmit}>
+                    <div className="rating-div">
+                        <label>Rating:
+                        </label>
+                        {this.StarRating()}
+                    </div> 
+                    <div>
+                        <label>Title:</label>
                         <input 
                             type="text"
                             value={this.state.title}
                             onChange={this.handleInput("title")}
-                        />
-                    </label>
-                    <label>Body:
-                        <input
+                        />    
+                    </div> 
+                    <div>
+                    <label>Body:</label>
+                        <textarea
                             type="text"
                             value={this.state.body}
                             onChange={this.handleInput("body")}
                         />
-                    </label>
-                    <label>Rating:
-                        <select 
-                            value={this.state.rating}
-                            onChange={this.handleInput("rating")}
-                            >
-                            <option value="5">5</option>
-                            <option value="4">4</option>
-                            <option value="3">3</option>
-                            <option value="2">2</option>
-                            <option value="1">1</option>
-                        </select>
-                    </label>
+                    </div>
+                    
                     <button >Submit Review</button>
                 </form>
             </div>
@@ -80,4 +114,4 @@ class ReviewForm extends React.Component {
 }
 
 
-export default withRouter(ReviewForm); 
+export default ReviewForm; 

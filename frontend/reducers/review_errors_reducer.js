@@ -1,13 +1,12 @@
-import {RECEIVE_REVIEW_ERRORS} from "../actions/review_actions";
+import {RECEIVE_REVIEW_ERRORS, CLEAR_REVIEW_ERRORS} from "../actions/review_actions";
 
 const reviewErrorsReducer = (state = [], action) => {
     Object.freeze(state)
-    let newState = Object.assign({}, state)
-    // debugger
     switch (action.type) {
-
         case RECEIVE_REVIEW_ERRORS:
-            return action.errors === undefined ? [] : action.errors
+            return action.errors
+        case CLEAR_REVIEW_ERRORS:
+            return []
         default:
             return state;
     }

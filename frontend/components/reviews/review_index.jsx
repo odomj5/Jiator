@@ -5,20 +5,37 @@ class ReviewIndex extends React.Component {
         super(props);
 
         this.handleDelete = this.handleDelete.bind(this);
+        // this.handleUpdate = this.handleUpdate.bind(this);
     }
 
 
     handleDelete(e) {
         e.preventDefault();
-        // debugger
         this.props.deleteReview(this.props.review.id)
+    }
+
+
+    currentStars() {
+        
+        return (
+            <div className="curr-star-rating">
+                {[...Array(5)].map((star, i) => {
+
+                    return (
+                            <i className="fas fa-star"
+                                key={i}
+                            id={i + 1 <= this.props.review.rating ? "checked" : "notChecked"}></i>
+                    )
+                })}
+            </div>
+        )
     }
 
     render() {
         let upDate = new Date(this.props.review.updatedAt)
         let year = upDate.getFullYear()
         let month = upDate.getMonth()
-        let day = upDate.getDay()
+        let day = upDate.getDate()
         const months = [
             'January', 'February', 'March', 'April', 'May',
             'June', 'July', 'August', 'September',
@@ -29,12 +46,7 @@ class ReviewIndex extends React.Component {
             <div className="review-index-div">
                <div className="star-title-cont">
                     <div className="star-icon-div">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        {/* <div>{this.props.review.rating}</div> */}
+                        {this.currentStars()}
                     </div>
                     <div>{this.props.review.title}</div>
                 </div> 

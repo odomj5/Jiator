@@ -1,9 +1,11 @@
-import * as APIUtil from "../util/review_api_util"
+import * as APIUtil from "../util/review_api_util";
 
-export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS"
-export const RECEIVE_REVIEW = "RECEIVE_REVIEW"
-export const REMOVE_REVIEW = "DELETE_REVIEW"
-export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS"
+export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
+export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
+export const REMOVE_REVIEW = "DELETE_REVIEW";
+export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+export const CLEAR_REVIEW_ERRORS = "CLEAR_REVIEW_ERRORS";
+export const RETURN_SINGLE_REVIEW = "RETURN_SINGLE_REVIEW"
 
 const receiveReviews = reviews => {
     return({
@@ -27,12 +29,24 @@ const receiveErrors = errors => {
 }
 
 const removeReview = reviewId => {
-    debugger
     return({
         type: REMOVE_REVIEW,
         reviewId: reviewId
     })
 } 
+
+export const clearReviewErrors = () => {
+    return({
+        type: CLEAR_REVIEW_ERRORS
+    })
+}
+
+export const returnSingleReview = review => {
+    return({
+        type: RETURN_SINGLE_REVIEW,
+        review
+    })
+}
 
 export const requestReviews = tourId => dispatch => {
     return APIUtil.fetchReviews(tourId)
@@ -59,7 +73,6 @@ export const updateReview = review => dispatch => {
 }
 
 export const deleteReview = reviewId => dispatch => {
-    debugger
     return APIUtil.deleteReview(reviewId)
     .then( () => dispatch(removeReview(reviewId)),
         (errors) => dispatch(receiveErrors(errors.responseJSON)))

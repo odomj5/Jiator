@@ -12,10 +12,8 @@ class Api::ReviewsController < ApplicationController
 
     #nested under tours 
     def create 
-        # debugger
         @review = Review.create(review_params)
         @review.user_id = current_user.id
-        # @review.tour_id = params[:tour_id]
         if @review.save 
             redirect_to api_review_url(@review.id) 
         else
