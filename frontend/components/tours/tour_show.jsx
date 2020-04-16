@@ -8,10 +8,14 @@ class TourShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: 06-02-2020
+            date: "2020-06-02"
         };
 
         
+    }
+
+    handleInput(inputType) {
+        return e => this.setState({ [inputType]: e.target.value })
     }
 
     
@@ -47,7 +51,9 @@ class TourShow extends React.Component {
                             </div>
                             <div className="booking-calendar">
                                 <h3>Select Date and Travelers</h3>
-                                <input type="date" value="2020-06-02"/>
+                                <input type="date" 
+                                    value={this.state.date}
+                                    onChange={this.handleInput("date")}/>
                                 <select name="Number of Travelors" id="">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
