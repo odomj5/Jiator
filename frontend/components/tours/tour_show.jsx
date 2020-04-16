@@ -30,8 +30,6 @@ class TourShow extends React.Component {
                     <div className="booking-div-cont">
 
                         <div className="booking-div">
-
-                            <div className="booked-div"><i className="fas fa-clipboard-check"></i>Booked by {this.props.tour.spacesAvailable * 13} travelors</div>
                             <div className="booked-avail-div">
                                 <div>Only {this.props.tour.spacesAvailable} spaces available</div>
                                 <div>From ${this.props.tour.price}</div>
