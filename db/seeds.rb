@@ -114,7 +114,7 @@ t5 = Tour.create!(name: "Golden Gate Park Segway Tour",
 
 r1 = Review.create!(title: "First Review!!!", 
     body: "The tour lived up to the hype.",
-    rating: 5,
+    rating: 4,
     user_id: u1.id,
     tour_id: t1.id)
 
@@ -144,13 +144,13 @@ r5 = Review.create!(title: "Brilliant",
 
 r6 = Review.create!(title: "Don’t Miss Experience", 
     body: "Highly recommend this tour - our guide was funny and super informative. Loved her storytelling ability to engage us while on the bus. Muir Woods, and the road to, was beautiful-and while I would have loved to explore longer, it was the right amount of time for this tour.",
-    rating: 5,
+    rating: 4,
     user_id: u5.id,
     tour_id: t2.id)
 
 r7 = Review.create!(title: "Thouroughly Enjoyed",
     body: "Muir woods was an excellent trip. Absolutely gorgeous and peaceful to walk amongst these massive and spectacular creations of nature. I wish we had more time to sit and enjoy their beauty. The bus ride and our tour guide (Tiana) were excellent very informative and comical. She made us laugh but yet also provided great information and history about what we were seeing while driving through the city. We took the later tour which worked for us this trip but I would take the earlier tour if you want to spend more time in Sausalito and then catch the 2:55 (weekend schedule) Ferry back to San Francisco as it makes two stops before landing by pier 39. Kind of giving you a mini bay cruise.",
-    rating: 5,
+    rating: 4,
     user_id: u4.id,
     tour_id: t2.id)
 
@@ -216,7 +216,7 @@ r17 = Review.create!(title: "Boston crew",
 
 r18 = Review.create!(title: "Enjoyable experience!",
     body: "It was great. Perfect way to spend my first evening EVER in San Francisco! The guides were amazing and I’d definitely go again in my next visit.",
-    rating: 5,
+    rating: 4,
     user_id: u1.id,
     tour_id: t4.id)
 
@@ -228,13 +228,13 @@ r19 = Review.create!(title: "Beautiful sunset!!!",
 
 r20 = Review.create!(title: "Sailing into the sunset",
     body: "Relaxed friendly crew; Plenty of space; generous snacks & drinks and warm jackets in the stunning San Francisco Bay. Not to be missed",
-    rating: 5,
+    rating: 3,
     user_id: u3.id,
     tour_id: t4.id)
 
 r21 = Review.create!(title: "Segway tour of San Francisco",
     body: "Oh my gosh what a great tour. Good equipment and a fantastic tour layout. We took two tours. Brandon and Jeff are the best and most knowledgeable in the areas history.",
-    rating: 5,
+    rating: 4,
     user_id: u4.id,
     tour_id: t5.id)
 
@@ -258,7 +258,7 @@ r24 = Review.create!(title: "A fantastic time!!",
 
 r25 = Review.create!(title: "Awesome tour!",
     body: "My family loved this Segway tour! Juannas was our tour guide and was extremely knowledgeable and made the tour super fun!",
-    rating: 5,
+    rating: 4,
     user_id: u5.id,
     tour_id: t5.id)
 
