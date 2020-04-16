@@ -4,6 +4,16 @@ import ReviewContainer from "../reviews/review_container"
 
 
 class TourShow extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: 06-02-2020
+        };
+
+        
+    }
+
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
