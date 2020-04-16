@@ -31,13 +31,22 @@ class TourShow extends React.Component {
 
                         <div className="booking-div">
                             <div className="booked-avail-div">
-                                <div>Only {this.props.tour.spacesAvailable} spaces available</div>
-                                <div>From ${this.props.tour.price}</div>
-                                <div>Lowest Price Guarantee</div>
+                                
+                                <div><span>from</span> ${this.props.tour.price}</div>
+                                <div className="l-p-g">Lowest Price Guarantee</div>
                             </div>
                             <div className="booking-calendar">
-                                <div>Date</div>
-                                <div>Number of travelors</div>
+                                <h3>Select Date and Travelers</h3>
+                                <input type="date" value="2020-06-02"/>
+                                <select name="Number of Travelors" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    
+                                </select>
+                                
                             </div>
                             <div className="reservation-dets">
                                 <h2>Reserve Now and Pay Later</h2>

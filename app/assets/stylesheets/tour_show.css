@@ -41,7 +41,7 @@
 } */
 
 .booking-div-cont {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     background-color: rgba(238, 241, 241, 0.952);
     height: 400px;
     max-width: 400px;
@@ -72,17 +72,36 @@
 
 .booked-avail-div {
     font-family: "Work Sans", Helvetica, Arial, sans-serif; 
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 30px;
     border-bottom: 1px solid grey;
-    padding: 10%;
+    padding: 5px;
     width: 80%;
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
 }
 
+.booked-avail-div > div > span {
+    font-weight: 450;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif; 
+}
+
+.l-p-g {
+    font-size: 14px;
+    line-height: 21px;
+    color: #186b6d;
+    padding: 10px 0 10px 0;
+
+}
+
 .booking-calendar {
-    padding: 10%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.booking-calendar > h3 {
+    font-size: 20px;
 }
 
 .reservation-dets {
