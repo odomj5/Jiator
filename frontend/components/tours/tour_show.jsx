@@ -8,7 +8,8 @@ class TourShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: "2020-06-02"
+            date: "2020-06-02",
+            travelors: "1"
         };
 
         
@@ -51,18 +52,31 @@ class TourShow extends React.Component {
                             </div>
                             <div className="booking-calendar">
                                 <h3>Select Date and Travelers</h3>
+                                <div className="date-cont">
+                                <i className="far fa-calendar-alt"></i>
                                 <input type="date" 
                                     value={this.state.date}
                                     onChange={this.handleInput("date")}/>
-                                <select name="Number of Travelors" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    
-                                </select>
-                                
+                                </div>
+                                <div className="travelor-cont">
+                                    <i className="fas fa-user-friends"></i>
+                                    <select name="Number of Travelors"
+                                        onChange={this.handleInput("travelors")}
+                                        value={this.state.travelors}  
+                                    >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option> 
+                                    </select>
+                                </div>
+                                <button>Book Now!</button>
                             </div>
                             <div className="reservation-dets">
                                 <h2>Reserve Now and Pay Later</h2>
