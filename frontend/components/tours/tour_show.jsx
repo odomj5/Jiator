@@ -86,13 +86,19 @@ class TourShow extends React.Component {
                             <div className="booking-calendar">
                                 <h3>Select Date and Travelers</h3>
                                 <div className="date-cont">
-                                <i className="far fa-calendar-alt"></i>
+                                    {this.state.flag ? null :
+                                <i className="far fa-calendar-alt"></i>}
+                                    {this.state.flag ? null : 
                                 <input type="date" 
                                     value={this.state.date}
-                                    onChange={this.handleInput("date")}/>
+                                    onChange={this.handleInput("date")}/>}
                                 </div>
                                 <div className="travelor-cont">
-                                    <i className="fas fa-user-friends"></i>
+                                    
+                                    {this.state.flag ? null : 
+                                    <i className="fas fa-user-friends"></i>}
+                                    
+                                    {this.state.flag ? null : 
                                     <select name="Number of Travelors"
                                         onChange={this.handleInput("travelors")}
                                         value={this.state.travelors}  
@@ -108,6 +114,7 @@ class TourShow extends React.Component {
                                         <option value="9">9</option>
                                         <option value="10">10</option> 
                                     </select>
+                                    }
                                 </div>
                                 <button onClick={this.handleBook}>{this.state.flag ?" Modify Reservation" : "Book Now!"}</button>
                                 {this.state.flag ? <div className="booked-res">Your reservation for {this.state.travelors} is set for {this.state.date}! </div> : null}
