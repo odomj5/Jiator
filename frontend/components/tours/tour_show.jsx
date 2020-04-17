@@ -109,8 +109,8 @@ class TourShow extends React.Component {
                                         <option value="10">10</option> 
                                     </select>
                                 </div>
-                                <button onClick={this.handleBook}>Book Now!</button>
-                                {this.state.flag ? <div>Your Booked!</div> : null}
+                                <button onClick={this.handleBook}>{this.state.flag ?" Modify Reservation" : "Book Now!"}</button>
+                                {this.state.flag ? <div className="booked-res">Your reservation for {this.state.travelors} is set for {this.state.date}! </div> : null}
                                
                             </div>
                             <div className="reservation-dets">

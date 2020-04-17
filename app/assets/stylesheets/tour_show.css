@@ -136,6 +136,11 @@
     margin: 10px 0 10px 0;
 }
 
+.booked-res {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
 .reservation-dets {
     padding: 5px;
     margin-top: 10px;
