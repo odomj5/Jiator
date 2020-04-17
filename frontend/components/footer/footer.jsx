@@ -25,7 +25,7 @@ class Footer extends React.Component {
                         <div className="footer-logo">Jiator</div>
                         <div className="footer-detail-cont">
                             <div className="footer-detail">© 1997–2020 Jiator, Inc.</div>
-                            <div>Terms and Conditions | Cookie PolicyCookie | Consent</div>
+                            <div>Terms and Conditions | Cookie PolicyCookie </div>
                         </div>
                     </div>
                 </div>
