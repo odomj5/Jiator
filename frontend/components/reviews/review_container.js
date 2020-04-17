@@ -3,12 +3,11 @@ import Review from "./review"
 import { deleteReview, returnSingleReview } from "../../actions/review_actions"
 
 
-const mSTP = (state, ownProps) => {
-    debugger
-    return ({
-        ui: state.ui.modal
-    })
-}
+// const mSTP = (state, ownProps) => {
+//     return ({
+//         ui: state.ui.modal
+//     })
+// }
 
 const mDTP = dispatch => {
     return ({
@@ -18,4 +17,4 @@ const mDTP = dispatch => {
 }
 
 
-export default connect(mSTP, mDTP)(Review)
+export default connect(null, mDTP)(Review)

@@ -50,6 +50,10 @@ class TourShow extends React.Component {
         if (this.props.match.params.tourId !== prevProps.match.params.tourId) {
             this.props.requestTour(this.props.match.params.tourId)
         }
+
+        if (this.props.reviews.length > prevProps.reviews.length) {
+            this.props.closeModal()
+        }
     }
 
     render() {
@@ -145,7 +149,7 @@ class TourShow extends React.Component {
                     
                     onClick={this.additionalToggle}>
                     <div className="additional-title">Additional Info
-                        <i class="fas fa-angle-down" id="additional-arrow"></i>
+                        <i className="fas fa-angle-down" id="additional-arrow"></i>
                     </div>
                     <div className="additional-container"
                         id="additional-container">

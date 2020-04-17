@@ -43,6 +43,10 @@
     /* display: none; */
 }
 
+#review-arrow {
+    cursor: pointer;
+}
+
 .star-title-cont {
     font-size: 14px;
     display: flex;

@@ -1,3 +1,7 @@
+.review-form {
+    margin-top: 5px;
+    padding: 10px;
+}
 
 .review-errors {
    color: red; 
@@ -6,6 +10,10 @@
 .review-form > div {
     margin-bottom: 10px;
     display: flex;
+}
+
+.review-form-cont > .close-x {
+    font-size: 18px;
 }
 
 .star-rating-div {
