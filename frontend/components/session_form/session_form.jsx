@@ -37,6 +37,12 @@ class SessionForm extends React.Component {
         // window.location.href = "/#/api/tours"
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.currentUser !== null && prevProps.currentUser === null ) {
+            this.props.closeModal()
+        }
+    }
+
     renderErrors() {
 
         return (
