@@ -31,11 +31,12 @@ class Review extends React.Component {
         // debugger
         return(
             <div className="review-div"
-                onClick={this.reviewToggle}>
+                >
                 <div className="review-header">
                     Reviews 
                     {this.props.userId === null ? null : <button onClick={() => this.leaveReview()}>Leave A Review</button>}
-                    <i class="fas fa-angle-up" id="review-arrow"></i>
+                    <i class="fas fa-angle-up" id="review-arrow"
+                        onClick={this.reviewToggle}></i>
                     <div className="review-index-cont" id="review-index-cont">
 
                         {reviewsRev.map(review => 
