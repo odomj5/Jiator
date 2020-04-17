@@ -288,9 +288,31 @@
 
 }
 
+.additional-div {
+    position: relative;
+}
+
+.additional-title {
+    cursor: pointer;
+}
+
+.additional-div:hover .additional-container {
+    display: block;
+}
+
+.additional-container {
+    display: none;
+}
+
+.additional-container-show {
+    display: block;
+}
+
 .additional-info {
     margin: 2%;
 }
+
+
 
 .additional-info  i {
     color: #186b6d;

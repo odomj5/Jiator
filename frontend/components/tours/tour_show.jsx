@@ -26,8 +26,14 @@ class TourShow extends React.Component {
         const incNo = document.getElementById("no-included").className
         const newNo = incNo === "included-no" ? "included-no-show" : "included-no"
         document.getElementById("no-included").className = newNo
+    }
 
-
+    additionalToggle() {
+        // debugger
+        const addContainer = document.getElementById("additional-container").className
+        const newAddContainer = addContainer === "additional-container" ? "additional-container-show" : "additional-container"
+        document.getElementById("additional-container").className =  newAddContainer
+        // debugger
     }
 
     
@@ -130,9 +136,12 @@ class TourShow extends React.Component {
                         
                     </div>
                 </div>
-                <div className="additional-div">
+                <div className="additional-div"
+                    
+                    onClick={this.additionalToggle}>
                     <div className="additional-title">Additional Info</div>
-                    <div className="additional-container">
+                    <div className="additional-container"
+                        id="additional-container">
                         <ul className="additional-info">{this.props.tour.additionalInfo.map((info, idx) => (
                             <li key={idx}><i className="fas fa-circle"></i> {info}</li>))}</ul>
                     </div>
