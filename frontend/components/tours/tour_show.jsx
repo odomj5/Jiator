@@ -26,14 +26,18 @@ class TourShow extends React.Component {
         const incNo = document.getElementById("no-included").className
         const newNo = incNo === "included-no" ? "included-no-show" : "included-no"
         document.getElementById("no-included").className = newNo
+        const oldArrow = document.getElementById("included-arrow").className
+        const newArrow = oldArrow === "fas fa-angle-down" ? "fas fa-angle-up" : "fas fa-angle-down"
+        document.getElementById("included-arrow").className = newArrow
     }
 
     additionalToggle() {
-        // debugger
         const addContainer = document.getElementById("additional-container").className
         const newAddContainer = addContainer === "additional-container" ? "additional-container-show" : "additional-container"
         document.getElementById("additional-container").className =  newAddContainer
-        // debugger
+        const oldArrow = document.getElementById("additional-arrow").className
+        const newArrow = oldArrow === "fas fa-angle-down" ? "fas fa-angle-up" : "fas fa-angle-down"
+        document.getElementById("additional-arrow").className = newArrow
     }
 
     
@@ -119,6 +123,7 @@ class TourShow extends React.Component {
                     <div className="included-div"
                         onClick={this.includedToggle}>
                         <div className="included-title">What's Included  
+                            <i class="fas fa-angle-down" id="included-arrow"></i>
                             <div className='included-container'>
 
                                 <div className="included-yes"
@@ -139,7 +144,9 @@ class TourShow extends React.Component {
                 <div className="additional-div"
                     
                     onClick={this.additionalToggle}>
-                    <div className="additional-title">Additional Info</div>
+                    <div className="additional-title">Additional Info
+                        <i class="fas fa-angle-down" id="additional-arrow"></i>
+                    </div>
                     <div className="additional-container"
                         id="additional-container">
                         <ul className="additional-info">{this.props.tour.additionalInfo.map((info, idx) => (

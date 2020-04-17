@@ -1,10 +1,17 @@
 .review-div {
+    position: relative;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .review-header {
     font-size: 24px;
     font-weight: bold;
+}
+
+.review-header > i {
+    float: right;
+    color: #186b6d;
 }
 
 .review-header > button {
@@ -14,7 +21,16 @@
     padding: 10px;
     border-radius: 12px;
     border-color: #186b6d;
-    margin: 0px 0px 0px 10px
+    margin: 0px 0px 0px 10px;
+    z-index: 2;
+}
+
+.review-index-cont {
+    display: block;
+}
+
+.review-index-hide {
+    display: none;
 }
 
 .review-header > button:hover {
@@ -23,6 +39,7 @@
 
 .review-index-div {
     margin-left: 1%;
+    /* display: none; */
 }
 
 .star-title-cont {
