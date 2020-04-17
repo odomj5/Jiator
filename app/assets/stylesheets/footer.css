@@ -68,6 +68,7 @@
 .footer-detail {
     display: flex;
     /* margin-bottom: 8px */
+    margin-top: 2px;
 }
 
 .footer-detail-cont > div{
