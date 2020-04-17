@@ -17,11 +17,6 @@ class ReviewForm extends React.Component {
         let review = Object.assign({}, this.state)
         review.tour_id = this.props.tourId 
         this.props.createReview(this.props.tourId, review)
-
-        if (this.props.errors.length) {
-            debugger
-            this.props.closeModal() 
-        }
     }
 
     handleInput(inputType) {
@@ -78,6 +73,7 @@ class ReviewForm extends React.Component {
     render() {
         return(
             <div className="review-form-cont">
+                <div onClick={this.props.closeModal} className='close-x'>×</div>
                     <div className="review-errors">
                         {this.renderErrors()}
                     </div>

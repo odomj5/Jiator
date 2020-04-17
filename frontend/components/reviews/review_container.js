@@ -5,7 +5,7 @@ import { deleteReview, returnSingleReview } from "../../actions/review_actions"
 
 // const mSTP = (state, ownProps) => {
 //     return ({
-
+//         ui: state.ui.modal
 //     })
 // }
 

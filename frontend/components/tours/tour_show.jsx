@@ -4,6 +4,50 @@ import ReviewContainer from "../reviews/review_container"
 
 
 class TourShow extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: "2020-06-02",
+            travelors: "1",
+            flag: false
+        };
+
+        this.handleBook = this.handleBook.bind(this)
+        
+    }
+
+    handleInput(inputType) {
+        return e => this.setState({ [inputType]: e.target.value })
+    }
+
+    handleBook() {
+        // debugger
+        this.setState({ flag: !this.state.flag })
+        
+    }
+
+    includedToggle() {
+        const incYes = document.getElementById("yes-included").className
+        const newYes = incYes === "included-yes" ? "included-yes-show" : "included-yes"
+        document.getElementById("yes-included").className = newYes
+        const incNo = document.getElementById("no-included").className
+        const newNo = incNo === "included-no" ? "included-no-show" : "included-no"
+        document.getElementById("no-included").className = newNo
+        const oldArrow = document.getElementById("included-arrow").className
+        const newArrow = oldArrow === "fas fa-angle-down" ? "fas fa-angle-up" : "fas fa-angle-down"
+        document.getElementById("included-arrow").className = newArrow
+    }
+
+    additionalToggle() {
+        const addContainer = document.getElementById("additional-container").className
+        const newAddContainer = addContainer === "additional-container" ? "additional-container-show" : "additional-container"
+        document.getElementById("additional-container").className =  newAddContainer
+        const oldArrow = document.getElementById("additional-arrow").className
+        const newArrow = oldArrow === "fas fa-angle-down" ? "fas fa-angle-up" : "fas fa-angle-down"
+        document.getElementById("additional-arrow").className = newArrow
+    }
+
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
@@ -13,6 +57,10 @@ class TourShow extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.match.params.tourId !== prevProps.match.params.tourId) {
             this.props.requestTour(this.props.match.params.tourId)
+        }
+
+        if (this.props.reviews.length > prevProps.reviews.length) {
+            this.props.closeModal()
         }
     }
 
@@ -30,16 +78,47 @@ class TourShow extends React.Component {
                     <div className="booking-div-cont">
 
                         <div className="booking-div">
-
-                            <div className="booked-div"><i className="fas fa-clipboard-check"></i>Booked by {this.props.tour.spacesAvailable * 13} travelors</div>
                             <div className="booked-avail-div">
-                                <div>Only {this.props.tour.spacesAvailable} spaces available</div>
-                                <div>From ${this.props.tour.price}</div>
-                                <div>Lowest Price Guarantee</div>
+                                
+                                <div><span>from</span> ${this.props.tour.price}</div>
+                                <div className="l-p-g">Lowest Price Guarantee</div>
                             </div>
                             <div className="booking-calendar">
-                                <div>Date</div>
-                                <div>Number of travelors</div>
+                                <h3>Select Date and Travelers</h3>
+                                <div className="date-cont">
+                                    {this.state.flag ? null :
+                                <i className="far fa-calendar-alt"></i>}
+                                    {this.state.flag ? null : 
+                                <input type="date" 
+                                    value={this.state.date}
+                                    onChange={this.handleInput("date")}/>}
+                                </div>
+                                <div className="travelor-cont">
+                                    
+                                    {this.state.flag ? null : 
+                                    <i className="fas fa-user-friends"></i>}
+                                    
+                                    {this.state.flag ? null : 
+                                    <select name="Number of Travelors"
+                                        onChange={this.handleInput("travelors")}
+                                        value={this.state.travelors}  
+                                    >
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option> 
+                                    </select>
+                                    }
+                                </div>
+                                <button onClick={this.handleBook}>{this.state.flag ?" Modify Reservation" : "Book Now!"}</button>
+                                {this.state.flag ? <div className="booked-res">Your reservation for {this.state.travelors} is set for {this.state.date}! </div> : null}
+                               
                             </div>
                             <div className="reservation-dets">
                                 <h2>Reserve Now and Pay Later</h2>
@@ -62,15 +141,19 @@ class TourShow extends React.Component {
                             <p className="overview-par">{this.props.tour.overview}</p>
                         </div>
                     </div>
-                    <div className="included-div">
+                    <div className="included-div"
+                        onClick={this.includedToggle}>
                         <div className="included-title">What's Included  
+                            <i className="fas fa-angle-down" id="included-arrow"></i>
                             <div className='included-container'>
 
-                                <div className="included-yes">
+                                <div className="included-yes"
+                                    id="yes-included">
                                     {this.props.tour.included.map((feature, idx) => (
                                         <div key={idx}><i className="fas fa-check"></i> {feature}</div>))}
                                 </div>
-                                <div className='included-no'>
+                                <div className='included-no'
+                                    id="no-included">
                                     {this.props.tour.notIncluded.map((feature, idx) => (
                                         <div key={idx}><i className="fas fa-times"></i> {feature}</div>))}
                                     </div>
@@ -79,9 +162,14 @@ class TourShow extends React.Component {
                         
                     </div>
                 </div>
-                <div className="additional-div">
-                    <div className="additional-title">Additional Info</div>
-                    <div className="additional-container">
+                <div className="additional-div"
+                    
+                    onClick={this.additionalToggle}>
+                    <div className="additional-title">Additional Info
+                        <i className="fas fa-angle-down" id="additional-arrow"></i>
+                    </div>
+                    <div className="additional-container"
+                        id="additional-container">
                         <ul className="additional-info">{this.props.tour.additionalInfo.map((info, idx) => (
                             <li key={idx}><i className="fas fa-circle"></i> {info}</li>))}</ul>
                     </div>

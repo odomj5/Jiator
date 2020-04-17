@@ -8,7 +8,15 @@ class Review extends React.Component {
         this.props.requestReviews(this.props.tour.id)
     }
 
-    
+    reviewToggle() {
+        debugger
+        const reviewContainer = document.getElementById("review-index-cont").className
+        const newReviewCont = reviewContainer === "review-index-cont" ? "review-index-hide" : "review-index-cont"
+        document.getElementById("review-index-cont").className = newReviewCont
+        const oldArrow = document.getElementById("review-arrow").className
+        const newArrow = oldArrow === "fas fa-angle-up" ? "fas fa-angle-down" : "fas fa-angle-up"
+        document.getElementById("review-arrow").className = newArrow
+    }
 
     render() {
         if (this.props.reviews === undefined) return null 
@@ -16,21 +24,26 @@ class Review extends React.Component {
         const reviewsRev = this.props.reviews.reverse() 
         // debugger
         return(
-            <div className="review-div">
-                <div className="review-header">Reviews
+            <div className="review-div"
+                >
+                <div className="review-header">
+                    Reviews 
                     {this.props.userId === null ? null : <button onClick={() => this.props.openModal("review")}>Leave A Review</button>}
-                   
-                    
-                    {reviewsRev.map(review => 
-                    <ReviewIndex 
-                        key={review.id}
-                        review={review}
-                        currentUserId={this.props.userId}
-                        deleteReview={this.props.deleteReview}
-                        returnSingleReview={this.props.returnSingleReview
-                        }
-                        openModal={this.props.openModal}
-                    />)}
+                    <i className="fas fa-angle-up" id="review-arrow"
+                        onClick={this.reviewToggle}></i>
+                    <div className="review-index-cont" id="review-index-cont">
+
+                        {reviewsRev.map(review => 
+                        <ReviewIndex
+                            key={review.id}
+                            review={review}
+                            currentUserId={this.props.userId}
+                            deleteReview={this.props.deleteReview}
+                            returnSingleReview={this.props.returnSingleReview
+                            }
+                            openModal={this.props.openModal}
+                        />)}
+                    </div>
                 </div>
 
                

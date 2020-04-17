@@ -4,6 +4,7 @@
     text-align: center;
     background-color: #ebf3f5;
     padding: 20px;
+    cursor: pointer;
 }
 
 
@@ -20,7 +21,7 @@
 .splash-idx-item-cont {
     position: relative;
     max-width: 350px;
-    height: 350px;
+    height: 390px;
     border: 1px solid #babebe;
     margin-bottom: 30px;
 }
