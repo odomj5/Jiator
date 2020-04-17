@@ -9,14 +9,22 @@ class TourShow extends React.Component {
         super(props);
         this.state = {
             date: "2020-06-02",
-            travelors: "1"
+            travelors: "1",
+            flag: false
         };
 
+        this.handleBook = this.handleBook.bind(this)
         
     }
 
     handleInput(inputType) {
         return e => this.setState({ [inputType]: e.target.value })
+    }
+
+    handleBook() {
+        // debugger
+        this.setState({ flag: !this.state.flag })
+        
     }
 
     includedToggle() {
@@ -101,7 +109,9 @@ class TourShow extends React.Component {
                                         <option value="10">10</option> 
                                     </select>
                                 </div>
-                                <button>Book Now!</button>
+                                <button onClick={this.handleBook}>Book Now!</button>
+                                {this.state.flag ? <div>Your Booked!</div> : null}
+                               
                             </div>
                             <div className="reservation-dets">
                                 <h2>Reserve Now and Pay Later</h2>
@@ -127,7 +137,7 @@ class TourShow extends React.Component {
                     <div className="included-div"
                         onClick={this.includedToggle}>
                         <div className="included-title">What's Included  
-                            <i class="fas fa-angle-down" id="included-arrow"></i>
+                            <i className="fas fa-angle-down" id="included-arrow"></i>
                             <div className='included-container'>
 
                                 <div className="included-yes"

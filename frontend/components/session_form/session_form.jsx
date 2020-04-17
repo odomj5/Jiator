@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
     handleDemo(e) {
         e.preventDefault()
         this.props.processDemo(this.demoUser)
-        this.props.closeModal()
+        // this.props.closeModal()
         // window.location.href = "/#/api/tours"
     }
 

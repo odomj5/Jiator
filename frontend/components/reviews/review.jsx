@@ -18,11 +18,6 @@ class Review extends React.Component {
         document.getElementById("review-arrow").className = newArrow
     }
 
-    // leaveReview() {
-    //     this.props.openModal("review")
-    //     document.getElementById("review-index-cont").className = "review-index-cont"
-    // }
-
     render() {
         if (this.props.reviews === undefined) return null 
 
@@ -34,7 +29,7 @@ class Review extends React.Component {
                 <div className="review-header">
                     Reviews 
                     {this.props.userId === null ? null : <button onClick={() => this.props.openModal("review")}>Leave A Review</button>}
-                    <i class="fas fa-angle-up" id="review-arrow"
+                    <i className="fas fa-angle-up" id="review-arrow"
                         onClick={this.reviewToggle}></i>
                     <div className="review-index-cont" id="review-index-cont">
 
