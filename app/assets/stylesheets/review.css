@@ -2,6 +2,7 @@
     position: relative;
     margin-bottom: 15px;
     margin-top: 15px;
+    /* z-index: -1; */
 }
 
 .review-header {
@@ -22,7 +23,7 @@
     border-radius: 12px;
     border-color: #186b6d;
     margin: 0px 0px 0px 10px;
-    z-index: 2;
+    z-index: 10;
 }
 
 .review-index-cont {

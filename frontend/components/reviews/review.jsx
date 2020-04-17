@@ -9,6 +9,7 @@ class Review extends React.Component {
     }
 
     reviewToggle() {
+        debugger
         const reviewContainer = document.getElementById("review-index-cont").className
         const newReviewCont = reviewContainer === "review-index-cont" ? "review-index-hide" : "review-index-cont"
         document.getElementById("review-index-cont").className = newReviewCont
@@ -17,8 +18,8 @@ class Review extends React.Component {
         document.getElementById("review-arrow").className = newArrow
     }
 
-    leaveReview(e) {
-        e.preventDefault()
+    leaveReview() {
+        // e.preventDefault()
         this.props.openModal("review")
         document.getElementById("review-index-cont").className = "review-index-cont"
     }
