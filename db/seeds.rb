@@ -22,6 +22,10 @@ u4 = User.create!(first_name: "Victoria", last_name: "Campbell", username: "4yok
 
 u5 = User.create!(first_name: "Ryan", last_name: "Mappa", username: "ArmShow01", email: "beastmode@sfaa.com", password:"hunter12" )
 
+u6 = User.create!(first_name: "Elena", last_name: "Altamirano", username: "Elena07", email: "ea07@sfaa.com", password:"hunter12" )
+
+u7 = User.create!(first_name: "Elena", last_name: "Altamirano", username: "Elena07", email: "ea07@sfaa.com", password:"hunter12" )
+
 
 t1 = Tour.create!(name: "Alcatraz and One Day Bike Rental", 
     overview: "Get two classic San Francisco experiences—a bike ride starting at Fisherman’s Wharf and a visit to the notorious prison island of Alcatraz—in one combined tour package. Take a scenic ferry ride to Alcatraz Island, where you can explore at your own pace on a self-guided audio tour. Use the flexible 1-day bike rental on the day of your choosing and enjoy a safe ride with a helmet included.",
@@ -262,3 +266,55 @@ r25 = Review.create!(title: "Awesome tour!",
     user_id: u5.id,
     tour_id: t5.id)
 
+t6 = Tour.create!(name: "3-Day Yosemite Camping Adventure",
+    overview: "On this 3-day Yosemite camping tour, visit Yosemite National Park with an experienced guide, spending two nights in a tent at a campsite. Enjoy the stunning natural sights of the park, such as Yosemite Falls and Half Dome, and go hiking amid the giant sequoia trees. With both guided portions and free time to explore the park on your own, this tour provides a convenient and balanced way to experience one of America’s favorite national parks. Previous camping experience is not required!",
+    included: ["Camping equipment (except a sleeping bag)", "Camping fees", "All fees and taxes", "Transport by biodiesel van", "Professional guide"], 
+    not_included: ["Gratuities", "Sleeping bag (available to rent for USD20)", "Hotel pickup and drop-off"],
+    additional_info: ["Confirmation will be received within 48 hours of booking, subject to availability",  "Children 17 years and younger must be accompanied by an adult", "Important: Please note if you need a sleeping bag and any dietary requirements in the 'Special Requirements' field when booking", "Camping is easy, but cooperation is important. Don't worry if you've never camped before; many people haven't. You will be supplied with all the camping equipment necessary for a trip of this nature, using quality tents, camping and cooking equipment. Everybody is expected to participate in setting up and breaking down the camp, and the professional guides are available to attend to your needs to ensure a positive camping experience. We camp at the best campsites, with hot showers and modern facilities. Swimming is available nearby. During booking, please note if you will need a sleeping bag", "You will be provided with the food, but not the chefs. You guys are the cooks, waiters, dishwashers and, of course, the guests. On leaving the city, we stop at a supermarket and buy everything we need. The fare is a mixture of chicken, beef and vegetarian, all-you-can-eat and very tasty. Most people eat better with us than they have done previously on their travels. Please inform us of any dietary requirements/concerns at the time of booking", "On your journeys, you will need sneakers or hiking boots, shorts, T-shirts, swimwear, sun protection, a water bottle, flashlight and something warmer in case there is a change in weather"], 
+    spaces_available: 13, 
+    location_id: 1, 
+    time_estimate: '3 days', 
+    language: 'English',
+    price: 521)
+
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite1.jpg"), filename: "yosemite1.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite2.jpg"), filename: "yosemite2.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite3.jpg"), filename: "yosemite3.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite4.jpg"), filename: "yosemite4.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite5.jpg"), filename: "yosemite5.jpg")
+
+r26 = Review.create!(title: "Was great!",
+    body: "We are a family from Canada, and we love Yosemite so much! The meals they served were great, a lot better then I was expecting, our tour guide was nice. If you like tours that are a mix between free time and guided tour then you'll like this one. We got a lot of free time to hike the mist and Muir trail. Over all great time!",
+    rating: 4,
+    user_id: u3.id,
+    tour_id: t6.id)
+
+r27 = Review.create!(title: "Fantastic weekend",
+    body: "Went on the 3 day camping and hiking trip to Yosemite with Dan as our tour guide, Dan was very friendly, great company and made me and my daughter feel at ease. I am not a very fast walker I have Achilles Tendonitis in my foot and Dan was very understanding that I was unable to walk as fast as most people and kept a eye on me to make sure that I was ok but also gave me space to walk at my own pace. I really enjoyed the weekend. Yosemite is beautiful.",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t6.id)
+
+r28 = Review.create!(title: "Simply Awsome",
+    body: "Just returned from this three day trip and we are all completely shattered. It was a fantastic 3 days and Jill our guided could not do enough for us. She worked solidly to ensure that everyone in the group was catered for in every respect. A very busy and packed three days, There is no way we would have experienced everything the park has to offer without our guide. We had some reservations when booking this trip and struggled in deciding what to pack. We should not have worried. The company provided a comfortable mini bus with a full box trailer so we could if necessary take a full suitcase and loaded our pack packs as required. The whole trip was absolutely fabulous. Thanks Jill",
+    rating: 5,
+    user_id: u3.id,
+    tour_id: t6.id)
+
+r29 = Review.create!(title: "Birthday weekend",
+    body: "Excellent trip. The hikes and views are definitely worth it. My guide Ariel was amazing. She made sure that everyone was happy and comfortable. She combined both touristy sites and gave us an option to hike to places that not everyone goes since its more challenging. I wish there were more camp fire meals (which are not always possible because of the drought) and the camp site wasn’t next to a highway... besides that the trip exceeded my expectations. Thank you!!! Best Birthday ever!!!",
+    rating: 5,
+    user_id: u1.id,
+    tour_id: t6.id)
+
+r30 = Review.create!(title: "First I’ll just say it’s hard to",
+    body: "First I’ll just say it’s hard to blow it in Yosemite. The Park is simply amazing. I don’t regret making the trip. But... The campsite is at an RV campground/motel just outside the park in a gravel parking lot right off the road right next to several other large tour groups. I would not book again.",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t6.id)
+
+r25 = Review.create!(title: "Awesome tour!",
+    body: "First I’ll just say it’s hard to blow it in Yosemite. The Park is simply amazing. I don’t regret making the trip. But... The campsite is at an RV campground/motel just outside the park in a gravel parking lot right off the road right next to several other large tour groups. I would not book again.",
+    rating: 3,
+    user_id: u5.id,
+    tour_id: t5.id)
