@@ -24,7 +24,13 @@ u5 = User.create!(first_name: "Ryan", last_name: "Mappa", username: "ArmShow01",
 
 u6 = User.create!(first_name: "Elena", last_name: "Altamirano", username: "Elena07", email: "ea07@sfaa.com", password:"hunter12" )
 
-u7 = User.create!(first_name: "Elena", last_name: "Altamirano", username: "Elena07", email: "ea07@sfaa.com", password:"hunter12" )
+u7 = User.create!(first_name: "Cecilia", last_name: "Altamirano", username: "Cecilia06", email: "ca06@sfaa.com", password:"hunter12" )
+
+u8 = User.create!(first_name: "Adelia", last_name: "Altamirano", username: "Adelia04", email: "aa04@sfaa.com", password:"hunter12" )
+
+u9 = User.create!(first_name: "Milo", last_name: "Altamirano", username: "Milo01", email: "Ma01@sfaa.com", password:"hunter12" )
+
+u10 = User.create!(first_name: "Jaxon", last_name: "Tan", username: "lil'Jaxon", email: "Ma01@sfaa.com", password:"hunter12" )
 
 
 t1 = Tour.create!(name: "Alcatraz and One Day Bike Rental", 
@@ -119,7 +125,7 @@ t5 = Tour.create!(name: "Golden Gate Park Segway Tour",
 r1 = Review.create!(title: "First Review!!!", 
     body: "The tour lived up to the hype.",
     rating: 4,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t1.id)
 
 r2 = Review.create!(title: "Great, easy experience", 
@@ -173,7 +179,7 @@ r9 = Review.create!(title: "Perfect half day trip",
 r10 = Review.create!(title: "Lovely day out",
     body: "Our driver was Dalilo. He was excellent - very informative. He made a quick photo stop at the Golden Gate Bridge which was appreciated. We drove on to Muir Woods and it was great to park right at the Visitor Centre where the walks begin. We had a full hour and a half to wander amongst the magnificent redwoods. He then took us on to Sausalito where I left to have fish and chips, check out the town and then catch the ferry back to Fisherman’s Wharf.",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t2.id)
 
 r11 = Review.create!(title: "Greer was outstanding! The tour was...",
@@ -197,7 +203,7 @@ r13 = Review.create!(title: "This tour was fantastic! We visited...",
 r14 = Review.create!(title: "What a wonderful way to see San...",
     body: "What a wonderful way to see San Francisco, it's a strenuous walk but Alex made sure there were plenty of breaks to take photos and catch our breath. The size of the group made it easy to accommodate everyone's tastes and interests. I would certainly do more walks around the city.",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t3.id)
 
 r15 = Review.create!(title: "I recently moved to San Francisco and...",
@@ -221,7 +227,7 @@ r17 = Review.create!(title: "Boston crew",
 r18 = Review.create!(title: "Enjoyable experience!",
     body: "It was great. Perfect way to spend my first evening EVER in San Francisco! The guides were amazing and I’d definitely go again in my next visit.",
     rating: 4,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t4.id)
 
 r19 = Review.create!(title: "Beautiful sunset!!!",
@@ -251,7 +257,7 @@ r22 = Review.create!(title: "First time on a segway",
 r23 = Review.create!(title: "Fun and informative!",
     body: "All 9 of us had a great time segwaying thru the park! Learned a lot about the history, plants and animals. SunDog was a great tour guide!",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t5.id)
 
 r24 = Review.create!(title: "A fantastic time!!",
@@ -298,13 +304,13 @@ r27 = Review.create!(title: "Fantastic weekend",
 r28 = Review.create!(title: "Simply Awsome",
     body: "Just returned from this three day trip and we are all completely shattered. It was a fantastic 3 days and Jill our guided could not do enough for us. She worked solidly to ensure that everyone in the group was catered for in every respect. A very busy and packed three days, There is no way we would have experienced everything the park has to offer without our guide. We had some reservations when booking this trip and struggled in deciding what to pack. We should not have worried. The company provided a comfortable mini bus with a full box trailer so we could if necessary take a full suitcase and loaded our pack packs as required. The whole trip was absolutely fabulous. Thanks Jill",
     rating: 5,
-    user_id: u3.id,
+    user_id: u6.id,
     tour_id: t6.id)
 
 r29 = Review.create!(title: "Birthday weekend",
     body: "Excellent trip. The hikes and views are definitely worth it. My guide Ariel was amazing. She made sure that everyone was happy and comfortable. She combined both touristy sites and gave us an option to hike to places that not everyone goes since its more challenging. I wish there were more camp fire meals (which are not always possible because of the drought) and the camp site wasn’t next to a highway... besides that the trip exceeded my expectations. Thank you!!! Best Birthday ever!!!",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t6.id)
 
 r30 = Review.create!(title: "First I’ll just say it’s hard to",
@@ -316,5 +322,5 @@ r30 = Review.create!(title: "First I’ll just say it’s hard to",
 r25 = Review.create!(title: "Awesome tour!",
     body: "First I’ll just say it’s hard to blow it in Yosemite. The Park is simply amazing. I don’t regret making the trip. But... The campsite is at an RV campground/motel just outside the park in a gravel parking lot right off the road right next to several other large tour groups. I would not book again.",
     rating: 3,
-    user_id: u5.id,
-    tour_id: t5.id)
+    user_id: u7.id,
+    tour_id: t6.id)
