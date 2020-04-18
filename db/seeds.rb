@@ -319,8 +319,44 @@ r30 = Review.create!(title: "First I’ll just say it’s hard to",
     user_id: u2.id,
     tour_id: t6.id)
 
-r25 = Review.create!(title: "Awesome tour!",
-    body: "First I’ll just say it’s hard to blow it in Yosemite. The Park is simply amazing. I don’t regret making the trip. But... The campsite is at an RV campground/motel just outside the park in a gravel parking lot right off the road right next to several other large tour groups. I would not book again.",
-    rating: 3,
+r31 = Review.create!(title: "This trip exceeded my expectations",
+    body: "Our guide, Sarah, was friendly, very generous with her time, and told us a whole load of interesting info about the history of Yosemite which I would never have found out if i'd been doing the trip on my own. We went to a few different places around Yosemite so got a flavour of how big and diverse it was - it was good not just staying in the valley which is very touristy. We had a really fun group, ranging from a ten-year-old to a very fit! elderly couple, and yet it worked for everyone, which is really impressive. Saw amazing views, tried smores for the first time, enjoyed learning something new from everyone in the group, enjoyed the camping. The only tiny suggestion I'd make is that the food could have been of a better quality. But these 3 days were some of the best of my whole trip! Thank you to everyone who I met there.",
+    rating: 5,
     user_id: u7.id,
     tour_id: t6.id)
+
+r32 = Review.create!(title: "LONG REVIEW",
+    body: "I highly recommend this trip! Spending 3 days/2 nights in Yosemite was the perfect way for me to explore Yosemite without being rushed amongst the crowds. My group consisted of 7 people, in their late 20s and 30s. Some of us had previous camping/hiking experience, and the others didn't. The first day started by being picked up around 9am in SF and heading out toward Yosemite. Half way there, our tour guide stopped and gave us some time to pick up lunch at a local grocery store. Before arriving at the Yosemite Valley, we made a brief stop at a forest with beautiful giant Sequoias for a short hike. Upon arriving at the Yosemite Valley, we had the opportunity to stop and drink natural water from a creek Seamus our tour guide took us to, and had time to take a bunch of pics. Then we headed to set up camp around 6pm. It was very easy to set up the tents and sleeping bags. Then we started dinner, which was plentiful! We had both vegetarian and non vegetarian dishes, which was all worked to cook ourselves! The first night we had a taco/burrito buffet. The first night camping under the stars was beautiful, sitting by the fire and connecting with your peers. The sleeping bags were comfortable and warm. The next day, we woke up around 7:30am for breakfast, which consisted of bread, yogurt, fruit, hot and cold cereal, and coffee/tea. We packed our lunches, and headed out to hike. Our tour guide took us to May lake and close to Mount Hoffman, which was a beautiful hike. We went at an easy pace, which allowed our bodies to get used to the altitude. Then after spending a few hours exploring, we headed back to camp to make dinner. Our second dinner was a meat and vegetarian stir fry. It was delicious and plentiful. On the 3rd day, again we woke up early and headed to the Yosemite valley, after packing up. Our tour guide gave us about 4 hours to ourselves to spend at the valley. Either hiking, bike riding, or simply just exploring the tourist stores and sites. A few of us decided to hike to Vernal falls, which was a semi challenging hike, but well worth it. I went by myself on this trip and I don't regret one minute of it! I was a bit anxious the night before, not knowing what the group dynamics would be like. However, our tour guide Seamus, did a great job of incorporating everyones personality and helped everyone feel welcomed. I definitely got my money's worth and cannot wait to go back to Yosemite one day! I will definitely use this company for related outdoor tours. P.S. Bring sweat shirt and warm pants, its warm at night, but gets cold in the morning. Bring a large water bottle, as you will need plenty of water throughout your hikes. Bring a small flashlight or headlamp for inside your tent. Bring appropriate footwear, hiking boots or sneakers.",
+    rating: 5,
+    user_id: u8.id,
+    tour_id: t6.id)
+
+r31 = Review.create!(title: "My son and I had wanted to visit",
+    body: "My son and I had wanted to visit Yosemite for some time. This looked like a great way to see the park, and it was. Plenty of guided tour, and time to explore on our own. Guide Alex was friendly, and knowledgable. Was a great 3 days, highly recommend! Geoff from Philly",
+    rating: 5,
+    user_id: u9.id,
+    tour_id: t6.id)
+
+r32 = Review.create!(title: "Very good experience and value",
+    body: "We had two very good experiences with the bike rental and Alcatraz. Very enjoyable and very good service from the bikes and the Alcatraz staff",
+    rating: 4,
+    user_id: u9.id,
+    tour_id: t1.id)
+
+r33 = Review.create!(title: "Missed the Mark",
+    body: "Was disappointed in the iconic attraction that people talk about. Buildings that should have been kept standing to preserve the historic story have been neglected and have fallen down. The seagull population has got too out of hand as this prevents tourists exploring parts of the island.",
+    rating: 3,
+    user_id: u8.id,
+    tour_id: t1.id)
+
+r34 = Review.create!(title: "Auto refund due to Covid-19",
+    body: "Didn't get the chance to experience this due to not being able to fly to USA at this time, so appreciate them giving a full cash refund which was done automatically. I would have been happy with credit voucher, so fully intend to use this company whenever I get the chance to get over to California",
+    rating: 5,
+    user_id: u6.id,
+    tour_id: t4.id)
+
+r35 = Review.create!(title: "Under the Spell of Muir Woods",
+    body: "The driver was informative and gave a fun and interesting running monologue to and from Muir woods. The hiking portion I wish was longer, Muir woods has a way of captivating you the moment you pull into the parking lot. The drive up the winding roads to Muir woods is not for the faint of heart, but if you have the stomach for it the scenery will take your breath away.",
+    rating: 5,
+    user_id: u7.id,
+    tour_id: t2.id)
