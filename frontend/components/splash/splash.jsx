@@ -3,6 +3,17 @@ import SplashIndexContainer from "./splash_index_container"
 
 class Splash extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: "Date",
+        };
+
+    }
+
+    handleInput(inputType) {
+        return e => this.setState({ [inputType]: e.target.value })
+    }
 
     render() {
         return (
@@ -21,7 +32,9 @@ class Splash extends React.Component {
                         </div>
                         <div>    
                             <label className="splash-date"><i className="far fa-calendar-alt"></i>
-                                <input type="date"/>
+                                <input type="date"
+                                value={this.state.date}
+                                onChange={this.handleInput("date")}/>
                             </label>
                         </div> 
                         <button>See Available Tours!</button> 
