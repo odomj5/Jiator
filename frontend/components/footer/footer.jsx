@@ -9,16 +9,14 @@ class Footer extends React.Component {
             <div className="Footer">
                 <div className="columns-cont">
                     <div className="left-column">
-                        <div>Help Center</div>
-                        <div>Privacy Policy</div>
-                        <div>About Jiator</div>
-                        <div>Sitemap</div>
+                        <a href="https://www.linkedin.com/in/jonathan-odom/">
+                            <i className="fab fa-linkedin"></i>
+                        </a>
                     </div>
                     <div className="right-column">
-                        <div >Supplier Sign Up</div>
-                        <div>Travel Agents</div>
-                        <div>Distribution Programs</div>
-                        <div>Group Services</div>
+                        <a href='https://github.com/odomj5'>
+                        <i className="fab fa-github-square"></i>
+                        </a>
                     </div>
                 </div>
                 <div className="bottom-row">
@@ -26,8 +24,8 @@ class Footer extends React.Component {
                     <div className="bottom-box">
                         <div className="footer-logo">Jiator</div>
                         <div className="footer-detail-cont">
-                            <div className="footer-detail">© 1997–2020 Jiator, Inc.</div>
-                            <div>Terms and Conditions | Cookie PolicyCookie | Consent</div>
+                            <div className="footer-detail">© 2020 Jiator, Inc.</div>
+                            
                         </div>
                     </div>
                 </div>

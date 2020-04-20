@@ -22,6 +22,16 @@ u4 = User.create!(first_name: "Victoria", last_name: "Campbell", username: "4yok
 
 u5 = User.create!(first_name: "Ryan", last_name: "Mappa", username: "ArmShow01", email: "beastmode@sfaa.com", password:"hunter12" )
 
+u6 = User.create!(first_name: "Elena", last_name: "Altamirano", username: "Elena07", email: "ea07@sfaa.com", password:"hunter12" )
+
+u7 = User.create!(first_name: "Cecilia", last_name: "Altamirano", username: "Cecilia06", email: "ca06@sfaa.com", password:"hunter12" )
+
+u8 = User.create!(first_name: "Adelia", last_name: "Altamirano", username: "Adelia04", email: "aa04@sfaa.com", password:"hunter12" )
+
+u9 = User.create!(first_name: "Milo", last_name: "Altamirano", username: "Milo01", email: "Ma01@sfaa.com", password:"hunter12" )
+
+u10 = User.create!(first_name: "Jaxon", last_name: "Tan", username: "lil'Jaxon", email: "btan01@sfaa.com", password:"hunter12" )
+
 
 t1 = Tour.create!(name: "Alcatraz and One Day Bike Rental", 
     overview: "Get two classic San Francisco experiences—a bike ride starting at Fisherman’s Wharf and a visit to the notorious prison island of Alcatraz—in one combined tour package. Take a scenic ferry ride to Alcatraz Island, where you can explore at your own pace on a self-guided audio tour. Use the flexible 1-day bike rental on the day of your choosing and enjoy a safe ride with a helmet included.",
@@ -115,7 +125,7 @@ t5 = Tour.create!(name: "Golden Gate Park Segway Tour",
 r1 = Review.create!(title: "First Review!!!", 
     body: "The tour lived up to the hype.",
     rating: 4,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t1.id)
 
 r2 = Review.create!(title: "Great, easy experience", 
@@ -169,7 +179,7 @@ r9 = Review.create!(title: "Perfect half day trip",
 r10 = Review.create!(title: "Lovely day out",
     body: "Our driver was Dalilo. He was excellent - very informative. He made a quick photo stop at the Golden Gate Bridge which was appreciated. We drove on to Muir Woods and it was great to park right at the Visitor Centre where the walks begin. We had a full hour and a half to wander amongst the magnificent redwoods. He then took us on to Sausalito where I left to have fish and chips, check out the town and then catch the ferry back to Fisherman’s Wharf.",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t2.id)
 
 r11 = Review.create!(title: "Greer was outstanding! The tour was...",
@@ -193,7 +203,7 @@ r13 = Review.create!(title: "This tour was fantastic! We visited...",
 r14 = Review.create!(title: "What a wonderful way to see San...",
     body: "What a wonderful way to see San Francisco, it's a strenuous walk but Alex made sure there were plenty of breaks to take photos and catch our breath. The size of the group made it easy to accommodate everyone's tastes and interests. I would certainly do more walks around the city.",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t3.id)
 
 r15 = Review.create!(title: "I recently moved to San Francisco and...",
@@ -217,7 +227,7 @@ r17 = Review.create!(title: "Boston crew",
 r18 = Review.create!(title: "Enjoyable experience!",
     body: "It was great. Perfect way to spend my first evening EVER in San Francisco! The guides were amazing and I’d definitely go again in my next visit.",
     rating: 4,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t4.id)
 
 r19 = Review.create!(title: "Beautiful sunset!!!",
@@ -247,7 +257,7 @@ r22 = Review.create!(title: "First time on a segway",
 r23 = Review.create!(title: "Fun and informative!",
     body: "All 9 of us had a great time segwaying thru the park! Learned a lot about the history, plants and animals. SunDog was a great tour guide!",
     rating: 5,
-    user_id: u1.id,
+    user_id: u10.id,
     tour_id: t5.id)
 
 r24 = Review.create!(title: "A fantastic time!!",
@@ -262,3 +272,91 @@ r25 = Review.create!(title: "Awesome tour!",
     user_id: u5.id,
     tour_id: t5.id)
 
+t6 = Tour.create!(name: "3-Day Yosemite Camping Adventure",
+    overview: "On this 3-day Yosemite camping tour, visit Yosemite National Park with an experienced guide, spending two nights in a tent at a campsite. Enjoy the stunning natural sights of the park, such as Yosemite Falls and Half Dome, and go hiking amid the giant sequoia trees. With both guided portions and free time to explore the park on your own, this tour provides a convenient and balanced way to experience one of America’s favorite national parks. Previous camping experience is not required!",
+    included: ["Camping equipment (except a sleeping bag)", "Camping fees", "All fees and taxes", "Transport by biodiesel van", "Professional guide"], 
+    not_included: ["Gratuities", "Sleeping bag (available to rent for USD20)", "Hotel pickup and drop-off"],
+    additional_info: ["Confirmation will be received within 48 hours of booking, subject to availability",  "Children 17 years and younger must be accompanied by an adult", "Important: Please note if you need a sleeping bag and any dietary requirements in the 'Special Requirements' field when booking", "Camping is easy, but cooperation is important. Don't worry if you've never camped before; many people haven't. You will be supplied with all the camping equipment necessary for a trip of this nature, using quality tents, camping and cooking equipment. Everybody is expected to participate in setting up and breaking down the camp, and the professional guides are available to attend to your needs to ensure a positive camping experience. We camp at the best campsites, with hot showers and modern facilities. Swimming is available nearby. During booking, please note if you will need a sleeping bag", "You will be provided with the food, but not the chefs. You guys are the cooks, waiters, dishwashers and, of course, the guests. On leaving the city, we stop at a supermarket and buy everything we need. The fare is a mixture of chicken, beef and vegetarian, all-you-can-eat and very tasty. Most people eat better with us than they have done previously on their travels. Please inform us of any dietary requirements/concerns at the time of booking", "On your journeys, you will need sneakers or hiking boots, shorts, T-shirts, swimwear, sun protection, a water bottle, flashlight and something warmer in case there is a change in weather"], 
+    spaces_available: 13, 
+    location_id: 1, 
+    time_estimate: '3 days', 
+    language: 'English',
+    price: 521)
+
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite1.jpg"), filename: "yosemite1.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite2.jpg"), filename: "yosemite2.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite3.jpg"), filename: "yosemite3.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite4.jpg"), filename: "yosemite4.jpg")
+t6.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/yosemite/yosemite5.jpg"), filename: "yosemite5.jpg")
+
+r26 = Review.create!(title: "Was great!",
+    body: "We are a family from Canada, and we love Yosemite so much! The meals they served were great, a lot better then I was expecting, our tour guide was nice. If you like tours that are a mix between free time and guided tour then you'll like this one. We got a lot of free time to hike the mist and Muir trail. Over all great time!",
+    rating: 4,
+    user_id: u3.id,
+    tour_id: t6.id)
+
+r27 = Review.create!(title: "Fantastic weekend",
+    body: "Went on the 3 day camping and hiking trip to Yosemite with Dan as our tour guide, Dan was very friendly, great company and made me and my daughter feel at ease. I am not a very fast walker I have Achilles Tendonitis in my foot and Dan was very understanding that I was unable to walk as fast as most people and kept a eye on me to make sure that I was ok but also gave me space to walk at my own pace. I really enjoyed the weekend. Yosemite is beautiful.",
+    rating: 5,
+    user_id: u4.id,
+    tour_id: t6.id)
+
+r28 = Review.create!(title: "Simply Awsome",
+    body: "Just returned from this three day trip and we are all completely shattered. It was a fantastic 3 days and Jill our guided could not do enough for us. She worked solidly to ensure that everyone in the group was catered for in every respect. A very busy and packed three days, There is no way we would have experienced everything the park has to offer without our guide. We had some reservations when booking this trip and struggled in deciding what to pack. We should not have worried. The company provided a comfortable mini bus with a full box trailer so we could if necessary take a full suitcase and loaded our pack packs as required. The whole trip was absolutely fabulous. Thanks Jill",
+    rating: 5,
+    user_id: u6.id,
+    tour_id: t6.id)
+
+r29 = Review.create!(title: "Birthday weekend",
+    body: "Excellent trip. The hikes and views are definitely worth it. My guide Ariel was amazing. She made sure that everyone was happy and comfortable. She combined both touristy sites and gave us an option to hike to places that not everyone goes since its more challenging. I wish there were more camp fire meals (which are not always possible because of the drought) and the camp site wasn’t next to a highway... besides that the trip exceeded my expectations. Thank you!!! Best Birthday ever!!!",
+    rating: 5,
+    user_id: u10.id,
+    tour_id: t6.id)
+
+r30 = Review.create!(title: "First I’ll just say it’s hard to",
+    body: "First I’ll just say it’s hard to blow it in Yosemite. The Park is simply amazing. I don’t regret making the trip. But... The campsite is at an RV campground/motel just outside the park in a gravel parking lot right off the road right next to several other large tour groups. I would not book again.",
+    rating: 5,
+    user_id: u2.id,
+    tour_id: t6.id)
+
+r31 = Review.create!(title: "This trip exceeded my expectations",
+    body: "Our guide, Sarah, was friendly, very generous with her time, and told us a whole load of interesting info about the history of Yosemite which I would never have found out if i'd been doing the trip on my own. We went to a few different places around Yosemite so got a flavour of how big and diverse it was - it was good not just staying in the valley which is very touristy. We had a really fun group, ranging from a ten-year-old to a very fit! elderly couple, and yet it worked for everyone, which is really impressive. Saw amazing views, tried smores for the first time, enjoyed learning something new from everyone in the group, enjoyed the camping. The only tiny suggestion I'd make is that the food could have been of a better quality. But these 3 days were some of the best of my whole trip! Thank you to everyone who I met there.",
+    rating: 5,
+    user_id: u7.id,
+    tour_id: t6.id)
+
+r32 = Review.create!(title: "LONG REVIEW",
+    body: "I highly recommend this trip! Spending 3 days/2 nights in Yosemite was the perfect way for me to explore Yosemite without being rushed amongst the crowds. My group consisted of 7 people, in their late 20s and 30s. Some of us had previous camping/hiking experience, and the others didn't. The first day started by being picked up around 9am in SF and heading out toward Yosemite. Half way there, our tour guide stopped and gave us some time to pick up lunch at a local grocery store. Before arriving at the Yosemite Valley, we made a brief stop at a forest with beautiful giant Sequoias for a short hike. Upon arriving at the Yosemite Valley, we had the opportunity to stop and drink natural water from a creek Seamus our tour guide took us to, and had time to take a bunch of pics. Then we headed to set up camp around 6pm. It was very easy to set up the tents and sleeping bags. Then we started dinner, which was plentiful! We had both vegetarian and non vegetarian dishes, which was all worked to cook ourselves! The first night we had a taco/burrito buffet. The first night camping under the stars was beautiful, sitting by the fire and connecting with your peers. The sleeping bags were comfortable and warm. The next day, we woke up around 7:30am for breakfast, which consisted of bread, yogurt, fruit, hot and cold cereal, and coffee/tea. We packed our lunches, and headed out to hike. Our tour guide took us to May lake and close to Mount Hoffman, which was a beautiful hike. We went at an easy pace, which allowed our bodies to get used to the altitude. Then after spending a few hours exploring, we headed back to camp to make dinner. Our second dinner was a meat and vegetarian stir fry. It was delicious and plentiful. On the 3rd day, again we woke up early and headed to the Yosemite valley, after packing up. Our tour guide gave us about 4 hours to ourselves to spend at the valley. Either hiking, bike riding, or simply just exploring the tourist stores and sites. A few of us decided to hike to Vernal falls, which was a semi challenging hike, but well worth it. I went by myself on this trip and I don't regret one minute of it! I was a bit anxious the night before, not knowing what the group dynamics would be like. However, our tour guide Seamus, did a great job of incorporating everyones personality and helped everyone feel welcomed. I definitely got my money's worth and cannot wait to go back to Yosemite one day! I will definitely use this company for related outdoor tours. P.S. Bring sweat shirt and warm pants, its warm at night, but gets cold in the morning. Bring a large water bottle, as you will need plenty of water throughout your hikes. Bring a small flashlight or headlamp for inside your tent. Bring appropriate footwear, hiking boots or sneakers.",
+    rating: 5,
+    user_id: u8.id,
+    tour_id: t6.id)
+
+r31 = Review.create!(title: "My son and I had wanted to visit",
+    body: "My son and I had wanted to visit Yosemite for some time. This looked like a great way to see the park, and it was. Plenty of guided tour, and time to explore on our own. Guide Alex was friendly, and knowledgable. Was a great 3 days, highly recommend! Geoff from Philly",
+    rating: 5,
+    user_id: u9.id,
+    tour_id: t6.id)
+
+r32 = Review.create!(title: "Very good experience and value",
+    body: "We had two very good experiences with the bike rental and Alcatraz. Very enjoyable and very good service from the bikes and the Alcatraz staff",
+    rating: 4,
+    user_id: u9.id,
+    tour_id: t1.id)
+
+r33 = Review.create!(title: "Missed the Mark",
+    body: "Was disappointed in the iconic attraction that people talk about. Buildings that should have been kept standing to preserve the historic story have been neglected and have fallen down. The seagull population has got too out of hand as this prevents tourists exploring parts of the island.",
+    rating: 3,
+    user_id: u8.id,
+    tour_id: t1.id)
+
+r34 = Review.create!(title: "Auto refund due to Covid-19",
+    body: "Didn't get the chance to experience this due to not being able to fly to USA at this time, so appreciate them giving a full cash refund which was done automatically. I would have been happy with credit voucher, so fully intend to use this company whenever I get the chance to get over to California",
+    rating: 5,
+    user_id: u6.id,
+    tour_id: t4.id)
+
+r35 = Review.create!(title: "Under the Spell of Muir Woods",
+    body: "The driver was informative and gave a fun and interesting running monologue to and from Muir woods. The hiking portion I wish was longer, Muir woods has a way of captivating you the moment you pull into the parking lot. The drive up the winding roads to Muir woods is not for the faint of heart, but if you have the stomach for it the scenery will take your breath away.",
+    rating: 5,
+    user_id: u7.id,
+    tour_id: t2.id)
