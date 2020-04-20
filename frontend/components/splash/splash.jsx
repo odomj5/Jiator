@@ -11,19 +11,20 @@ class Splash extends React.Component {
                     <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/splash/GGbridge.jpg"/>
                     <div className="splash-book">
                         <h2>Discover amazing things to do everywhere you go</h2>
-                        <div>
+                        <div className="splash-city-div">
                             <label className="splash-city">Select A City:
-                                <select id="cities">
-                                    <option value="" selected disabled hidden>Where would you like to explore?</option>
+                                <select id="cities" defaultValue="default">
+                                    <option value="default" disabled hidden >Where would you like to explore?</option>
                                     <option value="San Fancisco">San Fancisco</option>
                                 </select>
                             </label>
                         </div>
                         <div>    
-                        <label>Choose Date:
-                            <input type="date"/>
-                        </label>
-                        </div>  
+                            <label>Choose Date:
+                                <input type="date"/>
+                            </label>
+                        </div> 
+                        <button>See Available Tours!</button> 
                     </div>
                 </div>
                 <div className="icon-bar">

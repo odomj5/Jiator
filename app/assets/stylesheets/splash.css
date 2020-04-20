@@ -13,8 +13,8 @@
     position: absolute;
     left: 30%;
     top: 25%;
-    background-color: whitesmoke;
-    opacity: 60%;
+    background-color: #f5f5f585;
+    /* opacity: 60%; */
     height: 200px;
     width: 500px;
     padding: 20px;
@@ -32,22 +32,42 @@
     position: relative;
     font-family: Raleway, Helvetica, Arial;
     font-size: 20px;
+    
+    
 }
 
 .splash-book > div > label > select {
     margin-left: 5px;
     font-family: Raleway, Helvetica, Arial;
     font-size: 20px;
-    background-color: white;
-    /* opacity: 0%; */
+
 }
 
-splash-book > div > label > select > option {
+.splash-book > div > label > select > option {
     background-color: white;
 }
+
 
 .splash-city > select {
     margin-bottom: 20px;
+}
+
+.splash-book > div > label > input[value="date"] {
+    margin-left: 5px;
+    font-family: Raleway, Helvetica, Arial;
+    font-size: 20px;
+    background-color: white;
+}
+
+.splash-book > button {
+    box-sizing: border-box;
+    color: white;
+    background-color:#186b6d;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 
