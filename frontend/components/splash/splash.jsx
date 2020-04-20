@@ -7,16 +7,25 @@ class Splash extends React.Component {
     render() {
         return (
             <div className="splash-div">
+                <div className="splash-img-cont">
                     <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/splash/GGbridge.jpg"/>
                     <div className="splash-book">
-                        <h2>Discover amazing things to do everywhere you go</h2>  
-                        <label>Select A City:
-                            <select name="" id=""></select>
-                        </label>
+                        <h2>Discover amazing things to do everywhere you go</h2>
+                        <div>
+                            <label className="splash-city">Select A City:
+                                <select id="cities">
+                                    <option value="" selected disabled hidden>Where would you like to explore?</option>
+                                    <option value="San Fancisco">San Fancisco</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>    
                         <label>Choose Date:
-                            <input type="calendar"/>
+                            <input type="date"/>
                         </label>
+                        </div>  
                     </div>
+                </div>
                 <div className="icon-bar">
                     <div className='icon-1'>
                         <i className="fas fa-ticket-alt"></i>
