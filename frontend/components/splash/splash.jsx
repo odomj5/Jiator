@@ -12,7 +12,7 @@ class Splash extends React.Component {
                     <div className="splash-book">
                         <h2>Discover amazing things to do everywhere you go</h2>
                         <div className="splash-city-div">
-                            <label className="splash-city">Select A City:
+                            <label className="splash-city"><i className="fas fa-map-marked-alt"></i>
                                 <select id="cities" defaultValue="default">
                                     <option value="default" disabled hidden >Where would you like to explore?</option>
                                     <option value="San Fancisco">San Fancisco</option>
@@ -20,7 +20,7 @@ class Splash extends React.Component {
                             </label>
                         </div>
                         <div>    
-                            <label>Choose Date:
+                            <label className="splash-date"><i className="far fa-calendar-alt"></i>
                                 <input type="date"/>
                             </label>
                         </div> 
