@@ -1,6 +1,7 @@
-import React from 'react'
-import PhotoMain from "../photos/photo_main"
-import ReviewContainer from "../reviews/review_container"
+import React from 'react';
+import PhotoMain from "../photos/photo_main";
+import ReviewContainer from "../reviews/review_container";
+import AverageRating from "../reviews/average_rating";
 
 
 class TourShow extends React.Component {
@@ -73,6 +74,9 @@ class TourShow extends React.Component {
                 <h1 className="tour-name">
                     {this.props.tour.name}
                 </h1>
+                <AverageRating 
+                reviews={this.props.reviews}
+                />
                 <div className='booking-outer-div'>
                     <PhotoMain photos={this.props.tour.photoUrls} className="photo-main"/>
                     <div className="booking-div-cont">
