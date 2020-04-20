@@ -15,6 +15,10 @@ class Splash extends React.Component {
         return e => this.setState({ [inputType]: e.target.value })
     }
 
+    goTours() {
+        window.location.href = "/#/api/tours"
+    }
+
     render() {
         return (
             <div className="splash-div">
@@ -37,7 +41,9 @@ class Splash extends React.Component {
                                 onChange={this.handleInput("date")}/>
                             </label>
                         </div> 
-                        <button>See Available Tours!</button> 
+                        <button
+                        onClick={this.goTours}>
+                            See Available Tours!</button> 
                     </div>
                 </div>
                 <div className="icon-bar">
