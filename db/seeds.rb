@@ -30,7 +30,7 @@ u8 = User.create!(first_name: "Adelia", last_name: "Altamirano", username: "Adel
 
 u9 = User.create!(first_name: "Milo", last_name: "Altamirano", username: "Milo01", email: "Ma01@sfaa.com", password:"hunter12" )
 
-u10 = User.create!(first_name: "Jaxon", last_name: "Tan", username: "lil'Jaxon", email: "Ma01@sfaa.com", password:"hunter12" )
+u10 = User.create!(first_name: "Jaxon", last_name: "Tan", username: "lil'Jaxon", email: "btan01@sfaa.com", password:"hunter12" )
 
 
 t1 = Tour.create!(name: "Alcatraz and One Day Bike Rental", 
