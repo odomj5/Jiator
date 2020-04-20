@@ -8,6 +8,15 @@ class Splash extends React.Component {
         return (
             <div className="splash-div">
                     <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/splash/GGbridge.jpg"/>
+                    <div className="splash-book">
+                        <h2>Discover amazing things to do everywhere you go</h2>  
+                        <label>Select A City:
+                            <select name="" id=""></select>
+                        </label>
+                        <label>Choose Date:
+                            <input type="calendar"/>
+                        </label>
+                    </div>
                 <div className="icon-bar">
                     <div className='icon-1'>
                         <i className="fas fa-ticket-alt"></i>
