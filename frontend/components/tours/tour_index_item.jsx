@@ -16,9 +16,12 @@ class TourIndexItem extends React.Component {
         this.props.history.push(`/api/tours/${id}`)
     }
 
-    componentDidUpdate() {
-        this.props.requestReviews(this.props.tour.id)
-    }
+    //  componentDidUpdate(prevProps) {
+    //     if (this.props.tour.id !== prevProps.tour.id) {
+    //         this.props.requestReviews(this.props.tourId)
+    //     }
+    // }
+
 
     render() {
         // debugger
@@ -33,7 +36,9 @@ class TourIndexItem extends React.Component {
                 </div>
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
-                    <AverageRatingContainer/>
+                    <AverageRatingContainer
+                    tourId={this.props.tour.id}
+                    />
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
                     <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>

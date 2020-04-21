@@ -14,6 +14,17 @@ class AverageRating extends React.Component {
         }
     }
 
+    // componentDidMount() {
+    //     this.props.requestReviews(this.props.tourId)
+    // }
+
+    // componentDidUpdate(prevProps) {
+    //     // debugger
+    //     if (this.props.tourId !== prevProps.tourId) {
+    //         this.props.requestReviews(this.props.tourId)
+    //     }
+    // }
+
     starFillPercentage() {
 
         if (this.props.reviews.length) {

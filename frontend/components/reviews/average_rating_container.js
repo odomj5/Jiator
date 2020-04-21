@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AverageRating from "./average_rating"
-
+import {requestReviews} from "../../actions/review_actions"
 
 const mSTP = state => {
     // debugger
@@ -9,12 +9,12 @@ const mSTP = state => {
     })
 }
 
-// const mDTP = dispatch => {
-//     return ({
-//         deleteReview: reviewId => dispatch(deleteReview(reviewId)),
-//         returnSingleReview: review => dispatch(returnSingleReview(review))
-//     })
-// }
+const mDTP = dispatch => {
+    return ({
+        requestReviews: tourId => dispatch(requestReviews(tourId))
+        
+    })
+}
 
 
-export default connect(mSTP, null)(AverageRating)
+export default connect(mSTP, mDTP)(AverageRating)

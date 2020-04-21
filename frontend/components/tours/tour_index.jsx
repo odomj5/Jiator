@@ -7,7 +7,7 @@ class TourIndex extends React.Component {
     }
 
     getReviews() {
-        
+
     }
 
     render() {
