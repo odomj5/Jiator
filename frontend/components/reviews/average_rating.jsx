@@ -2,14 +2,20 @@ import React from 'react';
 
 
 class AverageRating extends React.Component {
+    
     // constructor(props) {
     //     super(props);
     //     this.state = {
-    //         ratingAverage: this.props.reviews.map(review => review.rating)
+    //         reviewCount: this.props.reviews.length
     //     }
-    //     debugger
+    //     // debugger
     // }
 
+    reviewCount() {
+        if (this.props.reviews.length) {
+            return this.props.reviews.length
+        }
+    }
 
     tourAvg() {
 
@@ -19,7 +25,15 @@ class AverageRating extends React.Component {
             const ratings = this.props.reviews.map(review => review.rating)
             const ratingSum = Object.values(ratings).reduce((sum, key) => sum + key) 
             const ratingAvg = (ratingSum / reviewCount)
-            return reviewCount
+            const starRounded = Math.round((ratingAvg/5) * 100)
+            // debugger
+            const starPercentageRounded = Math.round(starRounded / 10) * 10
+            // const innerStars = document.getElementById("stars-inner")
+            // innerStars.style.width = starPercentageRounded
+            debugger
+            return starPercentageRounded
+
+
         } else {
             return null
         } 
@@ -40,8 +54,10 @@ class AverageRating extends React.Component {
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
-                    
-                    <div className="stars-inner">
+
+                    <div className="stars-inner" id="stars-inner"
+                    style={{width: `${this.tourAvg()}%`}}
+                    >
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -49,7 +65,8 @@ class AverageRating extends React.Component {
                         <i className="fas fa-star"></i>
                     </div>
                 </div>
-               ({this.tourAvg()})
+               {/* ({this.tourAvg()}) */}
+               {this.reviewCount()}
             </div>
         )
     } 
