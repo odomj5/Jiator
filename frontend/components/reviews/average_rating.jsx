@@ -21,7 +21,6 @@ class AverageRating extends React.Component {
             const ratingAvg = (ratingSum / reviewCount)
             return reviewCount
         } else {
-            debugger
             return null
         } 
 
@@ -31,9 +30,7 @@ class AverageRating extends React.Component {
 
 
     render() {
-        // debugger
 
-        // if (this.props.reviews.length) return null
 
         return(
             <div className="avg-rating-div">
@@ -43,7 +40,8 @@ class AverageRating extends React.Component {
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
-                    <div className="stars-innner">
+                    
+                    <div className="stars-inner">
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -51,7 +49,7 @@ class AverageRating extends React.Component {
                         <i className="fas fa-star"></i>
                     </div>
                 </div>
-                {this.tourAvg()}
+               ({this.tourAvg()})
             </div>
         )
     } 

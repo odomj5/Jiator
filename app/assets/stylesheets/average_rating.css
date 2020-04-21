@@ -1,0 +1,25 @@
+.stars-outer {
+  position: relative;
+  display: inline-block;
+  color: #ccc;
+
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  color: red;
+
+}
+
+/* .stars-outer > i::before  {
+  color: #ccc;
+}
+
+.stars-inner > i::before {
+  color: red;
+} */
