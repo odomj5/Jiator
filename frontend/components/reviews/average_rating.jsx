@@ -44,7 +44,11 @@ class AverageRating extends React.Component {
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
                     <div className="stars-innner">
-
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
+                        <i className="fas fa-star"></i>
                     </div>
                 </div>
                 {this.tourAvg()}
