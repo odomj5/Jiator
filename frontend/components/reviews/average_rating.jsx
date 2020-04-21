@@ -2,14 +2,6 @@ import React from 'react';
 
 
 class AverageRating extends React.Component {
-    
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         reviewCount: this.props.reviews.length
-    //     }
-    //     // debugger
-    // }
 
     reviewCount() {
         if (this.props.reviews.length) {
@@ -17,7 +9,7 @@ class AverageRating extends React.Component {
         }
     }
 
-    tourAvg() {
+    starFillPercentage() {
 
         if (this.props.reviews.length) {
             const allReviews = this.props.reviews
@@ -26,20 +18,11 @@ class AverageRating extends React.Component {
             const ratingSum = Object.values(ratings).reduce((sum, key) => sum + key) 
             const ratingAvg = (ratingSum / reviewCount)
             const starRounded = Math.round((ratingAvg/5) * 100)
-            // debugger
             const starPercentageRounded = Math.round(starRounded / 10) * 10
-            // const innerStars = document.getElementById("stars-inner")
-            // innerStars.style.width = starPercentageRounded
-            debugger
             return starPercentageRounded
-
-
         } else {
             return null
         } 
-
-        
-
     }
 
 
@@ -56,7 +39,7 @@ class AverageRating extends React.Component {
                     <i className="fas fa-star"></i>
 
                     <div className="stars-inner" id="stars-inner"
-                    style={{width: `${this.tourAvg()}%`}}
+                        style={{ width: `${this.starFillPercentage()}%`}}
                     >
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -66,7 +49,10 @@ class AverageRating extends React.Component {
                     </div>
                 </div>
                {/* ({this.tourAvg()}) */}
-               {this.reviewCount()}
+               <div className='review-count'>
+               ({this.reviewCount()})
+               </div>
+                
             </div>
         )
     } 
