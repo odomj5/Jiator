@@ -3,6 +3,11 @@ import React from 'react';
 
 class AverageRating extends React.Component {
 
+    // componentDidMount() {
+    //     this.reviewCount()
+    //     this.starFillPercentage()
+    // }
+
     reviewCount() {
         if (this.props.reviews.length) {
             return this.props.reviews.length
@@ -27,7 +32,6 @@ class AverageRating extends React.Component {
 
 
     render() {
-
 
         return(
             <div className="avg-rating-div">

@@ -10,7 +10,8 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return({
-        requestTours: () => dispatch(requestTours())
+        requestTours: () => dispatch(requestTours()),
+        requestReviews: tourId => dispatch(requestReviews(tourId))
     })
 }
 
