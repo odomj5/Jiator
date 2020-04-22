@@ -3,7 +3,6 @@ import AverageRating from "./average_rating"
 import {requestReviews} from "../../actions/review_actions"
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return ({
         reviews: ownProps.reviews,
         tourId: ownProps.tourId,

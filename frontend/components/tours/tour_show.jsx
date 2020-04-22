@@ -23,7 +23,6 @@ class TourShow extends React.Component {
     }
 
     handleBook() {
-        // debugger
         this.setState({ flag: !this.state.flag })
         
     }

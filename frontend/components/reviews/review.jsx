@@ -9,7 +9,6 @@ class Review extends React.Component {
     }
 
     reviewToggle() {
-        debugger
         const reviewContainer = document.getElementById("review-index-cont").className
         const newReviewCont = reviewContainer === "review-index-cont" ? "review-index-hide" : "review-index-cont"
         document.getElementById("review-index-cont").className = newReviewCont
@@ -22,7 +21,7 @@ class Review extends React.Component {
         if (this.props.reviews === undefined) return null 
 
         const reviewsRev = this.props.reviews.reverse() 
-        // debugger
+        
         return(
             <div className="review-div"
                 >
