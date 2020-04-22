@@ -19,7 +19,7 @@ class TourIndex extends React.Component {
                 <div className="tour-index-item-container">
                     {this.props.tours.map(tour => 
                     <TourIndexItem tour={tour} key={tour.id}
-                    
+                    requestTour={this.props.requestTour}
                     requestReviews={this.props.requestReviews}
                     history={this.props.history}
                     location={this.props.location}

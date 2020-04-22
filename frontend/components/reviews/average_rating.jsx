@@ -3,10 +3,9 @@ import React from 'react';
 
 class AverageRating extends React.Component {
 
-    // componentDidMount() {
-    //     this.reviewCount()
-    //     this.starFillPercentage()
-    // }
+    componentDidMount() {
+        this.props.requestReviews(this.props.tourId)       
+    }
 
     reviewCount() {
         if (this.props.reviews.length) {
@@ -18,12 +17,12 @@ class AverageRating extends React.Component {
     //     this.props.requestReviews(this.props.tourId)
     // }
 
-    // componentDidUpdate(prevProps) {
-    //     // debugger
-    //     if (this.props.tourId !== prevProps.tourId) {
-    //         this.props.requestReviews(this.props.tourId)
-    //     }
-    // }
+    componentDidUpdate(prevProps) {
+        // debugger
+        if (this.props.tourId !== prevProps.tourId) {
+            this.props.requestReviews(this.props.tourId)
+        }
+    }
 
     starFillPercentage() {
 

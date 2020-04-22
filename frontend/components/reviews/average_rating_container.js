@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 import AverageRating from "./average_rating"
 import {requestReviews} from "../../actions/review_actions"
 
-const mSTP = state => {
+const mSTP = (state, ownProps) => {
     
     return ({
-        reviews: Object.values(state.entities.reviews)
+        reviews: Object.values(state.entities.reviews),
+        tourId: ownProps.tourId
     })
 }
 

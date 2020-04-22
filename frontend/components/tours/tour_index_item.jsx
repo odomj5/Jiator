@@ -1,6 +1,6 @@
 import React from 'react'
 import AverageRatingContainer from "../reviews/average_rating_container"
-import TourIndexItemReviews from './tour_index_item_reviews'
+import TourIndexItemReviewsContainer from './tour_index_item_review_container'
 
 class TourIndexItem extends React.Component {
     constructor(props) {
@@ -17,10 +17,15 @@ class TourIndexItem extends React.Component {
         this.props.history.push(`/api/tours/${id}`)
     }
 
+    // componentDidMount() {
+    //     this.props.requestReviews(this.props.tour.id)
+    // }
+
     //  componentDidUpdate(prevProps) {
-    //     //  debugger
+    //      debugger
     //     if (this.props.tour.id !== prevProps.tour.id) {
-    //         this.props.requestReviews(this.props.tourId)
+    //         debugger
+    //         this.props.requestReviews(this.props.tour.id)
     //     }
     // }
 
@@ -38,9 +43,11 @@ class TourIndexItem extends React.Component {
                 </div>
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
-                    <TourIndexItemReviews />
-                    {/* <AverageRatingContainer
-                    /> */}
+                    {/* <TourIndexItemReviewsContainer
+                    tourId={this.props.tour.id} /> */}
+                    <AverageRatingContainer
+                        tourId={this.props.tour.id} 
+                    />
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
                     <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>

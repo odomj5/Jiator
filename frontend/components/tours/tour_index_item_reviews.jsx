@@ -4,11 +4,24 @@ import AverageRating from "../reviews/average_rating"
 
 class TourIndexItemReviews extends React.Component {
 
+    componentDidMount() {
+        this.props.requestReviews(this.props.tourId)
+    }
+
+    componentDidUpdate(prevProps) {
+        // debugger
+        if (this.props.tourId !== prevProps.tourId) {
+            // debugger
+            this.props.requestReviews(this.props.tourId)
+        }
+    }
+
 
     render() {
+        debugger
         return(
             <div>
-                <AverageRating reivew={this.props.reviews}/>
+                <AverageRating reviews={this.props.reviews}/>
             </div>
         )
     }
