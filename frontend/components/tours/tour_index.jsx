@@ -8,13 +8,13 @@ class TourIndex extends React.Component {
         this.props.requestReviews("all")
     }
 
-    getReviews(tour) {
-        debugger
+    // getReviews(tour) {
+    //     debugger
 
-        const filterReviews = this.props.reviews.filter(review => review.tourId === tour.id)
+    //     const filterReviews = this.props.reviews.filter(review => review.tourId === tour.id)
 
-        debugger
-    }
+    //     debugger
+    // }
 
  
 
