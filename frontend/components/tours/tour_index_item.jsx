@@ -1,6 +1,5 @@
 import React from 'react'
 import AverageRatingContainer from "../reviews/average_rating_container"
-import TourIndexItemReviewsContainer from './tour_index_item_review_container'
 
 class TourIndexItem extends React.Component {
     constructor(props) {
@@ -17,10 +16,10 @@ class TourIndexItem extends React.Component {
         this.props.history.push(`/api/tours/${id}`)
     }
 
-    // componentDidMount() {
-    //     // debugger
-    //     this.props.requestReviews(this.props.tour.id)
-    // }
+    componentDidMount() {
+        debugger
+        this.props.requestReviews(this.props.tour.id)
+    }
 
     //  componentDidUpdate(prevProps) {
     //      debugger
@@ -34,12 +33,21 @@ class TourIndexItem extends React.Component {
     //      }
     // }
 
+    getReviews() {
+        debugger
+        this.props.requestReviews(this.props.tour.id)
+    }
+
 
     render() {
         // debugger
         let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
 
-        // debugger
+        if (!this.props.reviews.length) {
+            this.getReviews()
+        }
+
+        debugger
         return(
             <div className="index-item-div" onClick={() => this.selectTour(this.props.tour.id)}>
                 <div className="image-cont">
@@ -50,10 +58,10 @@ class TourIndexItem extends React.Component {
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
                     {/* <TourIndexItemReviewsContainer
                     tourId={this.props.tour.id} /> */}
-                    <AverageRatingContainer
+                    {/* <AverageRatingContainer
                         tourId={this.props.tour.id}
                         // reviews={this.props.reviews} 
-                    />
+                    /> */}
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
                     <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>
