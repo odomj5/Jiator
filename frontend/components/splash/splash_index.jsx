@@ -4,6 +4,7 @@ import SplashIndexItem from "./splash_index_item";
 class SplashIndex extends React.Component {
     componentDidMount() {
         this.props.requestTours();
+        this.props.requestReviews("all");
     }
 
     tourIndex() {
@@ -12,6 +13,9 @@ class SplashIndex extends React.Component {
 
 
     render() {
+
+        if (!this.props.reviews.length) return null
+
         return(
             <div className="splash-idx-div">
                 <h2 onClick={() => this.tourIndex()}>Explore San Francisco</h2>
@@ -20,7 +24,8 @@ class SplashIndex extends React.Component {
                         <SplashIndexItem tour={tour} key={tour.id}
                             history={this.props.history}
                             location={this.props.location}
-                            match={this.props.match}  
+                            match={this.props.match}
+                            reviews={this.props.reviews.filter(review => review.tourId === tour.id)} 
                         />)}
                 </div>
             </div>
