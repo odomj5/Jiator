@@ -7,17 +7,7 @@ class TourIndex extends React.Component {
         this.props.requestTours()
         this.props.requestReviews("all")
     }
-
-    // getReviews(tour) {
-    //     debugger
-
-    //     const filterReviews = this.props.reviews.filter(review => review.tourId === tour.id)
-
-    //     debugger
-    // }
-
  
-
     render() {
         
         if (!this.props.reviews.length) return null
@@ -29,14 +19,7 @@ class TourIndex extends React.Component {
                 <div className="tour-index-item-container">
                     {this.props.tours.map(tour => 
                     <TourIndexItemContainer tour={tour} key={tour.id}
-                            reviews={this.props.reviews.filter(review => review.tourId === tour.id)}
-                            // reviews={this.getReviews(tour)}
-                    // requestReviews={this.props.requestReviews}
-                    // history={this.props.history}
-                    // location={this.props.location}
-                    // match={this.props.match}
-
-                    
+                        reviews={this.props.reviews.filter(review => review.tourId === tour.id)}
                     /> )}
                 </div>
             </div>
