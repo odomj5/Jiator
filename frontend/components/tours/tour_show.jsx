@@ -52,7 +52,7 @@ class TourShow extends React.Component {
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
-        // this.props.requestReviews(this.props.match.params.tourId)
+        
     }
 
     componentDidUpdate(prevProps) {
@@ -64,6 +64,7 @@ class TourShow extends React.Component {
             this.props.closeModal()
         }
     }
+
 
     render() {
 

@@ -4,6 +4,7 @@ import TourShow from './tour_show';
 import {openModal, closeModal} from "../../actions/modal_actions";
 
 const mSTP = (state, ownProps) => {
+    // debugger
     return({
         tour: state.entities.tours[ownProps.match.params.tourId],
         reviews: Object.values(state.entities.reviews),

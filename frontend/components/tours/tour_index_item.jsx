@@ -16,10 +16,10 @@ class TourIndexItem extends React.Component {
         this.props.history.push(`/api/tours/${id}`)
     }
 
-    componentDidMount() {
-        debugger
-        this.props.requestReviews(this.props.tour.id)
-    }
+    // componentDidMount() {
+    //     debugger
+    //     this.props.requestReviews(this.props.tour.id)
+    // }
 
     //  componentDidUpdate(prevProps) {
     //      debugger

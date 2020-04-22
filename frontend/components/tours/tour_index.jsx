@@ -5,6 +5,7 @@ import TourIndexItemContainer from './tour_index_item_container';
 class TourIndex extends React.Component {
     componentDidMount() {
         this.props.requestTours()
+        this.props.requestReviews("all")
     }
 
  

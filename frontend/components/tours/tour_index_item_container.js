@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import {requestReviews} from '../../actions/review_actions';
 
 const mSTP = (state, ownProps) => {
-    debugger
+    // debugger
     return ({
         reviews: Object.values(state.entities.reviews),
         tour: ownProps.tour
