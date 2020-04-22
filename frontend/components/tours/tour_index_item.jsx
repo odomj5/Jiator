@@ -12,11 +12,8 @@ class TourIndexItem extends React.Component {
     }
 
     render() {
-        // debugger
+        
         let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
-
-       
-
         
         return(
             <div className="index-item-div" onClick={() => this.selectTour(this.props.tour.id)}>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { requestTours } from '../../actions/tour_actions';
-// import { requestReviews } from '../../actions/review_actions';
+import { requestReviews } from '../../actions/review_actions';
 import SplashIndex from "./splash_index";
 
 const mSTP = state => {
