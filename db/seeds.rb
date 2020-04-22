@@ -70,7 +70,7 @@ t2 = Tour.create!(name: "Muir Woods and Sausalito Half Day Tour",
     t2.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/muir/muirwoods2.jpg"), filename: "muirwoods2.jpg")
     t2.photos.attach(io: open("https://jiator-seeds.s3-us-west-1.amazonaws.com/muir/treerings2.jpg"), filename: "treerings2.jpg")
 
-t3 = Tour.create!(name: "Urban Hike: Coit Tower, Lombard Street and North Beach",
+t3 = Tour.create!(name: "Urban Hike: North Beach",
     overview: "San Francisco is undoubtedly a hilly place, and this challenging 5-mile walking tour doesn’t shy away from the steepness. Instead, it takes you off the beaten path and onto some of the city’s stairways for an incredible exploration of several neighborhoods and downtown attractions. While meandering through SF’s Russian Hill, Telegraph Hill and North Beach neighborhoods, you’ll come upon some hidden gems, jaw-dropping views, and world-famous sites. Climb to Coit Tower via the Filbert Street Steps; ascend Lombard Street, often referred to as the crookedest street in the world; and discover a tiny park overlooking St Peter and Paul Church, where Marilyn Monroe and Joe DiMaggio took their wedding pics after tying the knot at San Francisco City Hall.",
     included: ["Professional guide", "Narrated city hiking tou"], 
     not_included: ["Gratuities", "Food and drinks", "Coit Tower elevator"],
@@ -184,13 +184,13 @@ r10 = Review.create!(title: "Lovely day out",
 
 r11 = Review.create!(title: "Greer was outstanding! The tour was...",
     body: "Greer was outstanding! The tour was very informative and brought us to several outstanding scenic view points. The walk is definitely strenuous as stated in the write-up. Many hills and flights of stairs, but definitely worth the effort! Greer adjusted the pace to the group's comfort level.",
-    rating: 5,
+    rating: 4,
     user_id: u4.id,
     tour_id: t3.id)
 
 r12 = Review.create!(title: "Really enjoyed seeing and hearing about...",
     body: "Really enjoyed seeing and hearing about hidden treasures of the city on this tour. The guide Greer was well informed, knowledgable, passionate and helpful I wouldn't consider myself to be fit, I found some of the steep hills difficult but I enjoyed the tour all the same; no pain, no gain.",
-    rating: 5,
+    rating: 4,
     user_id: u5.id,
     tour_id: t3.id)
 
@@ -202,13 +202,13 @@ r13 = Review.create!(title: "This tour was fantastic! We visited...",
 
 r14 = Review.create!(title: "What a wonderful way to see San...",
     body: "What a wonderful way to see San Francisco, it's a strenuous walk but Alex made sure there were plenty of breaks to take photos and catch our breath. The size of the group made it easy to accommodate everyone's tastes and interests. I would certainly do more walks around the city.",
-    rating: 5,
+    rating: 4,
     user_id: u10.id,
     tour_id: t3.id)
 
 r15 = Review.create!(title: "I recently moved to San Francisco and...",
     body: "I recently moved to San Francisco and signed up for an Urban Hike to become better acquainted with my new hometown! On this hilly walk, I explored some of the city’s famous spots (like Coit Tower and Lombard Street), as well discover hidden gems (such as Jack Early Park and Macondrary Lane). Our tour guide, Alex, was really friendly and shared some engaging stories about the locations we visited. The hike isn’t too strenuous, you’ll definitely get a good calf workout. I’d suggest wearing comfortable walking shoes and bringing a bottle of water. Whether you’re a local or here on vacation, I highly recommend this tour!",
-    rating: 5,
+    rating: 3,
     user_id: u2.id,
     tour_id: t3.id)
 
@@ -226,7 +226,7 @@ r17 = Review.create!(title: "Boston crew",
 
 r18 = Review.create!(title: "Enjoyable experience!",
     body: "It was great. Perfect way to spend my first evening EVER in San Francisco! The guides were amazing and I’d definitely go again in my next visit.",
-    rating: 4,
+    rating: 5,
     user_id: u10.id,
     tour_id: t4.id)
 
@@ -238,7 +238,7 @@ r19 = Review.create!(title: "Beautiful sunset!!!",
 
 r20 = Review.create!(title: "Sailing into the sunset",
     body: "Relaxed friendly crew; Plenty of space; generous snacks & drinks and warm jackets in the stunning San Francisco Bay. Not to be missed",
-    rating: 3,
+    rating: 5,
     user_id: u3.id,
     tour_id: t4.id)
 
@@ -260,9 +260,9 @@ r23 = Review.create!(title: "Fun and informative!",
     user_id: u10.id,
     tour_id: t5.id)
 
-r24 = Review.create!(title: "A fantastic time!!",
-    body: "We had a great time riding on the segways, seeing a ton of it, and learning about the park from our awesome guide Kelly!!",
-    rating: 5,
+r24 = Review.create!(title: "Could have been planned better",
+    body: "No stops for coffee or bathroom breaks was unusual in our experience.",
+    rating: 1,
     user_id: u2.id,
     tour_id: t5.id)
 
@@ -360,3 +360,22 @@ r35 = Review.create!(title: "Under the Spell of Muir Woods",
     rating: 5,
     user_id: u7.id,
     tour_id: t2.id)
+
+
+r36 = Review.create!(title: "Exhausting",
+    body: "Too many steep hills, I couldn't keep up",
+    rating: 1,
+    user_id: u9.id,
+    tour_id: t3.id)
+
+r37 = Review.create!(title: "Poor visibility on cloudy day",
+    body: "I wish we could have gone another day, couldn't see much of the views",
+    rating: 1,
+    user_id: u8.id,
+    tour_id: t3.id)
+
+r38 = Review.create!(title: "The group was slow",
+    body: "Spent a lot of time waiting on others",
+    rating: 2,
+    user_id: u7.id,
+    tour_id: t3.id)

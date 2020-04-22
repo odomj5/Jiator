@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import AverageRatingContainer from "../reviews/average_rating_container";
+
 
 class SplashIndexItem extends React.Component {
 
@@ -17,7 +19,10 @@ class SplashIndexItem extends React.Component {
                 </div>
                 <h5> <i className="fas fa-globe"></i> San Francisco, United States</h5>
                 <h2>{this.props.tour.name}</h2>
-                <h3>Review</h3>
+                <AverageRatingContainer
+                    tourId={this.props.tour.id}
+                    reviews={this.props.reviews}
+                />
                 <h4>from: <span>${this.props.tour.price}</span></h4>
             </div>
         )

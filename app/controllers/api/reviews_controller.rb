@@ -2,7 +2,12 @@ class Api::ReviewsController < ApplicationController
     
     # nested under tours 
     def index 
-        @reviews = Review.where(tour_id: params[:tour_id])
+
+        if params[:tour_id] == "all"
+            @reviews = Review.all
+        else
+            @reviews = Review.where(tour_id: params[:tour_id])
+        end
     end
 
     def show

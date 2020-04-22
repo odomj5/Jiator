@@ -3,11 +3,49 @@ import SplashIndexContainer from "./splash_index_container"
 
 class Splash extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: "Date",
+        };
+
+    }
+
+    handleInput(inputType) {
+        return e => this.setState({ [inputType]: e.target.value })
+    }
+
+    goTours() {
+        window.location.href = "/#/api/tours"
+    }
 
     render() {
         return (
             <div className="splash-div">
+                <div className="splash-img-cont">
                     <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/splash/GGbridge.jpg"/>
+                    <div className="splash-book">
+                        <h2>Discover amazing things to do everywhere you go</h2>
+                        <div className="splash-city-div">
+                            <label className="splash-city"><i className="fas fa-map-marked-alt"></i>
+                                <select id="cities" defaultValue="default">
+                                    <option value="default" disabled hidden >Where would you like to explore?</option>
+                                    <option value="San Fancisco">San Fancisco</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>    
+                            <label className="splash-date"><i className="far fa-calendar-alt"></i>
+                                <input type="date"
+                                value={this.state.date}
+                                onChange={this.handleInput("date")}/>
+                            </label>
+                        </div> 
+                        <button
+                        onClick={this.goTours}>
+                            See Available Tours!</button> 
+                    </div>
+                </div>
                 <div className="icon-bar">
                     <div className='icon-1'>
                         <i className="fas fa-ticket-alt"></i>

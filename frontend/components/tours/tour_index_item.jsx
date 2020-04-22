@@ -1,9 +1,9 @@
 import React from 'react'
+import AverageRatingContainer from "../reviews/average_rating_container"
 
 class TourIndexItem extends React.Component {
     constructor(props) {
         super(props)
-
         this.selectTour = this.selectTour.bind(this)
     }
 
@@ -12,9 +12,9 @@ class TourIndexItem extends React.Component {
     }
 
     render() {
-
+        
         let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
-
+        
         return(
             <div className="index-item-div" onClick={() => this.selectTour(this.props.tour.id)}>
                 <div className="image-cont">
@@ -23,6 +23,10 @@ class TourIndexItem extends React.Component {
                 </div>
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
+                    <AverageRatingContainer
+                        tourId={this.props.tour.id}
+                        reviews={this.props.reviews} 
+                    />
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
                     <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>

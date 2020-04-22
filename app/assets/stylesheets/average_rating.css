@@ -1,0 +1,43 @@
+.avg-rating-div {
+    display: flex;
+    margin: 0 0 2px;
+}
+
+.show-div .avg-rating-div {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.index-item-details > .avg-rating-div {
+  margin-bottom: 10px;
+}
+
+.splash-idx-item-cont > .avg-rating-div {
+  margin-left: 2px;
+}
+
+.stars-outer {
+  position: relative;
+  display: inline-block;
+  color: #ccc;
+  margin-right: 5px;
+}
+
+
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #186b6d;
+  /* margin-right: 10px; */
+}
+
+.review-count {
+    /* margin: 10px;
+    justify-self: flex-start; */
+}
+
+

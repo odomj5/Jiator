@@ -1,6 +1,7 @@
-import React from 'react'
-import PhotoMain from "../photos/photo_main"
-import ReviewContainer from "../reviews/review_container"
+import React from 'react';
+import PhotoMain from "../photos/photo_main";
+import ReviewContainer from "../reviews/review_container";
+import AverageRating from "../reviews/average_rating";
 
 
 class TourShow extends React.Component {
@@ -22,7 +23,6 @@ class TourShow extends React.Component {
     }
 
     handleBook() {
-        // debugger
         this.setState({ flag: !this.state.flag })
         
     }
@@ -51,7 +51,7 @@ class TourShow extends React.Component {
     
     componentDidMount() {
         this.props.requestTour(this.props.match.params.tourId)
-        // this.props.requestReviews(this.props.match.params.tourId)
+        
     }
 
     componentDidUpdate(prevProps) {
@@ -64,6 +64,7 @@ class TourShow extends React.Component {
         }
     }
 
+
     render() {
 
         if (this.props.tour === undefined) return null
@@ -73,6 +74,9 @@ class TourShow extends React.Component {
                 <h1 className="tour-name">
                     {this.props.tour.name}
                 </h1>
+                <AverageRating 
+                reviews={this.props.reviews}
+                />
                 <div className='booking-outer-div'>
                     <PhotoMain photos={this.props.tour.photoUrls} className="photo-main"/>
                     <div className="booking-div-cont">
