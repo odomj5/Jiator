@@ -1,6 +1,19 @@
 .avg-rating-div {
     display: flex;
-    margin: 0 0 5px 10px;
+    margin: 0 0 2px;
+}
+
+.show-div .avg-rating-div {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.index-item-details > .avg-rating-div {
+  margin-bottom: 5px;
+}
+
+.splash-idx-item-cont > .avg-rating-div {
+  margin-left: 2px;
 }
 
 .stars-outer {
@@ -8,9 +21,9 @@
   display: inline-block;
   color: #ccc;
   margin-right: 5px;
-
-
 }
+
+
 
 .stars-inner {
   position: absolute;
