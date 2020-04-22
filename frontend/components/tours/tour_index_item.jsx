@@ -4,40 +4,12 @@ import AverageRatingContainer from "../reviews/average_rating_container"
 class TourIndexItem extends React.Component {
     constructor(props) {
         super(props)
-        // this.state = {
-        //     reviews: this.props.requestReviews(this.props.tour.id)
-            
-        // }
-        // debugger
         this.selectTour = this.selectTour.bind(this)
     }
 
     selectTour(id) {
         this.props.history.push(`/api/tours/${id}`)
     }
-
-    // componentDidMount() {
-    //     debugger
-    //     this.props.requestReviews(this.props.tour.id)
-    // }
-
-    //  componentDidUpdate(prevProps) {
-    //      debugger
-    //     // if (this.props.tour.id !== prevProps.tour.id) {
-    //     //     debugger
-    //     //     this.props.requestReviews(this.props.tour.id)
-    //     // }
-    //      if (this.props.reviews[0] !== this.props.tour.id) {
-    //          debugger
-    //          this.props.requestReviews(this.props.tour.id)
-    //      }
-    // }
-
-    // getReviews() {
-    //     debugger
-    //     this.props.requestReviews(this.props.tour.id)
-    // }
-
 
     render() {
         // debugger
@@ -54,8 +26,6 @@ class TourIndexItem extends React.Component {
                 </div>
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
-                    {/* <TourIndexItemReviewsContainer
-                    tourId={this.props.tour.id} /> */}
                     <AverageRatingContainer
                         tourId={this.props.tour.id}
                         reviews={this.props.reviews} 
