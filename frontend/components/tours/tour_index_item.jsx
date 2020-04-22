@@ -58,7 +58,7 @@ class TourIndexItem extends React.Component {
                     tourId={this.props.tour.id} /> */}
                     <AverageRatingContainer
                         tourId={this.props.tour.id}
-                        // reviews={this.props.reviews} 
+                        reviews={this.props.reviews} 
                     />
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>

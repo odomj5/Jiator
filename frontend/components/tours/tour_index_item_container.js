@@ -6,7 +6,7 @@ import {requestReviews} from '../../actions/review_actions';
 const mSTP = (state, ownProps) => {
     // debugger
     return ({
-        reviews: Object.values(state.entities.reviews),
+        reviews: ownProps.reviews,
         tour: ownProps.tour
     })
 }

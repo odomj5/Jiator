@@ -2,13 +2,10 @@ class Api::ReviewsController < ApplicationController
     
     # nested under tours 
     def index 
-        debugger
 
         if params[:tour_id] == "all"
-            debugger
             @reviews = Review.all
         else
-            debugger
             @reviews = Review.where(tour_id: params[:tour_id])
         end
     end
