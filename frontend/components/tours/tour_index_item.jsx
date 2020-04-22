@@ -33,21 +33,19 @@ class TourIndexItem extends React.Component {
     //      }
     // }
 
-    getReviews() {
-        debugger
-        this.props.requestReviews(this.props.tour.id)
-    }
+    // getReviews() {
+    //     debugger
+    //     this.props.requestReviews(this.props.tour.id)
+    // }
 
 
     render() {
         // debugger
         let ovrSnip = this.props.tour.overview.split(" ").slice(0, 55).join(" ")
 
-        if (!this.props.reviews.length) {
-            this.getReviews()
-        }
+       
 
-        debugger
+        
         return(
             <div className="index-item-div" onClick={() => this.selectTour(this.props.tour.id)}>
                 <div className="image-cont">
@@ -58,10 +56,10 @@ class TourIndexItem extends React.Component {
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
                     {/* <TourIndexItemReviewsContainer
                     tourId={this.props.tour.id} /> */}
-                    {/* <AverageRatingContainer
+                    <AverageRatingContainer
                         tourId={this.props.tour.id}
                         // reviews={this.props.reviews} 
-                    /> */}
+                    />
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
                     <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>

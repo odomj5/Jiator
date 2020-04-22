@@ -7,12 +7,10 @@ class TourIndex extends React.Component {
         this.props.requestTours()
     }
 
-    // getReviews() {
-
-    // }
+ 
 
     render() {
-        debugger
+        
         return(
             <div className="index-div">
                 <img src="https://jiator-seeds.s3-us-west-1.amazonaws.com/index/SFindex.jpeg"

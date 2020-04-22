@@ -53,7 +53,9 @@ class AverageRating extends React.Component {
 
     render() {
 
-        debugger
+        if (!this.props.reviews.length) return null
+
+
         return(
             <div className="avg-rating-div">
                 <div className="stars-outer">
