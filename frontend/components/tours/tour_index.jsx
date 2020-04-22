@@ -1,14 +1,15 @@
 import React from 'react'
 import TourIndexItem from './tour_index_item'
+import TourIndexItemContainer from './tour_index_item_container';
 
 class TourIndex extends React.Component {
     componentDidMount() {
         this.props.requestTours()
     }
 
-    getReviews() {
+    // getReviews() {
 
-    }
+    // }
 
     render() {
         // debugger
@@ -18,12 +19,12 @@ class TourIndex extends React.Component {
                 className="t-index-img"/>
                 <div className="tour-index-item-container">
                     {this.props.tours.map(tour => 
-                    <TourIndexItem tour={tour} key={tour.id}
-                    requestTour={this.props.requestTour}
-                    requestReviews={this.props.requestReviews}
-                    history={this.props.history}
-                    location={this.props.location}
-                    match={this.props.match}
+                    <TourIndexItemContainer tour={tour} key={tour.id}
+                    // requestTour={this.props.requestTour}
+                    // requestReviews={this.props.requestReviews}
+                    // history={this.props.history}
+                    // location={this.props.location}
+                    // match={this.props.match}
 
                     
                     /> )}

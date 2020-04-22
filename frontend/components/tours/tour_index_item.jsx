@@ -18,15 +18,20 @@ class TourIndexItem extends React.Component {
     }
 
     // componentDidMount() {
+    //     // debugger
     //     this.props.requestReviews(this.props.tour.id)
     // }
 
     //  componentDidUpdate(prevProps) {
     //      debugger
-    //     if (this.props.tour.id !== prevProps.tour.id) {
-    //         debugger
-    //         this.props.requestReviews(this.props.tour.id)
-    //     }
+    //     // if (this.props.tour.id !== prevProps.tour.id) {
+    //     //     debugger
+    //     //     this.props.requestReviews(this.props.tour.id)
+    //     // }
+    //      if (this.props.reviews[0] !== this.props.tour.id) {
+    //          debugger
+    //          this.props.requestReviews(this.props.tour.id)
+    //      }
     // }
 
 
@@ -46,7 +51,8 @@ class TourIndexItem extends React.Component {
                     {/* <TourIndexItemReviewsContainer
                     tourId={this.props.tour.id} /> */}
                     <AverageRatingContainer
-                        tourId={this.props.tour.id} 
+                        tourId={this.props.tour.id}
+                        // reviews={this.props.reviews} 
                     />
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>

@@ -3,9 +3,9 @@ import React from 'react';
 
 class AverageRating extends React.Component {
 
-    componentDidMount() {
-        this.props.requestReviews(this.props.tourId)       
-    }
+    // componentDidMount() {
+    //     this.props.requestReviews(this.props.tourId)       
+    // }
 
     reviewCount() {
         if (this.props.reviews.length) {
@@ -20,6 +20,7 @@ class AverageRating extends React.Component {
     componentDidUpdate(prevProps) {
         // debugger
         if (this.props.tourId !== prevProps.tourId) {
+            debugger
             this.props.requestReviews(this.props.tourId)
         }
     }
@@ -42,7 +43,7 @@ class AverageRating extends React.Component {
 
 
     render() {
-
+        debugger
         return(
             <div className="avg-rating-div">
                 <div className="stars-outer">
