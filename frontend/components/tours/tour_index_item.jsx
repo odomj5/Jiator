@@ -1,5 +1,6 @@
 import React from 'react'
 import AverageRatingContainer from "../reviews/average_rating_container"
+import TourIndexItemReviews from './tour_index_item_reviews'
 
 class TourIndexItem extends React.Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class TourIndexItem extends React.Component {
     }
 
     //  componentDidUpdate(prevProps) {
+    //     //  debugger
     //     if (this.props.tour.id !== prevProps.tour.id) {
     //         this.props.requestReviews(this.props.tourId)
     //     }
@@ -36,9 +38,9 @@ class TourIndexItem extends React.Component {
                 </div>
                 <div className="index-item-details">
                     <div className='idx-tour-n'>{this.props.tour.name}</div>
-                    <AverageRatingContainer
-                    tourId={this.props.tour.id}
-                    />
+                    <TourIndexItemReviews />
+                    {/* <AverageRatingContainer
+                    /> */}
                     <div className='idx-tour-o'>{ovrSnip}</div>
                     <div className="idx-more">more...</div>
                     <div className='idx-tour-l'>Languages available: <span className="lan-span">{this.props.tour.language}</span></div>
