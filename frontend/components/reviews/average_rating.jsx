@@ -3,38 +3,15 @@ import React from 'react';
 
 class AverageRating extends React.Component {
 
-    // componentDidMount() {
-    //     this.props.requestReviews(this.props.tourId)       
-    // }
-
     reviewCount() {
         if (this.props.reviews.length) {
             return this.props.reviews.length
         }
     }
 
-    // componentDidMount() {
-    //     debugger
-    //     this.props.requestReviews(this.props.tourId)
-    // }
-
-    // componentDidUpdate(prevProps) {
-    //     debugger
-
-    //     // if(this.props.reviews === underfined ) {
-    //     //     this.props.requestReviews(this.props.tourId)
-
-    //     // }
-    //     if (this.props.tourId !== this.props.reviews[0].tourId) {
-    //         debugger
-    //         this.props.requestReviews(this.props.tourId)
-    //     }
-
-    // }
-
     starFillPercentage() {
 
-        if (this.props.reviews.length) {
+        // if (this.props.reviews.length) {
             const allReviews = this.props.reviews
             const reviewCount = allReviews.length
             const ratings = this.props.reviews.map(review => review.rating)
@@ -43,13 +20,10 @@ class AverageRating extends React.Component {
             const starRounded = Math.round((ratingAvg/5) * 100)
             const starPercentageRounded = Math.round(starRounded / 10) * 10
             return starPercentageRounded
-        } else {
-            return null
-        } 
+        // } else {
+        //     return null
+        // } 
     }
-
-
-
 
     render() {
 
