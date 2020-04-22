@@ -10,19 +10,14 @@ class AverageRating extends React.Component {
     }
 
     starFillPercentage() {
-
-        // if (this.props.reviews.length) {
-            const allReviews = this.props.reviews
-            const reviewCount = allReviews.length
-            const ratings = this.props.reviews.map(review => review.rating)
-            const ratingSum = Object.values(ratings).reduce((sum, key) => sum + key) 
-            const ratingAvg = (ratingSum / reviewCount)
-            const starRounded = Math.round((ratingAvg/5) * 100)
-            const starPercentageRounded = Math.round(starRounded / 10) * 10
-            return starPercentageRounded
-        // } else {
-        //     return null
-        // } 
+        const allReviews = this.props.reviews
+        const reviewCount = allReviews.length
+        const ratings = this.props.reviews.map(review => review.rating)
+        const ratingSum = Object.values(ratings).reduce((sum, key) => sum + key) 
+        const ratingAvg = (ratingSum / reviewCount)
+        const starRounded = Math.round((ratingAvg/5) * 100)
+        const starPercentageRounded = Math.round(starRounded / 10) * 10
+        return starPercentageRounded
     }
 
     render() {
