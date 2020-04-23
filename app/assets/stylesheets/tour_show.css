@@ -118,11 +118,6 @@
     cursor: pointer;
 }
 
-.booking-calendar > input[type-date] {
-    border: 2px solid #ccc;
-
-}
-
 .date-cont {
     font-size: 20px;
     margin: 10px 0 10px 0;
@@ -130,6 +125,11 @@
 
 .date-cont > input[type=date] {
     margin-left: 8px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    color: rgb(110, 110, 110);
+    font-family: Raleway, Helvetica, Arial;
+
 }
 
 .travelor-cont {
