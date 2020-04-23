@@ -51,8 +51,8 @@
 
 
 .tour-index-item-container {
-   margin-left: 200px;
-   margin-right: 200px;
+   margin-left: 12%;
+   margin-right: 12%;
    
 
 }
@@ -78,7 +78,7 @@
    flex-direction: column;
    justify-content: flex-start;
    /* align-items: space-between; */
-   margin: 5px;
+   margin: 0 5px 5px 10px;
    flex-basis: 45%;
    min-width: 400px;
    
