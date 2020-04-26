@@ -3,7 +3,7 @@ App Academy - Full Stack Project
 
 [View the live site ](https://jiator.herokuapp.com/#/)
 
-![homepage](app/assets/images/homepage.png)
+![homepage](/app/assets/images/jiatorSplash.png)
 
 
 Jiator, inspired by [Viator](https://www.viator.com/), is the world leader in offering amazing tours, activities, and travel experiences around the world
@@ -35,7 +35,14 @@ Users can create an account and log in. User authentication for this web applica
 ![modal](app/assets/images/signupmodal.png)
 
 ## Tours 
-Tours are listed for booking. Tour listings include: price, overview, included features, additional info, spaces available, length of time, and languages available in.
+Tours are listed for booking.
+
+![tourIndex](app/assets/images/indexJiator.png)
+
+Tour listings include: price, overview, included features, additional info, spaces available, length of time, and languages available in.
+
+![tourShow](app/assets/images/jiatorShow.png)
 
 ## Reviews 
 Reviews are listed by tour. Reviews include: rating, timestamp, username, title and body.
+![reviews](app/assets/images/jiatorReviews.png)
