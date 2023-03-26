@@ -1,7 +1,7 @@
 # Jiator 
 App Academy - Full Stack Project 
 
-[View the live site ](https://jiator.herokuapp.com/#/)
+No longer being hosted since Heroku's free teir has been removed
 
 ![homepage](/app/assets/images/jiatorSplash.png)
 
